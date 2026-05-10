@@ -29,7 +29,7 @@
     "chessground": "^9.1.1",
     "chessops": "^0.15.0",
     "fuse.js": "^7.0.0",
-    "i18next": "^26.0.8",
+    "i18next": "^26.0.10",
     "i18next-browser-languagedetector": "^8.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
