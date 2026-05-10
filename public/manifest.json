@@ -2,7 +2,7 @@
   "name": "Ch3ssVid5 Hub",
   "short_name": "Ch3ssVid5 Hub",
   "description": "Browse annotated chess PGN files synced with YouTube videos",
-  "start_url": "/ch3ssvid5hub/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#1a1a2e",

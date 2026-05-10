@@ -87,7 +87,7 @@ Output in `dist/`.
 npm run build && npm run preview
 ```
 
-Open [http://localhost:4173/ch3ssvid5hub/](http://localhost:4173/ch3ssvid5hub/)
+Open [http://localhost:4173/](http://localhost:4173/)
 
 ## Content Pipeline
 
