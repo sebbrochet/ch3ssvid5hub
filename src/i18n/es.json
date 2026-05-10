@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Ch3ssVid5 Hub"
+  },
+  "header": {
+    "browse": "Explorar",
+    "ch3ssvid5": "Ch3ssVid5"
+  },
+  "landing": {
+    "tagline": "Explora partidas de ajedrez anotadas y sincronizadas con vídeos de YouTube.",
+    "tagline2": "Previsualiza, elige e importa en Ch3ssVid5 con un solo clic.",
+    "browseGames": "Explorar partidas",
+    "contribute": "Contribuir",
+    "games": "Partidas",
+    "youtubers": "YouTubers",
+    "openings": "Aperturas",
+    "tags": "Etiquetas"
+  },
+  "browse": {
+    "filters": "Filtros",
+    "youtuber": "YouTuber",
+    "result": "Resultado",
+    "variant": "Variante",
+    "opening": "Apertura",
+    "tagsLabel": "Etiquetas",
+    "searchPlaceholder": "Buscar partidas, jugadores, aperturas, YouTubers…",
+    "gamesFound": "{{count}} partida encontrada",
+    "gamesFound_other": "{{count}} partidas encontradas",
+    "noResults": "No se encontraron partidas. Prueba con otras palabras clave o borra los filtros.",
+    "showFilters": "Mostrar filtros",
+    "hideFilters": "Ocultar filtros",
+    "sortYoutuber": "Orden: YouTuber",
+    "sortDate": "Orden: Fecha",
+    "sortPlayer": "Orden: Jugador",
+    "sortOpening": "Orden: Apertura",
+    "loading": "Cargando catálogo…"
+  },
+  "detail": {
+    "home": "Inicio",
+    "browse": "Explorar",
+    "openingMoves": "Movimientos de apertura",
+    "openInCh3ssVid5": "Abrir en Ch3ssVid5",
+    "downloadPgn": "Descargar PGN",
+    "watchOnYoutube": "Ver en YouTube",
+    "loading": "Cargando…",
+    "notFound": "Partida no encontrada",
+    "play": "Reproducir",
+    "pause": "Pausa"
+  },
+  "footer": {
+    "contribute": "Contribuir",
+    "license": "GPL-3.0 — Ch3ssVid5 Hub"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "La página que buscas no existe o ha sido movida.",
+    "home": "Inicio",
+    "browse": "Explorar partidas"
+  }
+}

@@ -1,0 +1,131 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.site-header-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-header-brand:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-version {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-secondary);
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+}
+
+.site-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.site-header-nav a {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header-nav a:hover,
+.site-header-nav a.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  padding: 4px;
+  border-radius: 4px;
+  border-bottom: none !important;
+  transition: color 0.15s;
+}
+
+.github-link:hover {
+  color: var(--color-text);
+  border-bottom: none !important;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.lang-switcher {
+  position: relative;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.lang-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.25rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  z-index: 100;
+  min-width: 120px;
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: none;
+  color: var(--color-text);
+  text-align: left;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.lang-option:hover {
+  background: var(--color-bg-secondary);
+}
+
+.lang-option.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .app-version,
+  .github-link {
+    display: none;
+  }
+}

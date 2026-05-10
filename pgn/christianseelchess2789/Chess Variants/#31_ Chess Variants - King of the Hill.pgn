@@ -1,0 +1,11 @@
+[Event "Chess Variants #31 - King of the Hill"]
+[Site "?"]
+[Date "????.??.??"]
+[White "Player 1"]
+[Black "Player 2"]
+[Result "*"]
+[VideoURL "https://youtu.be/qhTU2pVukfQ?si=QLc_gXGC-cxP6kRk"]
+[Variant "KingOfTheHill"]
+[Orientation "black"]
+
+1. e4 {[%ts 1:56]} d5 {[%ts 2:01]} 2. exd5 {[%ts 2:05]} Qxd5 {[%ts 2:06]} 3. Nc3 {[%ts 2:07]} Qa5 {[%ts 2:07]} 4. Nf3 {[%ts 2:25]} Nf6 {[%ts 2:26]} 5. d4 {[%ts 2:27]} Bg4 {[%ts 2:34]} 6. h3 {[%ts 2:41]} Bxf3 {[%ts 2:43]} 7. Qxf3 {[%ts 2:43]} Nc6 {[%ts 2:44]} 8. Bb5 {[%ts 2:55]} O-O-O 9. Bxc6 {[%ts 3:02]} bxc6 {[%ts 3:02]} 10. Qxc6 {[%ts 3:04]} Rxd4 {[%ts 3:05]} 11. O-O {[%ts 3:41]} ( 11. Be3 {[%ts 3:22]} e5 {[%ts 3:22]} ) 11... Qb6 {[%ts 3:46]} 12. Qa8+ {[%ts 4:39]} ( 12. Qxb6 {[%ts 4:17]} axb6 {[%ts 4:18]} ) 12... Qb8 {[%ts 4:40]} 13. Qf3 {[%ts 4:40]} Qb7 {[%ts 4:44]} 14. Qe2 {[%ts 4:46]} e6 {[%ts 4:47]} 15. Be3 {[%ts 4:51]} Rd8 {[%ts 4:52]} 16. Rfd1 {[%ts 4:55]} Bb4 {[%ts 4:56]} 17. Na4 {[%ts 5:00]} Qc6 {[%ts 5:03]} 18. b3 {[%ts 5:05]} Rxd1+ {[%ts 5:08]} 19. Rxd1 {[%ts 5:09]} Rd8 {[%ts 5:10]} 20. Bd4 {[%ts 5:46]} ( 20. Rxd8+ {[%ts 5:22]} Kxd8 {[%ts 5:23]} 21. Bd4 {[%ts 5:33]} Ke7 {[%ts 5:34]} ) 20... Nd5 {[%ts 5:58]} 21. g3 {[%ts 6:03]} Nb6 {[%ts 6:08]} *

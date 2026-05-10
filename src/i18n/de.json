@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Ch3ssVid5 Hub"
+  },
+  "header": {
+    "browse": "Durchsuchen",
+    "ch3ssvid5": "Ch3ssVid5"
+  },
+  "landing": {
+    "tagline": "Durchsuchen Sie annotierte Schachpartien, synchronisiert mit YouTube-Videos.",
+    "tagline2": "Vorschau ansehen, auswählen und mit einem Klick in Ch3ssVid5 importieren.",
+    "browseGames": "Partien durchsuchen",
+    "contribute": "Beitragen",
+    "games": "Partien",
+    "youtubers": "YouTuber",
+    "openings": "Eröffnungen",
+    "tags": "Tags"
+  },
+  "browse": {
+    "filters": "Filter",
+    "youtuber": "YouTuber",
+    "result": "Ergebnis",
+    "variant": "Variante",
+    "opening": "Eröffnung",
+    "tagsLabel": "Tags",
+    "searchPlaceholder": "Partien, Spieler, Eröffnungen, YouTuber suchen…",
+    "gamesFound": "{{count}} Partie gefunden",
+    "gamesFound_other": "{{count}} Partien gefunden",
+    "noResults": "Keine passenden Partien gefunden. Versuchen Sie andere Suchbegriffe oder setzen Sie die Filter zurück.",
+    "showFilters": "Filter anzeigen",
+    "hideFilters": "Filter ausblenden",
+    "sortYoutuber": "Sortierung: YouTuber",
+    "sortDate": "Sortierung: Datum",
+    "sortPlayer": "Sortierung: Spieler",
+    "sortOpening": "Sortierung: Er\u00f6ffnung",
+    "loading": "Katalog wird geladen…"
+  },
+  "detail": {
+    "home": "Startseite",
+    "browse": "Durchsuchen",
+    "openingMoves": "Eröffnungszüge",
+    "openInCh3ssVid5": "In Ch3ssVid5 öffnen",
+    "downloadPgn": "PGN herunterladen",
+    "watchOnYoutube": "Auf YouTube ansehen",
+    "loading": "Laden…",
+    "notFound": "Partie nicht gefunden",
+    "play": "Abspielen",
+    "pause": "Pause"
+  },
+  "footer": {
+    "contribute": "Beitragen",
+    "license": "GPL-3.0 — Ch3ssVid5 Hub"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "home": "Startseite",
+    "browse": "Partien durchsuchen"
+  }
+}

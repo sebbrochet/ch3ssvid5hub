@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Ch3ssVid5 Hub"
+  },
+  "header": {
+    "browse": "Parcourir",
+    "ch3ssvid5": "Ch3ssVid5"
+  },
+  "landing": {
+    "tagline": "Parcourez des parties d'échecs annotées et synchronisées avec des vidéos YouTube.",
+    "tagline2": "Prévisualisez, choisissez et importez dans Ch3ssVid5 en un clic.",
+    "browseGames": "Parcourir les parties",
+    "contribute": "Contribuer",
+    "games": "Parties",
+    "youtubers": "YouTubers",
+    "openings": "Ouvertures",
+    "tags": "Tags"
+  },
+  "browse": {
+    "filters": "Filtres",
+    "youtuber": "YouTuber",
+    "result": "Résultat",
+    "variant": "Variante",
+    "opening": "Ouverture",
+    "tagsLabel": "Tags",
+    "searchPlaceholder": "Rechercher parties, joueurs, ouvertures, YouTubers…",
+    "gamesFound": "{{count}} partie trouvée",
+    "gamesFound_other": "{{count}} parties trouvées",
+    "noResults": "Aucune partie ne correspond à votre recherche. Essayez d'autres mots-clés ou effacez les filtres.",
+    "showFilters": "Afficher les filtres",
+    "hideFilters": "Masquer les filtres",
+    "sortYoutuber": "Tri : YouTuber",
+    "sortDate": "Tri : Date",
+    "sortPlayer": "Tri : Joueur",
+    "sortOpening": "Tri : Ouverture",
+    "loading": "Chargement du catalogue…"
+  },
+  "detail": {
+    "home": "Accueil",
+    "browse": "Parcourir",
+    "openingMoves": "Premiers coups",
+    "openInCh3ssVid5": "Ouvrir dans Ch3ssVid5",
+    "downloadPgn": "Télécharger le PGN",
+    "watchOnYoutube": "Regarder sur YouTube",
+    "loading": "Chargement…",
+    "notFound": "Partie introuvable",
+    "play": "Lecture",
+    "pause": "Pause"
+  },
+  "footer": {
+    "contribute": "Contribuer",
+    "license": "GPL-3.0 — Ch3ssVid5 Hub"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n’existe pas ou a été déplacée.",
+    "home": "Accueil",
+    "browse": "Parcourir les parties"
+  }
+}

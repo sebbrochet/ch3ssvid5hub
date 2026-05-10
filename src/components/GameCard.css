@@ -1,0 +1,141 @@
+.game-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  text-decoration: none;
+  color: var(--color-text);
+  transition:
+    box-shadow 0.15s,
+    border-color 0.15s;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.game-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.game-card-youtuber {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.game-card-variant {
+  background: var(--color-variant-bg);
+  color: var(--color-variant-text);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.game-card-players {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.game-card-white {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-card-black {
+  flex: 1;
+  text-align: right;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-card-result {
+  font-size: 0.85rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.result-white {
+  background: var(--color-result-white-bg);
+  color: var(--color-result-white-text);
+}
+
+.result-black {
+  background: var(--color-result-black-bg);
+  color: var(--color-result-black-text);
+}
+
+.result-draw {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.game-card-opening {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-card-event {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.game-card-meta {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.game-card-video {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tag-more {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Dark rounded background (same as Ch3ssVid5) -->
+  <rect width="512" height="512" rx="80" fill="#1a1a2e"/>
+
+  <!-- Subtle chessboard pattern in bottom-right corner (decorative) -->
+  <g opacity="0.08">
+    <rect x="256" y="256" width="64" height="64" fill="#fff"/>
+    <rect x="384" y="256" width="64" height="64" fill="#fff"/>
+    <rect x="320" y="320" width="64" height="64" fill="#fff"/>
+    <rect x="448" y="320" width="64" height="64" fill="#fff"/>
+    <rect x="256" y="384" width="64" height="64" fill="#fff"/>
+    <rect x="384" y="384" width="64" height="64" fill="#fff"/>
+    <rect x="320" y="448" width="64" height="64" fill="#fff"/>
+    <rect x="448" y="448" width="64" height="64" fill="#fff"/>
+  </g>
+
+  <!-- Knight silhouette (same style, shifted left and slightly smaller) -->
+  <g transform="translate(60, 60) scale(7.5)" fill="none" stroke="#e0e0e0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Body -->
+    <path d="M 22,10 C 32.5,11 38.5,18 38,39 L 15,39 C 15,30 25,32.5 23,18" fill="#e0e0e0"/>
+    <!-- Head -->
+    <path d="M 24,18 C 24.38,20.91 18.45,25.37 16,27 C 13,29 13.18,31.34 11,31 C 9.958,30.06 12.41,27.96 11,28 C 10,28 11.19,29.23 10,30 C 9,30 5.997,31 6,26 C 6,24 12,14 12,14 C 12,14 13.89,12.1 14,10.5 C 13.27,9.506 13.5,8.5 13.5,7.5 C 14.5,6.5 16.5,10 16.5,10 L 18.5,10 C 18.5,10 19.28,8.008 21,7 C 22,7 22,10 22,10" fill="#e0e0e0"/>
+    <!-- Eye -->
+    <circle cx="9" cy="25.5" r="0.5" fill="#1a1a2e" stroke="none"/>
+  </g>
+
+  <!-- Magnifying glass (green accent, bottom-right — represents browsing/searching the catalog) -->
+  <g transform="translate(310, 290)">
+    <!-- Glass circle -->
+    <circle cx="60" cy="60" r="55" fill="none" stroke="#27ae60" stroke-width="16"/>
+    <!-- Glass fill (subtle) -->
+    <circle cx="60" cy="60" r="47" fill="#27ae60" opacity="0.15"/>
+    <!-- Handle -->
+    <line x1="100" y1="100" x2="145" y2="145" stroke="#27ae60" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small grid dots inside magnifying glass (catalog/hub concept) -->
+  <g fill="#e0e0e0" opacity="0.9">
+    <circle cx="350" cy="332" r="6"/>
+    <circle cx="374" cy="332" r="6"/>
+    <circle cx="398" cy="332" r="6"/>
+    <circle cx="350" cy="356" r="6"/>
+    <circle cx="374" cy="356" r="6"/>
+    <circle cx="398" cy="356" r="6"/>
+    <circle cx="350" cy="380" r="6"/>
+    <circle cx="374" cy="380" r="6"/>
+    <circle cx="398" cy="380" r="6"/>
+  </g>
+</svg>

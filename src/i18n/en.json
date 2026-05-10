@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Ch3ssVid5 Hub"
+  },
+  "header": {
+    "browse": "Browse",
+    "ch3ssvid5": "Ch3ssVid5"
+  },
+  "landing": {
+    "tagline": "Browse annotated chess games synced with YouTube videos.",
+    "tagline2": "Preview, pick, and import into Ch3ssVid5 with one click.",
+    "browseGames": "Browse Games",
+    "contribute": "Contribute",
+    "games": "Games",
+    "youtubers": "YouTubers",
+    "openings": "Openings",
+    "tags": "Tags"
+  },
+  "browse": {
+    "filters": "Filters",
+    "youtuber": "YouTuber",
+    "result": "Result",
+    "variant": "Variant",
+    "opening": "Opening",
+    "tagsLabel": "Tags",
+    "searchPlaceholder": "Search games, players, openings, YouTubers…",
+    "gamesFound": "{{count}} game found",
+    "gamesFound_other": "{{count}} games found",
+    "noResults": "No games match your search. Try different keywords or clear filters.",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters",
+    "sortYoutuber": "Sort: YouTuber",
+    "sortDate": "Sort: Date",
+    "sortPlayer": "Sort: Player",
+    "sortOpening": "Sort: Opening",
+    "loading": "Loading catalog…"
+  },
+  "detail": {
+    "home": "Home",
+    "browse": "Browse",
+    "openingMoves": "Opening Moves",
+    "openInCh3ssVid5": "Open in Ch3ssVid5",
+    "downloadPgn": "Download PGN",
+    "watchOnYoutube": "Watch on YouTube",
+    "loading": "Loading…",
+    "notFound": "Game not found",
+    "play": "Play",
+    "pause": "Pause"
+  },
+  "footer": {
+    "contribute": "Contribute",
+    "license": "GPL-3.0 — Ch3ssVid5 Hub"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you’re looking for doesn’t exist or has been moved.",
+    "home": "Home",
+    "browse": "Browse Games"
+  }
+}
