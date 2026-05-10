@@ -1,5 +1,7 @@
 # Ch3ssVid5 Hub
 
+[![Deploy](https://github.com/sebbrochet/ch3ssvid5hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/sebbrochet/ch3ssvid5hub/actions/workflows/deploy.yml)
+[![Version](https://img.shields.io/github/package-json/v/sebbrochet/ch3ssvid5hub)](https://github.com/sebbrochet/ch3ssvid5hub)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A browsable catalog of annotated chess PGN files synced with YouTube videos. Preview games, search by YouTuber, opening, or tags, and import directly into [Ch3ssVid5](https://ch3ssvid5.sebbrochet.com/) with one click.
