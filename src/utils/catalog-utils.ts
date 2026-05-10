@@ -19,7 +19,8 @@ export function filterGames(
     filtered = filtered.filter((g) => g.youtuber === filters.youtuber);
   }
   if (filters.tag) {
-    filtered = filtered.filter((g) => g.tags.includes(filters.tag));
+    const tag = filters.tag;
+    filtered = filtered.filter((g) => g.tags.includes(tag));
   }
   if (filters.result) {
     filtered = filtered.filter((g) => g.result === filters.result);
