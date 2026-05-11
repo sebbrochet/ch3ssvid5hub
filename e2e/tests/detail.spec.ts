@@ -36,8 +36,8 @@ test.describe('Game Detail', () => {
   test('shows Open in Ch3ssVid5 button', async () => {
     await expect(hub.importButton).toBeVisible();
     const href = await hub.importButton.getAttribute('href');
-    expect(href).toContain('ch3ssvid5.sebbrochet.com');
-    expect(href).toContain('pgn=');
+    expect(href).toContain('?pgn=');
+    expect(href).toContain('folder=');
   });
 
   test('shows Download PGN button', async () => {
