@@ -45,14 +45,6 @@ export default function LandingPage() {
         <Link to="/browse" className="btn btn-primary">
           {t('landing.browseGames')}
         </Link>
-        <a
-          href="https://github.com/sebbrochet/Ch3ssVid5-Hub"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-secondary"
-        >
-          {t('landing.contribute')}
-        </a>
       </section>
     </div>
   );
