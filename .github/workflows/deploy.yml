@@ -44,8 +44,29 @@ jobs:
       - name: Audit
         run: npm audit --audit-level=high
 
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Build catalog
+        run: npm run build:catalog
+
+      - name: Run E2E tests
+        run: npx playwright test --project=desktop-chrome --retries=1
+
   build:
-    needs: check
+    needs: [check, e2e]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
