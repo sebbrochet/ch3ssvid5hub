@@ -25,6 +25,7 @@ interface ChannelResponse {
 interface PlaylistItemSnippet {
   title: string;
   resourceId: { videoId: string };
+  publishedAt: string;
 }
 
 interface PlaylistItemsResponse {
@@ -36,6 +37,7 @@ interface PlaylistItemsResponse {
 interface VideoInfo {
   title: string;
   videoId: string;
+  publishedAt: string;
 }
 
 interface ImportResult {
@@ -73,7 +75,7 @@ export function parseArgs(argv: string[]): CliArgs {
 
   if (!playlist) {
     console.error(
-      'Usage: npm run import:playlist -- --playlist <URL_OR_ID> [--youtuber <handle>] [--playlist-name <name>] [--language <code>] [--dry-run]',
+      'Usage: npx tsx scripts/import-playlist.ts --playlist <URL_OR_ID> [--youtuber <handle>] [--playlist-name <name>] [--language <code>] [--dry-run]',
     );
     process.exit(1);
   }
@@ -130,19 +132,44 @@ export function sanitizeFilename(title: string): string {
 
 // ── PGN Generation ─────────────────────────────────────────────────────────────
 
-export function generatePgn(videoId: string, language?: string): string {
+export function escapePgnString(value: string): string {
+  return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
+export function formatPgnDate(isoDate: string): string {
+  const d = new Date(isoDate);
+  if (isNaN(d.getTime())) return '????.??.??';
+  const yyyy = String(d.getFullYear());
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yyyy}.${mm}.${dd}`;
+}
+
+export function generatePgn(
+  videoId: string,
+  options?: { language?: string; publishedAt?: string; videoTitle?: string; playlistTitle?: string },
+): string {
+  const date = options?.publishedAt ? formatPgnDate(options.publishedAt) : '????.??.??';
   const headers = [
     '[Event "?"]',
     '[Site "?"]',
-    '[Date "????.??.??"]',
+    `[Date "${date}"]`,
     '[White "?"]',
     '[Black "?"]',
     '[Result "*"]',
     `[VideoURL "https://youtu.be/${videoId}"]`,
   ];
 
-  if (language) {
-    headers.push(`[Language "${language}"]`);
+  if (options?.videoTitle) {
+    headers.push(`[VideoTitle "${escapePgnString(options.videoTitle)}"]`);
+  }
+
+  if (options?.playlistTitle) {
+    headers.push(`[VideoPlaylist "${escapePgnString(options.playlistTitle)}"]`);
+  }
+
+  if (options?.language) {
+    headers.push(`[Language "${options.language}"]`);
   }
 
   return headers.join('\n') + '\n\n*\n';
@@ -233,6 +260,7 @@ async function fetchPlaylistItems(playlistId: string, apiKey: string): Promise<V
       videos.push({
         title: item.snippet.title,
         videoId: item.snippet.resourceId.videoId,
+        publishedAt: item.snippet.publishedAt,
       });
     }
 
@@ -327,7 +355,16 @@ async function main() {
 
     try {
       fs.mkdirSync(outputDir, { recursive: true });
-      fs.writeFileSync(filePath, generatePgn(video.videoId, args.language), 'utf-8');
+      fs.writeFileSync(
+        filePath,
+        generatePgn(video.videoId, {
+          language: args.language,
+          publishedAt: video.publishedAt,
+          videoTitle: video.title,
+          playlistTitle: playlistInfo.title,
+        }),
+        'utf-8',
+      );
       console.log(`  ✓ Created: ${filename}`);
       result.created++;
     } catch (err) {

@@ -30,12 +30,14 @@ export default function GameDetail() {
 
   // Build URLs at runtime (uses current origin in dev, production domain in prod)
   const pgnFileUrl = buildPgnFileUrl(game.pgnPath);
-  const folder = catalogGame ? buildFolder(catalogGame.youtuber, catalogGame.playlist) : '';
+  const folder = catalogGame ? buildFolder(catalogGame.youtuberDisplayName, catalogGame.playlistDisplayName) : '';
   const importUrl = buildImportUrl(game.pgnPath, folder);
 
   // Display-friendly headers (exclude internal ones)
   const hiddenHeaders = new Set([
     'VideoURL',
+    'VideoTitle',
+    'VideoPlaylist',
     'Orientation',
     'SetUp',
     'FEN',
@@ -57,7 +59,7 @@ export default function GameDetail() {
             <span className="breadcrumb-sep">›</span>
             <Link to={`/browse?youtuber=${catalogGame.youtuber}`}>{catalogGame.youtuberDisplayName}</Link>
             <span className="breadcrumb-sep">›</span>
-            <span>{catalogGame.playlist}</span>
+            <span>{catalogGame.playlistDisplayName}</span>
           </>
         )}
       </nav>

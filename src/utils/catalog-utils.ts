@@ -66,3 +66,29 @@ export function paginate<T>(
   const pagedItems = items.slice((safePage - 1) * itemsPerPage, safePage * itemsPerPage);
   return { pagedItems, totalPages, safePage };
 }
+
+/**
+ * Build a truncated list of page numbers with ellipsis gaps.
+ * Always shows first, last, and a window of ±siblings around the current page.
+ * Returns numbers for page buttons and `null` for ellipsis placeholders.
+ */
+export function buildPageNumbers(currentPage: number, totalPages: number, siblings: number = 1): (number | null)[] {
+  if (totalPages <= 1) return [1];
+
+  const pages = new Set<number>();
+  pages.add(1);
+  pages.add(totalPages);
+  for (let i = currentPage - siblings; i <= currentPage + siblings; i++) {
+    if (i >= 1 && i <= totalPages) pages.add(i);
+  }
+
+  const sorted = [...pages].sort((a, b) => a - b);
+  const result: (number | null)[] = [];
+  for (let i = 0; i < sorted.length; i++) {
+    if (i > 0 && sorted[i] - sorted[i - 1] > 1) {
+      result.push(null);
+    }
+    result.push(sorted[i]);
+  }
+  return result;
+}

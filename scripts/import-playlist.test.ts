@@ -1,5 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { extractPlaylistId, sanitizeFilename, generatePgn, parseArgs } from './import-playlist';
+import {
+  extractPlaylistId,
+  sanitizeFilename,
+  generatePgn,
+  parseArgs,
+  formatPgnDate,
+  escapePgnString,
+} from './import-playlist';
 
 // ── extractPlaylistId ──────────────────────────────────────────────────────────
 
@@ -80,22 +87,103 @@ describe('generatePgn', () => {
   it('generates skeleton PGN with VideoURL', () => {
     const pgn = generatePgn('dQw4w9WgXcQ');
     expect(pgn).toContain('[Event "?"]');
+    expect(pgn).toContain('[Date "????.??.??"]');
     expect(pgn).toContain('[White "?"]');
     expect(pgn).toContain('[Black "?"]');
     expect(pgn).toContain('[Result "*"]');
     expect(pgn).toContain('[VideoURL "https://youtu.be/dQw4w9WgXcQ"]');
     expect(pgn).not.toContain('[Language');
+    expect(pgn).not.toContain('[VideoTitle');
+    expect(pgn).not.toContain('[VideoPlaylist');
     expect(pgn).toMatch(/\n\*\n$/);
   });
 
   it('includes Language header when provided', () => {
-    const pgn = generatePgn('abc123', 'fr');
+    const pgn = generatePgn('abc123', { language: 'fr' });
     expect(pgn).toContain('[Language "fr"]');
   });
 
   it('omits Language header when not provided', () => {
     const pgn = generatePgn('abc123');
     expect(pgn).not.toContain('[Language');
+  });
+
+  it('includes Date from publishedAt', () => {
+    const pgn = generatePgn('abc123', { publishedAt: '2025-03-15T10:00:00Z' });
+    expect(pgn).toContain('[Date "2025.03.15"]');
+  });
+
+  it('includes VideoTitle when provided', () => {
+    const pgn = generatePgn('abc123', { videoTitle: 'My Great Game' });
+    expect(pgn).toContain('[VideoTitle "My Great Game"]');
+  });
+
+  it('includes VideoPlaylist when provided', () => {
+    const pgn = generatePgn('abc123', { playlistTitle: 'Système Jobava-Londres 🔥' });
+    expect(pgn).toContain('[VideoPlaylist "Système Jobava-Londres 🔥"]');
+  });
+
+  it('escapes double quotes in VideoPlaylist', () => {
+    const pgn = generatePgn('abc123', { playlistTitle: 'The "Best" Playlist' });
+    expect(pgn).toContain('[VideoPlaylist "The \\"Best\\" Playlist"]');
+  });
+
+  it('includes all optional headers together', () => {
+    const pgn = generatePgn('abc123', {
+      language: 'en',
+      publishedAt: '2024-12-01T08:30:00Z',
+      videoTitle: 'Best Opening Ever',
+      playlistTitle: 'My Playlist',
+    });
+    expect(pgn).toContain('[Date "2024.12.01"]');
+    expect(pgn).toContain('[VideoTitle "Best Opening Ever"]');
+    expect(pgn).toContain('[VideoPlaylist "My Playlist"]');
+    expect(pgn).toContain('[Language "en"]');
+  });
+  it('escapes double quotes in VideoTitle', () => {
+    const pgn = generatePgn('abc123', { videoTitle: 'The "King\'s Indian" Attack' });
+    expect(pgn).toContain('[VideoTitle "The \\"King\'s Indian\\" Attack"]');
+  });
+
+  it('escapes backslashes in VideoTitle', () => {
+    const pgn = generatePgn('abc123', { videoTitle: 'Path\\to\\victory' });
+    expect(pgn).toContain('[VideoTitle "Path\\\\to\\\\victory"]');
+  });
+});
+
+// ── escapePgnString ────────────────────────────────────────────────────────────
+
+describe('escapePgnString', () => {
+  it('escapes double quotes', () => {
+    expect(escapePgnString('The "best" move')).toBe('The \\"best\\" move');
+  });
+
+  it('escapes backslashes', () => {
+    expect(escapePgnString('a\\b')).toBe('a\\\\b');
+  });
+
+  it('escapes both together', () => {
+    expect(escapePgnString('say "hello\\world"')).toBe('say \\"hello\\\\world\\"');
+  });
+
+  it('returns plain strings unchanged', () => {
+    expect(escapePgnString('Normal title')).toBe('Normal title');
+  });
+});
+
+// ── formatPgnDate ──────────────────────────────────────────────────────────────
+
+describe('formatPgnDate', () => {
+  it('formats ISO date to PGN date', () => {
+    expect(formatPgnDate('2025-03-15T10:00:00Z')).toBe('2025.03.15');
+  });
+
+  it('handles different times correctly', () => {
+    expect(formatPgnDate('2024-01-01T00:00:00Z')).toBe('2024.01.01');
+  });
+
+  it('returns unknown date for invalid input', () => {
+    expect(formatPgnDate('not-a-date')).toBe('????.??.??');
   });
 });
 

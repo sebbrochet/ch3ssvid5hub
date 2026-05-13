@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Fuse from 'fuse.js';
 import { useCatalog } from '../hooks/useCatalog';
 import { usePageTitle } from '../hooks/usePageTitle';
-import { filterGames, sortGames, paginate } from '../utils/catalog-utils';
+import { filterGames, sortGames, paginate, buildPageNumbers } from '../utils/catalog-utils';
 import GameCard from './GameCard';
 import type { CatalogGame } from '../types/catalog';
 import './CatalogBrowser.css';
@@ -392,15 +392,21 @@ export default function CatalogBrowser() {
                 <button className="pagination-btn" disabled={safePage <= 1} onClick={() => goToPage(safePage - 1)}>
                   ‹
                 </button>
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                  <button
-                    key={p}
-                    className={`pagination-btn ${p === safePage ? 'active' : ''}`}
-                    onClick={() => goToPage(p)}
-                  >
-                    {p}
-                  </button>
-                ))}
+                {buildPageNumbers(safePage, totalPages).map((p, i) =>
+                  p === null ? (
+                    <span key={`ellipsis-${i}`} className="pagination-ellipsis">
+                      …
+                    </span>
+                  ) : (
+                    <button
+                      key={p}
+                      className={`pagination-btn ${p === safePage ? 'active' : ''}`}
+                      onClick={() => goToPage(p)}
+                    >
+                      {p}
+                    </button>
+                  ),
+                )}
                 <button
                   className="pagination-btn"
                   disabled={safePage >= totalPages}

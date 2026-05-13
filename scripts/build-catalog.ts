@@ -34,6 +34,7 @@ interface CatalogGame {
   youtuber: string;
   youtuberDisplayName: string;
   playlist: string;
+  playlistDisplayName: string;
   fileName: string;
   gameIndex: number;
   white: string;
@@ -488,6 +489,7 @@ async function buildCatalog(): Promise<void> {
         youtuber,
         youtuberDisplayName: displayNames[youtuber],
         playlist,
+        playlistDisplayName: h['VideoPlaylist'] ?? playlist,
         fileName,
         gameIndex: gi,
         white: h['White'] ?? '?',

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { filterGames, sortGames, paginate } from './catalog-utils';
+import { filterGames, sortGames, paginate, buildPageNumbers } from './catalog-utils';
 import type { CatalogGame } from '../types/catalog';
 
 function makeGame(overrides: Partial<CatalogGame> = {}): CatalogGame {
@@ -8,6 +8,7 @@ function makeGame(overrides: Partial<CatalogGame> = {}): CatalogGame {
     youtuber: 'TestYoutuber',
     youtuberDisplayName: 'Test Youtuber',
     playlist: 'TestPlaylist',
+    playlistDisplayName: 'TestPlaylist',
     fileName: 'test.pgn',
     gameIndex: 0,
     white: 'White Player',
@@ -189,5 +190,48 @@ describe('paginate', () => {
     const result = paginate([1, 2], 1, 10);
     expect(result.pagedItems).toEqual([1, 2]);
     expect(result.totalPages).toBe(1);
+  });
+});
+
+describe('buildPageNumbers', () => {
+  it('returns [1] for single page', () => {
+    expect(buildPageNumbers(1, 1)).toEqual([1]);
+  });
+
+  it('returns all pages when total is small', () => {
+    expect(buildPageNumbers(1, 3)).toEqual([1, 2, 3]);
+  });
+
+  it('returns all pages when within sibling range', () => {
+    expect(buildPageNumbers(3, 5)).toEqual([1, 2, 3, 4, 5]);
+  });
+
+  it('truncates end when on first page with many pages', () => {
+    expect(buildPageNumbers(1, 20)).toEqual([1, 2, null, 20]);
+  });
+
+  it('truncates start when on last page with many pages', () => {
+    expect(buildPageNumbers(20, 20)).toEqual([1, null, 19, 20]);
+  });
+
+  it('truncates both sides when in the middle', () => {
+    expect(buildPageNumbers(10, 20)).toEqual([1, null, 9, 10, 11, null, 20]);
+  });
+
+  it('does not show ellipsis for adjacent pages', () => {
+    // Page 3 of 5: window is [2,3,4], plus first=1 and last=5 → all contiguous
+    expect(buildPageNumbers(3, 5)).toEqual([1, 2, 3, 4, 5]);
+  });
+
+  it('shows ellipsis only on one side when near start', () => {
+    expect(buildPageNumbers(3, 10)).toEqual([1, 2, 3, 4, null, 10]);
+  });
+
+  it('shows ellipsis only on one side when near end', () => {
+    expect(buildPageNumbers(8, 10)).toEqual([1, null, 7, 8, 9, 10]);
+  });
+
+  it('respects custom siblings parameter', () => {
+    expect(buildPageNumbers(10, 20, 2)).toEqual([1, null, 8, 9, 10, 11, 12, null, 20]);
   });
 });

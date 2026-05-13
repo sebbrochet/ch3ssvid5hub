@@ -11,8 +11,8 @@ vi.stubGlobal('window', {
 });
 
 describe('buildFolder', () => {
-  it('combines youtuber and playlist', () => {
-    expect(buildFolder('agadmator', 'World Championship 2024')).toBe('agadmator/World Championship 2024');
+  it('combines youtuber display name and playlist', () => {
+    expect(buildFolder('IM Alex Banzea', 'World Championship 2024')).toBe('IM Alex Banzea/World Championship 2024');
   });
 
   it('handles special characters', () => {

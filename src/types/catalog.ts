@@ -8,6 +8,8 @@ export interface CatalogGame {
   youtuberDisplayName: string;
   /** Original YouTube playlist name (folder name) */
   playlist: string;
+  /** Original YouTube playlist title from [VideoPlaylist] header (unsanitized) */
+  playlistDisplayName: string;
   /** PGN filename */
   fileName: string;
   /** Index within multi-game PGN (0-based) */
