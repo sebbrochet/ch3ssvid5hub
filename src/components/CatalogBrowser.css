@@ -51,6 +51,49 @@
   margin-left: auto;
 }
 
+/* Opening family groups */
+.opening-family {
+  margin-bottom: 0.15rem;
+}
+
+.opening-family-header {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.2rem 0;
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.opening-family-header:hover {
+  color: var(--color-primary);
+}
+
+.opening-family-header.active {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.opening-family-arrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+
+.opening-family-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.opening-family-variants {
+  padding-left: 1.1rem;
+}
+
 .browse-main {
   flex: 1;
   min-width: 0;

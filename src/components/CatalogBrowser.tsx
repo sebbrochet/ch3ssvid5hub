@@ -44,6 +44,7 @@ export default function CatalogBrowser() {
 
   const [localQuery, setLocalQuery] = useState(query);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
   const searchRef = useRef<HTMLInputElement>(null);
 
   // Keyboard shortcuts: / to focus search, Escape to clear
@@ -91,6 +92,20 @@ export default function CatalogBrowser() {
 
   // Pagination
   const { pagedItems: pagedGames, totalPages, safePage } = paginate(sortedGames, currentPage, GAMES_PER_PAGE);
+
+  // Group openings by family (first part before ":" or ",")
+  const openingFamilies = useMemo(() => {
+    if (!catalog) return [];
+    const familyMap = new Map<string, string[]>();
+    for (const op of catalog.openings) {
+      const family = op.split(/[:,]/)[0].trim();
+      if (!familyMap.has(family)) familyMap.set(family, []);
+      familyMap.get(family)!.push(op);
+    }
+    return [...familyMap.entries()]
+      .map(([family, variants]) => ({ family, variants: variants.sort() }))
+      .sort((a, b) => a.family.localeCompare(b.family));
+  }, [catalog]);
 
   function updateSearch(newQuery: string) {
     setLocalQuery(newQuery);
@@ -226,18 +241,67 @@ export default function CatalogBrowser() {
         {catalog.openings.length > 0 && (
           <div className="filter-group">
             <h4>{t('browse.opening')}</h4>
-            {catalog.openings.map((op) => {
-              const count = catalog.games.filter((g) => g.opening === op).length;
+            {openingFamilies.map(({ family, variants }) => {
+              const familyCount = catalog.games.filter((g) => g.opening?.startsWith(family)).length;
+              const isExpanded = expandedFamilies.has(family);
+              const hasVariants = variants.length > 1;
+
+              if (!hasVariants) {
+                // Single opening — render flat (no expand/collapse)
+                const op = variants[0];
+                return (
+                  <label key={op} className={`filter-item ${selectedOpening === op ? 'active' : ''}`}>
+                    <input
+                      type="checkbox"
+                      checked={selectedOpening === op}
+                      onChange={() => toggleFilter('opening', op)}
+                    />
+                    {op}
+                    <span className="filter-count">({familyCount})</span>
+                  </label>
+                );
+              }
+
               return (
-                <label key={op} className={`filter-item ${selectedOpening === op ? 'active' : ''}`}>
-                  <input
-                    type="checkbox"
-                    checked={selectedOpening === op}
-                    onChange={() => toggleFilter('opening', op)}
-                  />
-                  {op}
-                  <span className="filter-count">({count})</span>
-                </label>
+                <div key={family} className="opening-family">
+                  <button
+                    className={`opening-family-header ${variants.some((v) => v === selectedOpening) ? 'active' : ''}`}
+                    onClick={() => {
+                      setExpandedFamilies((prev) => {
+                        const next = new Set(prev);
+                        if (next.has(family)) next.delete(family);
+                        else next.add(family);
+                        return next;
+                      });
+                    }}
+                  >
+                    <span className={`opening-family-arrow ${isExpanded ? 'expanded' : ''}`}>▸</span>
+                    {family}
+                    <span className="filter-count">({familyCount})</span>
+                  </button>
+                  {isExpanded && (
+                    <div className="opening-family-variants">
+                      {variants.map((op) => {
+                        const count = catalog.games.filter((g) => g.opening === op).length;
+                        // Show only the variant part after the family name
+                        const variantLabel = op.startsWith(family)
+                          ? op.slice(family.length).replace(/^[,:]\s*/, '')
+                          : op;
+                        return (
+                          <label key={op} className={`filter-item ${selectedOpening === op ? 'active' : ''}`}>
+                            <input
+                              type="checkbox"
+                              checked={selectedOpening === op}
+                              onChange={() => toggleFilter('opening', op)}
+                            />
+                            {variantLabel || op}
+                            <span className="filter-count">({count})</span>
+                          </label>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>
