@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLrkH1SE3m-XxHN4RKvWfq5IPnuN5j7Yhg'
+defaults:
+  videoPlaylist: "Batailles sur l'échiquier ! ⚔️"

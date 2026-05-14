@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLy7vABK_JsyO0bxBYHkNO_Lk-3GrtU4qq'
+defaults:
+  videoPlaylist: 'OTB rapid chess'

@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLiZ56cRXeIu0ugSkWLA4HQa_t2yILdBkA'
+defaults:
+  videoPlaylist: 'Répertoire complet avec les blancs (1.e4)'

@@ -1,0 +1,37 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "Bird's Defence (3...Nd4)"]
+[Result "*"]
+[VideoURL "https://youtu.be/ilq6Tu7ZTkQ?si=nCeQDVujMxuVYOdn"]
+[ECO "C61"]
+[Annotator "ChessGeek"]
+[PlyCount "38"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 {Welcome to the
+chapter covering 3...Nd4: A dubious defense indeed. Moving the same piece
+twice does not inspire much confidence in Black's plan. It is tempting to try
+to go for a quick win against such moves, but this is where these dubious
+defenses actually make sense - they tempt White into making overly ambitious
+responses. Instead, we need to develop our other pieces and 0-0.   A breakdown
+of the ideas/lines we cover:   Thankfully, after we castle, Black does not
+have too many alternatives to consider. In terms of developing, only Bc5 & Ne7
+make sense (putting the knight on f6, although possible, invites the response
+e5!). The only question is if and when Black plays c6. They can start with c6,
+or first develop the bishop and then play c6, or develop the Bishop and Knight
+first and avoid c6 altogether, but then their attempt to strike with d5 is
+much harder. Either way, we respond by simply developing naturally, and if c6
+comes, moving the Bishop to the most active diagonal on c4!} e5 2. Nf3 Nc6 3. Bb5 Nd4 {A dubious defense indeed. Moving the same piece twice does not
+inspire much confidence in Black's plan. It is tempting to try to go for a
+quick win against such moves, but this is where these dubious defenses
+actually make sense - they tempt White into making overly ambitious responses.
+Instead, we need to develop our other pieces and 0-0.} 4. Nxd4 exd4 5. O-O Bc5 ( 5... c6 6. Bc4 Bc5 ( 6... Nf6 7. Re1 Bc5 8. e5 Nd5 9. Bxd5 cxd5 {[%csl Gd4,Gd5,Gd7]} 10. d3 O-O 11. Nd2 Re8 12. Qh5 d6 13. Nf3 dxe5 14. Ng5 ) 7. Bxf7+ Kxf7 8. Qh5+ ) ( 5... Be7 {Not a good move, because again, the Knight has trouble coming
+to f6} 6. Qf3 Nf6 7. e5 Ng8 8. Bc4 Nh6 9. d3 O-O 10. Bxh6 gxh6 11. Nd2 ) 6. d3 Ne7 ( 6... c6 7. Bc4 d5 ( 7... Ne7 8. Bxf7+ Kxf7 9. Qh5+ ) 8. Bb3 {exd5 seems
+most natural, but I recommend a different, more rare move: Bb3. This seems
+strange, to move the bishop again, but note that first, they can never take on
+e4 before 0-0 due to the pressure on f7 (Qh5 ideas), and secondly, we wish to
+maintain a pawn on e4, which we can use in conjunction with a pawn on f4, to
+obtain some Kingside pressure and space.} Ne7 ( 8... dxe4 9. Qh5 ) 9. f4 O-O 10. f5 f6 11. Nd2 Kh8 12. Qh5 Qe8 13. Qh4 Bb6 14. Rf3 h6 15. Nf1 Ng8 16. exd5 cxd5 17. Bxd5 Ba5 18. Bf4 {1-0 (18) Doggers,P (2189)-Talma,K Vlissingen 2003} ) 7. Qh5 Bb6 8. Bc4 O-O 9. Bg5 Qe8 10. f4 Kh8 11. Qf3 Ng6 12. Qh5 f6 13. Bh4 Nxh4 14. Qxh4 c6 15. Nd2 d6 16. f5 Bd7 17. Rf3 d5 18. exd5 cxd5 19. Bxd5 Bc6 {1-0 (19) Golek,J (2066)-Swiatnicka,M (1822) Mrzezyno 2011} *

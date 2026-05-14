@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "2023.01.27"]
+[Round "?"]
+[White "Classical 9.Nd2"]
+[Black "Chapter 3"]
+[Result "*"]
+[VideoURL "https://youtu.be/-FA6omzhDT4?si=U36GB-el2LmiVn4j"]
+[ECO "E97"]
+[Annotator "ChessGeek"]
+[PlyCount "66"]
+[EventDate "2019.??.??"]
+[SourceVersionDate "2023.01.18"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Nd2 Ne8 10. b4 ( 10. Rb1 f5 11. b4 Nf6 12. f3 f4 13. c5 g5 14. Nc4 Ng6 15. a4 Rf7 16. Ba3 Bf8 17. a5 Rg7 18. b5 b6 19. cxd6 cxd6 20. Na2 g4 21. fxg4 Nh4 22. Rb3 Nxg4 23. Bf3 bxa5 24. Qd2 a4 25. Rc3 Bd7 26. Rb1 Rc8 27. Kh1 Nxh2 28. Kxh2 Rxc4 29. Rbc1 Nxf3+ 30. Rxf3 Qh4+ 31. Kg1 Rxe4 32. Qf2 Qh5 33. Rc7 Re1+ 34. Qxe1 Qxf3 35. Qd2 Qg4 36. Nc3 f3 37. Rxa7 Qh3 {0-1 (37) Kamsky,G (2655)-Kasparov,G (2790) Paris 1992} ) 10... f5 11. c5 Nf6 12. f3 f4 13. Nc4 g5 14. a4 Ng6 15. Ba3 Rf7 16. b5 ( 16. a5 h5 17. b5 dxc5 18. b6 g4 19. bxc7 Rxc7 20. Nb5 g3 ( 20... Rf7 ) 21. Nxc7 Nxe4 22. Ne6 ( 22. fxe4 Qh4 23. h3 Bxh3 24. gxh3 Qxh3 25. Rf2 gxf2+ 26. Kxf2 Qg3+ 27. Kf1 f3 ( 27... Qh3+ ) 28. Bxf3 ( 28. Nxa8 fxe2+ 29. Qxe2 Nf4 ) 28... Rf8 ) 22... Bxe6 23. dxe6 gxh2+ 24. Kxh2 Qh4+ 25. Kg1 Ng3 26. Bxc5 e4 27. Ra4 Rc8 28. Bxa7 b5 29. Rb4 bxc4 30. Bxc4 Qh1+ 31. Kf2 e3+ 32. Bxe3 fxe3+ 33. Kxe3 Nxf1+ 34. Bxf1 Qg1+ {0-1 (34)
+Beliavsky,A (2662)-Nakamura,H (2710) Amsterdam 2009} ) 16... dxc5 17. Bxc5 h5 18. a5 g4 19. b6 g3 20. Kh1 Bf8 21. d6 axb6 22. Bg1 Nh4 23. Re1 Nxg2 24. dxc7 Nxe1 25. Qxe1 g2+ 26. Kxg2 Rg7+ 27. Kh1 Bh3 28. Bf1 Qd3 29. Nxe5 Bxf1 30. Qxf1 Qxc3 31. Rc1 Qxe5 32. c8=Q Rxc8 33. Rxc8 Qe6 {0-1 (33) Gelfand,B (2761)
+-Nakamura,H (2708) Bursa 2010 CBM 134 [Ftacnik,L]} *

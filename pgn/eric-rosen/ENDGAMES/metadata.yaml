@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLdT3OotRiHJmV3ZxuV0mQPA2R9ZnxEBOZ'
+defaults:
+  videoPlaylist: 'ENDGAMES'

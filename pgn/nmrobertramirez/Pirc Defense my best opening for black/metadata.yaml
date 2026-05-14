@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLQKBpQZcRycrdFv_RC9rovYN1Wh6F_JPR'
+defaults:
+  videoPlaylist: 'Pirc Defense: my best opening for black'

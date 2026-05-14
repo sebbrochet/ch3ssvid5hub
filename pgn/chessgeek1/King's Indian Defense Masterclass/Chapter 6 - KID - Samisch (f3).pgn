@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "2023.01.27"]
+[Round "?"]
+[White "Sämisch"]
+[Black "Chapter 6"]
+[Result "*"]
+[VideoURL "https://youtu.be/cSg4hNKl0e0?si=n_zoGzSFk6cfCW4j"]
+[ECO "A65"]
+[Annotator "ChessGeek"]
+[PlyCount "64"]
+[EventDate "2019.??.??"]
+[SourceVersionDate "2023.01.18"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 c5 7. d5 ( 7. dxc5 dxc5 8. Qxd8 Rxd8 9. Bxc5 Nc6 10. Nge2 ( 10. Nd5 Nd7 11. Bxe7 ( 11. Nxe7+ Nxe7 12. Bxe7 Bxb2 13. Rb1 Bc3+ 14. Kf2 Bd4+ 15. Kg3 Re8 16. Bg5 Nf6 17. Ne2 Nh5+ 18. Kh4 Bf2+ 19. g3 f6 20. Bd2 Ng7 ) 11... Nxe7 12. Nxe7+ Kf8 13. Nd5 Bxb2 14. Rb1 Bg7 15. Nh3 Nc5 16. Nf2 Be6 17. Be2 Rac8 18. O-O b6 ) ( 10. Ba3 a5 11. Rd1 Be6 12. Nd5 Nb4 13. Nxe7+ Kh8 14. Rxd8+ Rxd8 15. Nd5 Nc2+ 16. Kf2 Nxa3 17. bxa3 b5 18. cxb5 Nxd5 19. exd5 Rxd5 20. Ne2 Rxb5 21. Nf4 Rb2+ 22. Ke3 Bh6 ) 10... Nd7 11. Be3 Nde5 12. Nf4 Nb4 13. Rc1 Bh6 14. Nfd5 Bxe3 15. Nxe3 Nbd3+ 16. Bxd3 Nxd3+ 17. Ke2 Nxc1+ 18. Rxc1 e6 19. Nb5 b6 20. b4 Bd7 21. Nd6 Bc6 22. e5 a5 23. b5 Be8 24. g4 f6 25. f4 g5 26. fxg5 fxe5 27. Ne4 Bg6 28. Nf6+ Kh8 29. c5 bxc5 30. Rxc5 Bd3+ 31. Kf2 a4 32. h4 Rab8 33. Rxe5 Rxb5 34. Rxe6 Rb2+ 35. Kg3 Rxa2 36. h5 Re2 37. Re7 Bb1 38. g6 Rxe3+ 39. Rxe3 Rd3 40. Rxd3 Bxd3 41. gxh7 a3 42. g5 a2 43. g6 a1=Q 44. Ng4 Bxg6 45. hxg6 Kg7 46. Kf4 Kxg6 47. h8=Q Qxh8 48. Ne5+ Kg7 49. Kf5 Qa8 50. Ke6 Qc8+ 51. Kd5 Qb7+ 52. Nc6 Kf6 53. Kd6 Qb6 54. Kd7 Qc5 55. Nd8 Qd5+ 56. Kc7 Ke7 57. Nc6+ Ke8 58. Nb8 Qd8+ 59. Kb7 Qd6 60. Nc6 Kd7 61. Nb8+ Ke6 62. Nc6 Kd5 63. Kb6 Qxc6+ 64. Ka7 {Hikaru won by resignation 0-1 (64) uzbektiger95 (2777)-Hikaru 
+(3152) Chess.com 2016} ) ( 7. Nge2 Nc6 8. Ng3 Ng4 9. fxg4 cxd4 10. Bd2 dxc3 11. Bxc3 Bxc3+ 12. bxc3 Qa5 ) 7... a6 8. Qd2 e6 9. O-O-O ( 9. dxe6 Bxe6 10. Rd1 Qa5 11. Qxd6 Nfd7 12. Bd2 Nc6 13. Nd5 Qxa2 14. Bc3 Bxc3+ 15. bxc3 Bxd5 16. cxd5 Nce5 17. Nh3 Qc2 18. Be2 Rae8 19. Kf2 f5 ) ( 9. Nge2 exd5 10. cxd5 Nbd7 11. a4 Ne5 12. Ng3 Rb8 ( 12... h5 13. Be2 h4 14. Nf1 Rb8 15. h3 Nh5 16. Nh2 Ng3 ) ) 9... exd5 10. cxd5 b5 11. h4 b4 12. Nce2 h5 13. Nf4 Re8 14. Ngh3 a5 15. Ng5 Ba6 16. Bxa6 Nxa6 17. Rdg1 c4 18. g4 c3 19. bxc3 bxc3 20. Qg2 Rb8 21. gxh5 Rb2 22. hxg6 fxg6 23. Nge6 Qb8 24. Qxg6 Rb1+ 25. Kc2 Qb2+ 26. Kd3 Nb4+ 27. Kc4 Qxa2+ 28. Kb5 Rb8+ 29. Bb6 Nbxd5+ 30. Ka6 R1xb6+ 31. Ka7 R6b7+ 32. Ka6 Nb4# {Hikaru won by
+checkmate 0-1 (32) TaytayBis (2363)-Hikaru (2943) Chess.com 2015} *

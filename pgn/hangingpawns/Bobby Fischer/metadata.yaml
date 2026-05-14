@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLssNbVBYrGcCve2i0o8h7-5zPQJsoBKd8'
+defaults:
+  videoPlaylist: 'Bobby Fischer'

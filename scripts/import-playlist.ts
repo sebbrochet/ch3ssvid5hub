@@ -111,17 +111,25 @@ export function extractPlaylistId(input: string): string {
 
 // ── Filename Sanitization ──────────────────────────────────────────────────────
 
-const UNSAFE_CHARS = /[<>:"/\\|?*]/g;
+const UNSAFE_CHARS = /[<>:"/\\|?*#[\]]/g;
 const EMOJI = /[\p{Emoji_Presentation}\p{Extended_Pictographic}\uFE0E\uFE0F]/gu;
 const UNICODE_WHITESPACE = /[\u00A0\u2000-\u200A\u202F\u205F\u3000]/g;
+const SMART_SINGLE_QUOTES = /[\u2018\u2019\u201A\u201B]/g;
+const SMART_DOUBLE_QUOTES = /[\u201C\u201D\u201E\u201F]/g;
+const UNICODE_DASHES = /[\u2013\u2014\u2015]/g;
+const NON_ASCII_SYMBOLS = /[^\p{L}\p{M}\p{N}\x20-\x7E]/gu;
 const CONSECUTIVE_SPACES = /\s{2,}/g;
 const MAX_FILENAME_LENGTH = 200;
 
 export function sanitizeFilename(title: string): string {
   let name = title
     .replace(UNICODE_WHITESPACE, ' ')
+    .replace(SMART_SINGLE_QUOTES, "'")
+    .replace(SMART_DOUBLE_QUOTES, '')
+    .replace(UNICODE_DASHES, '-')
     .replace(UNSAFE_CHARS, '')
     .replace(EMOJI, '')
+    .replace(NON_ASCII_SYMBOLS, '')
     .replace(CONSECUTIVE_SPACES, ' ')
     .trim();
 

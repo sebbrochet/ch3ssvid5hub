@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLf5T-au8Lb20jlCgrptI6Lcser1TVpETx'
+defaults:
+  videoPlaylist: 'Learn Chess Openings'

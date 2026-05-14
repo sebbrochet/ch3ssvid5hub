@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLQKBpQZcRycrOWMB4mCCh1O3T7BMqouwn'
+defaults:
+  videoPlaylist: 'Rook Endgames - Every class on rook endgames from our Chess course can be found here. Learn this crucial topic with National Master Robert Ramirez'

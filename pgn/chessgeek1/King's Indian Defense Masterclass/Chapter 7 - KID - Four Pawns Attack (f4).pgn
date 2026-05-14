@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "2023.01.27"]
+[Round "?"]
+[White "Four Pawns Attack"]
+[Black "Chapter 7"]
+[Result "*"]
+[VideoURL "https://youtu.be/hHQ_NgF5UfM?si=hEe9zNLRIIg_aOwG"]
+[ECO "E76"]
+[Annotator "ChessGeek"]
+[PlyCount "87"]
+[SourceVersionDate "2023.01.18"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f4 O-O 6. Nf3 c5 7. dxc5 ( 7. d5 e6 8. dxe6 ( 8. Be2 exd5 9. cxd5 Re8 10. e5 dxe5 11. fxe5 Ng4 ) ( 8. Bd3 exd5 9. cxd5 Re8 10. O-O c4 11. Bc2 Na6 12. a3 Nc5 13. Re1 Ng4 14. h3 Nb3 15. Bxb3 Qb6+ 16. Be3 Nxe3 ) 8... fxe6 9. Bd3 Nc6 10. O-O Nd4 11. Ng5 e5 12. f5 h6 13. Nh3 gxf5 14. exf5 b5 15. Be3 bxc4 16. Bxc4+ Kh8 17. Bxd4 cxd4 18. Nd5 Ba6 19. Nxf6 Bxc4 20. Nh5 Bxf1 21. Qg4 Qd7 22. Rxf1 d3 23. Qf3 d2 24. g4 Rac8 25. Qd3 Qa4 26. Nf2 Qd4 27. Qxd4 exd4 28. Nf4 Rfe8 29. Ne6 Rc1 30. Nd1 Bf6 31. Kf2 Bg5 32. Ke2 Rc5 33. Kd3 Re5 34. Nxg5 hxg5 35. Rf2 Re4 36. h3 Re3+ 37. Kxd4 R8e4+ 38. Kd5 Re2 39. Rf3 Re1 40. f6 Rf4 {0-1 (40) Christiansen,L (2585)-Kasparov,G (2675)
+Moscow 1982 IZT [Kasparov,G]} ) 7... Qa5 8. Bd3 Qxc5 9. Qe2 Nc6 10. Be3 Qa5 11. O-O Bg4 12. Rac1 Nd7 13. Qf2 Bxf3 14. gxf3 Nc5 15. Bb1 Na4 16. Nxa4 Qxa4 17. b3 ( 17. Kh1 e6 18. h4 Ne7 19. h5 Qb4 20. Rc2 Rac8 21. b3 f5 22. Qh4 Kf7 23. Re2 Bf6 24. Qh2 b5 25. cxb5 Qxb5 26. Bxa7 Rc3 27. Bg1 Rg8 28. h6 Rgc8 29. Ree1 Ng8 30. a4 Qb4 31. exf5 exf5 32. Rd1 Ne7 33. a5 d5 34. a6 Rxb3 35. a7 Rb2 36. Qg3 d4 37. Bd3 Qa3 38. Rc1 Qxa7 39. Rxc8 Nxc8 40. Bc4+ Kf8 41. Qe1 Qe7 42. Qc1 Rb6 43. Re1 Qc7 44. Qa3+ Qd6 45. Qa8 Rb8 46. Qa4 Nb6 47. Qa6 Nxc4 48. Qxc4 Qxf4 49. Qc5+ Kg8 50. Qd5+ Kh8 51. Bh2 Qxh6 52. Qc6 Rf8 53. Re6 Bg7 54. Kg1 Qg5+ 55. Kf1 Qd8 56. Bd6 Rg8 57. Ke2 Qa8 {0-1 (57) Arencibia Rodriguez,W (2542)-Nakamura,H 
+(2430) Linares 2002} ) 17... Qa3 18. c5 dxc5 19. Bxc5 Qxc5 20. Rxc5 Bd4 21. Rd1 Bxf2+ 22. Kxf2 Rfd8 23. Rcd5 e6 24. Rxd8+ Rxd8 25. Rxd8+ Nxd8 26. Ke3 Kf8 27. f5 e5 28. f4 f6 29. fxe5 fxe5 30. fxg6 hxg6 31. h4 Kg7 32. Kd3 Kf6 33. Kc4 Ke6 34. Kc5 b6+ 35. Kb5 Kd6 36. b4 Kc7 37. a4 Ne6 38. Ba2 Nd4+ 39. Ka6 Kb8 40. Bf7 Nf3 41. Bxg6 Nxh4 42. Bf7 Nf3 43. a5 bxa5 44. bxa5 {1/2-1/2 (44) Topalov,V 
+(2640)-Kasparov,G (2805) Linares 1994} *

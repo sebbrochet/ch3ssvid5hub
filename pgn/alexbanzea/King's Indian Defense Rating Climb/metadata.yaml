@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLy7vABK_JsyMwuY5Oo9BK1xl4Ken3f8ob'
+defaults:
+  videoPlaylist: "King's Indian Defense Rating Climb"

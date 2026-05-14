@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLtD5kVP5gLc7gEZ4KR-m2kpuK7t1UdQgK'
+defaults:
+  videoPlaylist: 'Endgame Technique & Practice'

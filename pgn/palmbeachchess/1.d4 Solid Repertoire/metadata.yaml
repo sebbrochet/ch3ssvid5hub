@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLtD5kVP5gLc70xU3LnpLvfQz93ExZov0I'
+defaults:
+  videoPlaylist: '1.d4 Solid Repertoire'

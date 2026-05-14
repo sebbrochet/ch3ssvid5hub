@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLrkH1SE3m-XzI1uO-KM3d0ZHW3JpbKVJw'
+defaults:
+  videoPlaylist: 'Système Jobava-Londres'

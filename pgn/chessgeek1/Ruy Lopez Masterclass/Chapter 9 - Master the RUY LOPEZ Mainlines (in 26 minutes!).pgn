@@ -1,0 +1,28 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "ML: Nf6+d6/Be7"]
+[Result "*"]
+[VideoURL "https://youtu.be/mAQ6XuzI9T4?si=HQyz3zRHZDEOk161"]
+[ECO "C65"]
+[Annotator "ChessGeek"]
+[PlyCount "9"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 {This chapter covers the ML
+of Nf6 + d6/Be7. The main difference between the two ML chapters is that here
+g6&Bg7 is possible. On one hand this can be a good defensive resource, and
+thus many times the QS is where White plays for an advantage. But, the dark
+squares are weakened when g6 is played, and White should not forget about KS
+attacking chances. We will see both of these concepts.} e5 2. Nf3 Nc6 3. Bb5 Nf6 {We will delay playing c3, until the e5 pawn is defended, either with
+Re8+Bf8, or more commonly d6, as at that point, Na5 becomes possible and we
+need Bc2.} ( 3... a6 4. Ba4 Nf6 5. d3 d6 ( 5... b5 6. Bb3 Be7 ( 6... d6 7. c3 ) 7. O-O O-O ( 7... d6 8. c3 ) 8. Re1 d6 ( 8... Bb7 9. Nbd2 d6 ( 9... Re8 10. Nf1 Bf8 11. c3 d6 {By prioritizing development, and not playing c3 unnecessarily, we
+made it tough for Black to break with d5, as we always had good piece
+placement. So, we instead encourage them to play for d6, which is more passive,
+and gives us good attacking chances.} 12. Ng3 g6 {A key difference when the
+Bishop is on e7/f8 and not c5 is that g6 with Bg7 is possible. But this does
+weaken the g5 square.} 13. Ng5 Re7 14. a4 {We come back to a4 as our friend!} h6 15. Nf3 Bg7 16. h4 {h4 is our friend too!} h5 17. Bg5 Qd7 18. axb5 axb5 19. Rxa8+ Bxa8 20. Nh2 Re8 21. Re3 {the attack plays itself.} ) 10. c3 Nb8 ( 10... Na5 11. Bc2 c5 12. Nf1 Re8 13. Ng3 g6 14. d4 cxd4 15. cxd4 Nc6 16. d5 Nb4 17. Bb1 a5 18. a3 Na6 19. Bd3 Qd7 20. Qe2 Nc7 21. Be3 a4 22. Rac1 Rec8 23. Rc2 Bd8 24. Rec1 Qe8 25. Nd2 h5 26. f3 h4 27. Ngf1 Nh5 28. g3 hxg3 29. hxg3 Kg7 30. Nb1 Qe7 31. Nc3 Ne8 32. Nxb5 Rxc2 33. Qxc2 Rc8 34. Nc3 Qf6 35. Qf2 Ba5 36. Nxa4 Rxc1 37. Bxc1 Bc8 38. b4 Bd8 39. Be3 Bh3 40. Nb6 Kg8 41. a4 Nf4 42. gxf4 exf4 43. Bd4 Qg5+ 44. Kh1 Qh5 45. Nh2 Bh4 46. Qg1 Bg3 47. Be2 Qh4 48. a5 Ng7 49. a6 Bxh2 50. Qxh2 Qe1+ 51. Bg1 Nh5 52. Qf2 Ng3+ 53. Kh2 Qa1 54. Qd4 Qe1 55. Kxh3 Nxe4 56. Kg2 Qxe2+ 57. Bf2 Nxf2 58. Qxf2 Qxa6 59. Nd7 Qb5 60. Nf6+ Kf8 61. Qd2 {1-0 (61) Nepomniachtchi,I (2587)-Van der Wiel,J (2511) Wijk aan Zee 2007} ) 11. Nf1 Nbd7 12. Ng3 Nc5 13. Bc2 g6 14. d4 Ncd7 15. h3 Re8 16. Bg5 c5 17. Qd2 Rc8 18. d5 c4 19. Be3 Nc5 20. b4 cxb3 21. axb3 Qc7 22. Rec1 Ncd7 23. c4 bxc4 24. bxc4 Nc5 25. Qb4 Nfd7 26. Nd2 Ra8 27. Ne2 Reb8 28. Nc3 Qd8 29. Qa5 Bc8 30. Qxd8+ Bxd8 31. Na4 Rb4 32. Rcb1 Rab8 33. Rxb4 Rxb4 34. Nc3 $2 Rb2 35. Ra2 Rxa2 36. Nxa2 Ba5 37. Nb3 Nxb3 38. Bxb3 Kf8 39. Kf1 Ke7 40. Ke2 Bb6 41. Bg5+ f6 42. Bc1 Nc5 43. Be3 f5 44. exf5 Bxf5 45. Nb4 a5 46. Bxc5 Bxc5 47. Nc6+ Kf6 48. Nxa5 Bb4 49. Nc6 Bc5 50. Nd8 Ke7 51. Ne6 {½-½ (51) McShane,L (2671)-Nguyen,N 
+(2633) Baku 2016  Purpose of this game: Shows a nice swing from KS pressure,
+to QS play. With the DS bishop & knights coming around to the other side.} ) 9. c3 ) 6. c3 ) 4. d3 d6 5. c3 *

@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLtD5kVP5gLc4qY_Zi9VeBCon_wtqPXN4m'
+defaults:
+  videoPlaylist: 'Classical Master Games'

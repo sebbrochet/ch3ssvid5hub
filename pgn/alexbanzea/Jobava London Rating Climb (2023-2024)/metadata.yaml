@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLy7vABK_JsyMVS96CROuDBWogBG5Jvj38'
+defaults:
+  videoPlaylist: 'Jobava London Rating Climb (2023-2024)'

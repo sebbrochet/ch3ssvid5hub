@@ -1,0 +1,38 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "Cozio Defence (3...Nge7)"]
+[Result "*"]
+[VideoURL "https://youtu.be/rUZiYObFU6M?si=1Bssq17dzdpeFym_"]
+[ECO "C60"]
+[Annotator "ChessGeek"]
+[PlyCount "55"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nge7 {Playing 4.c3 is a decision I thought long and hard about. The engine dislikes
+it, due to the instant strike of d5. So why do I suggest it. A few thoughts to
+consider:   (1) Even after d5, with precise play, White maintains an edge.  (2)
+d5 is extremely uncommon (perhaps due to the temptation for Black to defend
+the e5 pawn) (3) If Black does not play d5, White has as much of an advantage
+as the best lines instead of 4.c3 (4) THIS IS THE KEY: We obtain a huge amount
+of transpositional value. Specifically, Black can address his developmental
+issues by either playing Ng6 and Bishop somewhere along the a3-f8 diagonal 
+(the independent option we need to check), OR, Black will need to play the
+more common and more logical g6 & Bg7. We fully covered all the lines after 4..
+.g6 (or 4...a6 and 5...g6) in the Smyslov chapter!! This is a huge bonus to us.
+So, what do we need to check here?   (1) The critical d5 -- trying to punish
+us for the slow c3.  (2) The other way to develop the knight with Ng6.   That
+is it! Okay, let's go!} 4. c3 Ng6 {is practically the same as throwing in a6
+first.} ( 4... a6 5. Ba4 Ng6 ( 5... g6 {is the most popular move in the position,
+and transposes after 6.d4! to the Smyslov chapter.} 6. d4 ) 6. d4 exd4 7. cxd4 Bb4+ 8. Nc3 O-O 9. O-O {I end here the line. White has a healthy advantage
+thanks to the strong center, and good development.} ) ( 4... d5 {Is a critical
+move we need to check.} 5. Nxe5 dxe4 6. Qe2 Be6 {the only good move to try to
+obtain equality.} ( 6... a6 7. Nxc6 bxc6 8. Bc4 ) ( 6... Qd5 {a super common try,
+but a super bad one!} 7. Nxc6 Nxc6 8. d4 $1 Bf5 9. Nd2 O-O-O 10. O-O Bg6 11. Re1 f5 12. a4 a6 13. Bc4 Qd6 14. f3 Re8 15. fxe4 fxe4 16. Qg4+ Qd7 17. Qxd7+ Kxd7 18. Bd5 Bd6 19. Bxe4 Bf4 20. Bxc6+ Kxc6 21. Rxe8 Rxe8 22. Nf3 Bxc1 23. Rxc1 Re2 24. b3 Rb2 25. b4 Kd5 26. c4+ Ke4 27. b5 Rb4 28. bxa6 bxa6 29. a5 Ra4 30. Re1+ Kd3 31. Re7 Rxa5 32. Rxc7 Be4 33. Kf2 Ra2+ 34. Kg3 Bxf3 35. Kxf3 Kxd4 36. Rxg7 Kxc4 37. Rxh7 Kd5 38. h4 Ke5 39. Rh5+ Kf6 40. Rc5 Ra4 41. g4 Kg6 42. Rc6+ Kg7 43. h5 a5 44. Ra6 Ra1 45. Kf4 a4 46. Kg5 a3 47. h6+ Kf7 48. Ra7+ Ke6 49. Kg6 Rg1 50. g5 Rg3 51. h7 Rh3 52. Rxa3 Kd5 {1-0 (52) Gao,R (2546)-Ye,R 
+(2461) Shenzhen 2017} ) 7. Qxe4 Bd5 8. Qe2 Bxg2 9. Rg1 Bd5 10. d4 f6 11. Nxc6 bxc6 12. Bd3 Qd6 {This is the best Black can do against our system. We have a
+strange middle game, where our pieces find interesting homes: Be3, Nd2, Rg3!
+etc.} 13. Rg3 Kf7 14. Be3 g6 15. Nd2 ) ( 4... g6 {Is the most common form of
+development, and transposes to the Smyslov chapter after 5.d4!} 5. d4 ) 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 O-O 8. O-O Bxc3 9. bxc3 d6 10. h3 Bd7 11. Bd3 h6 12. Rb1 b6 13. Nh2 f5 14. Qh5 Qf6 15. f4 Qh4 16. Qf3 Qf6 17. g4 fxe4 18. Bxe4 Nge7 19. f5 Rae8 20. Bf4 Na5 21. Rbe1 Bc6 22. Re2 Bb5 23. Bd5+ Kh8 24. Re6 Qh4 25. Be4 ( 25. Bg3 {There was no reason to give up material. Black is back in the
+game after Be4. Bg3 would have been stronger, with ideas of f6 & h4 in the mix.} Qg5 ( 25... Qxh3 26. f6 ) 26. h4 ) 25... Bxf1 26. Nxf1 Nc4 27. Kg2 g5 28. Bg3 {1-0 (28) Givon,A (2340)-Simantsev,M (2526) Olomouc 2012} *

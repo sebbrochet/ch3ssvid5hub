@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLiZ56cRXeIu2KAd_HlaMJBFCCLw1BnUdd'
+defaults:
+  videoPlaylist: 'Garry Kasparov'

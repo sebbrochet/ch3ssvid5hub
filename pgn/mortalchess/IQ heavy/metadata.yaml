@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLpNkevK7P-pFJR7Y9K1uJ9nYowi_TIpug'
+defaults:
+  videoPlaylist: 'IQ heavy'

@@ -1,0 +1,47 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez "]
+[Black "Deferred Steinitz (4...d6)"]
+[Result "*"]
+[VideoURL "https://youtu.be/KdH8icP9SZM?si=D3-Y254o1lqHc4Xe"]
+[ECO "C75"]
+[Annotator "ChessGeek"]
+[PlyCount "12"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 {Welcome to the
+chapter on the Deferred Steinitz Defense. If Black wants to play an early d6,
+this is probably the better way to do it! I would have loved to use the same
+ideas we use in the Old Steinitz Defense (3...d6), but Black is specifically
+opposing the immediate d4, which would fall into their trap! So if we cannot
+play for the same d4, we do the next best thing: we play c3 and aim for d4 on
+the next move! __________________________________________________  Breakdown
+of the theory:  After we play 5.c3, black can respond in three main ways:   (1)
+5...f5: This is actually the best move in this position, and probably the best
+place in the entire Ruy Lopez complex for the insertion of an early f5! We
+need to be careful to maintain our advantage, and I recommend to do so with a
+quick trade of Bishops  (2) 5...Nf6 or 5...Bd7: This will transpose to other
+areas in this masterclass. 5...Bd7 will transpose to 5...Nf6, or to the
+Smyslov lines in the next chapter, while 5...Nf6 will transpose to the final
+chapter, where we get typical RL main lines, even up a tempo!} e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c3 {We need to prepare d4 with
+one extra move. The bonus, though, is that we get to establish a strong pawn
+center. [%cal Gc8d7,Gf7f5,Gg8f6]} ( 5. d4 $2 {This is what Black is hoping for by throwing in a6.} b5 6. Bb3 exd4 7. Nxd4 $2 Nxd4 8. Qxd4 c5 9. Qd5 Be6 10. Qc6+ Bd7 11. Qd5 c4 $19 {Oh no :(} ) 5... Bd7 ( 5... Nf6 {This will tranpose to the final chapter in this
+masterclass, where White develops the Bishop to e7, and the knight to f6,
+while White tries to play for d4, and the knight moving from b1-d2-f1-g3, and
+so on. I show some lines, and games here too, for those who do not want to
+wait for the final chapter, but it is very similar!} 6. d4 Bd7 ( 6... Nxe4 7. d5 ) ( 6... Be7 7. O-O b5 8. Bc2 Bg4 9. d5 Nb8 10. h3 Bh5 11. a4 Nbd7 12. Be3 O-O 13. Nbd2 Rb8 14. axb5 axb5 15. Ra7 Bg6 16. Nh4 Bxe4 17. Nxe4 Nxe4 18. Nf5 Ndf6 19. Bxe4 Nxe4 20. Qg4 {1-0 (20) Senff,M (2430)-Bentsen,H (2159) Oslo 2005} ) 7. O-O Be7 8. Re1 O-O 9. Nbd2 Re8 10. Nf1 b5 ( 10... exd4 11. cxd4 d5 12. e5 Ne4 13. Bc2 Nb4 14. Bb1 c5 15. a3 Nc6 16. dxc5 Bg4 17. b4 g6 18. Bb2 Ng5 19. N1d2 Bf8 20. Qb3 Bg7 21. Ba2 Bxf3 22. Nxf3 Nxf3+ 23. Qxf3 Bxe5 24. Bxe5 Nxe5 25. Qxd5 Qf6 26. Rad1 Rad8 27. Qxb7 Rd2 28. Bxf7+ Kf8 29. Bxe8 Qxf2+ 30. Kh1 Nd3 31. Qf7+ Qxf7 32. Bxf7 Nf2+ 33. Kg1 Nxd1 34. Bc4 {1-0 (34) Janowski,
+D-Schlechter,C Karlsbad 1902} ) 11. Bb3 Bf8 12. Ng3 h6 13. a4 Na5 14. Bc2 c5 15. axb5 ( 15. d5 {was better to fight for an edge.} ) 15... axb5 16. b3 cxd4 17. cxd4 Nc6 18. Bb2 Bg4 19. Bd3 Qb6 20. d5 Nb4 21. h3 Bd7 22. Qd2 Nxd3 23. Qxd3 Qb7 24. Nd2 Rxa1 25. Rxa1 Ra8 26. Rxa8 Qxa8 27. b4 Be7 28. Qa3 Qxa3 29. Bxa3 Bd8 30. Nb3 Bb6 {1/2-1/2 (30) Cigan,S (2349)-Mohr,G (2511) Gostovanja 2010} ) ( 5... f5 6. exf5 Bxf5 7. O-O Bd3 8. Re1 Be7 9. Bc2 ( 9. Re3 e4 10. Na3 Nf6 11. Ne1 {If you find my rec. against f5 too drawish/not appealing, look into these
+Re2+Na3 lines. They have been played as alternatives, and the engine seems to
+give white a very small edge in these lines.} Rb8 ) 9... Bxc2 10. Qxc2 Nf6 11. d4 e4 12. Ng5 d5 13. f3 h6 14. Nh3 O-O ( 14... exf3 15. Qg6+ Kd7 16. Qf5+ Ke8 17. Qxf3 ) 15. Nd2 exf3 16. Nxf3 {[%cal Gf8f7,Gd8d7,Ga8f8,Re1e2,Ra1e1]} Rf7 ( 16... Bd6 {If they first play Bd6, hoping to transpose after Nf2 and Rf7 while
+not allowing our intended Bf4, we can hit them with an unpleasent suprise with:} 17. Bxh6 gxh6 18. Qg6+ Kh8 19. Qxh6+ Nh7 20. Nfg5 Qd7 21. Re6 Rae8 22. Rae1 Rxe6 23. Rxe6 Rg8 24. Nxh7 Qxh7 25. Qf6+ Qg7 26. Qh4+ Qh7 27. Rh6 {1-0 (27)
+Sokolov,A (2555)-Anic,D (2450) France 1994} ) 17. Bf4 ( 17. Nf2 {Is the main
+move, but this allows Bd6, where I prefer to contest this strong Bishop.} Bd6 18. Bd2 ) 17... Qd7 ( 17... Bd6 18. Bxd6 ( 18. Be5 {Is possible, but less fun, as
+we would need to take on e5 with a rook in the end, and we lose some
+coordination due to this. (we could also take the second time with the pawn,
+which would be okay-ish for us, but I dislike those structures with a loose
+pawn. So, against Bd6, we trade and play slighly differently.} Qd7 19. Re2 Bxe5 20. Nxe5 Nxe5 21. Rxe5 Ne4 ) 18... Qxd6 19. Nf2 Re7 20. Rxe7 Qxe7 ( 20... Nxe7 21. Qb3 b6 22. Re1 c5 23. Re3 Rf8 24. Qd1 Nc6 25. Qd3 b5 26. a3 Nh5 27. g3 Nf6 28. Kg2 cxd4 29. Nxd4 Nxd4 30. Qxd4 Qd7 31. Re5 Qf7 32. Qf4 {1/2-1/2 (32)
+Milos,G (2620)-Timman,J (2655) Bali 2000 CBM 077 [Wedberg,T]} ) 21. Re1 Qd6 22. Ne5 Re8 23. Qf5 Nxe5 24. Rxe5 {1/2-1/2 (24) Polgar,J (2656)-Bologan,V (2641)
+Buenos Aires 2000} ) 18. Be5 Nxe5 ( 18... Raf8 19. Nf4 Re8 20. Re2 Bd8 21. Rae1 ) 19. Nxe5 ) 6. d4 Nf6 {transposes to the Nf6 lines.} ( 6... g6 7. O-O Bg7 8. Re1 Nge7 9. d5 Nb8 10. Bxd7+ Nxd7 11. Be3 {And we transpose to the Smyslov (3...g6)
+chapter!} ) *

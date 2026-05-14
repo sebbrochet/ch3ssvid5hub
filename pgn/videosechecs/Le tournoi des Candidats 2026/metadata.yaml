@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLiZ56cRXeIu2mKPoKgzAu9pYgh-szq9Sw'
+defaults:
+  videoPlaylist: 'Le tournoi des Candidats 2026'

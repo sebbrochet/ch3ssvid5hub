@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLssNbVBYrGcBZfLbeAU7d8llHf2jxBEl7'
+defaults:
+  videoPlaylist: 'Caro-Kann Opening Theory'

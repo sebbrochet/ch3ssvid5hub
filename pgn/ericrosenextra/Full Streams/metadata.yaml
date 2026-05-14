@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLvZCY7S9lO1eJpWpIR9ZK326WpwEL2krS'
+sync: manual
+defaults:
+  videoPlaylist: 'Full Streams'

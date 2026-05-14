@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "2023.01.23"]
+[Round "?"]
+[White "Gligoric System"]
+[Black "Chapter 9"]
+[Result "*"]
+[VideoURL "https://youtu.be/Qy1IxMlzEIg?si=Dgblzhw5Q-Jl3Rif"]
+[ECO "E92"]
+[Annotator "ChessGeek"]
+[PlyCount "80"]
+[SourceVersionDate "2023.01.18"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. Be3 ( 7. O-O Nc6 8. d5 Ne7 9. Be3 Ng4 ( 9... Nd7 ) ) 7... Ng4 ( 7... Nc6 8. d5 Ne7 9. Nd2 Nd7 10. O-O f5 11. f3 f4 12. Bf2 ) 8. Bg5 f6 9. Bh4 ( 9. Bc1 exd4 10. Nxd4 f5 11. O-O fxe4 12. Bxg4 Bxg4 13. Qxg4 Bxd4 14. Qxe4 Nc6 15. Be3 Bxe3 16. Qxe3 Qh4 17. f4 Rae8 18. Qd2 Qh5 19. Nd5 Ne7 20. Rae1 Nxd5 21. cxd5 Qf5 22. g3 h5 23. Qd1 h4 24. Qf3 hxg3 25. hxg3 Rxe1 26. Rxe1 g5 27. Rf1 Rf7 28. Qe3 Qxd5 29. fxg5 Rxf1+ 30. Kxf1 Qxa2 31. Qe8+ Kg7 32. Kg2 Qxb2+ 33. Kh3 Qb3 34. Qe7+ {0-1 (34) Damljanovic,B 
+(2587)-Radjabov,T (2644) Sarajevo 2003} ) 9... g5 10. Bg3 Nh6 11. dxe5 ( 11. d5 Nd7 12. O-O f5 13. exf5 Nxf5 14. Nd2 Nd4 15. Nde4 h6 16. Bg4 b6 17. f3 Nc5 18. Bxc8 Qxc8 19. Bf2 Qd7 20. Ng3 a5 21. Nce2 Nf5 22. Nxf5 Qxf5 23. Ng3 Qg6 24. Bxc5 bxc5 25. Qb1 Qxb1 26. Raxb1 e4 27. Nxe4 Bd4+ 28. Kh1 a4 29. h4 gxh4 30. Kh2 Rfb8 31. b3 axb3 32. axb3 Ra2 33. Rfd1 Kf7 34. Rd2 Ra3 35. Kh3 Raxb3 36. Rxb3 Rxb3 37. Kxh4 Kg6 38. Rc2 Rb1 39. Ng3 h5 40. f4 Bf6+ 41. Kh3 Rb3 42. Kh2 h4 43. Ne2 Kf5 44. Ra2 Rb4 45. Ra8 Rxc4 46. Re8 Rb4 47. Re6 Rb3 48. g4+ hxg3+ 49. Nxg3+ Kg4 50. Ne2 Rb2 51. Kg2 Be5 52. Kf2 Bxf4 53. Re7 Kf5 54. Rf7+ Ke5 55. Kf3 Bd2 56. Rxc7 Kxd5 57. Ng3 Rb3+ 58. Kg2 Bf4 59. Ne2 Be5 60. Kf2 Ke4 61. Rh7 Rf3+ 62. Ke1 d5 63. Kd2 d4 64. Rh4+ Kd5 {0-1 (64) Wang,Y (2739)-Radjabov,T 
+(2761) Wijk aan Zee 2009 CBM 129 [Radjabov,T]} ) 11... dxe5 12. Qd5+ Kh8 13. O-O-O Qe7 14. Qa5 c6 15. Nd2 b6 16. Qa4 Bd7 17. f3 c5 18. Qa3 Nc6 19. Nd5 Qf7 20. Bd3 Be6 21. h3 f5 22. Nb1 Nd4 23. Nbc3 Rfd8 24. Be1 f4 25. Kb1 Ng8 26. Ne2 Ne7 27. Nxd4 exd4 28. h4 g4 29. Nc7 Rac8 30. Nxe6 Qxe6 31. Bd2 gxf3 32. gxf3 Nc6 33. Bxf4 Rf8 34. Bc1 Rxf3 35. Rhg1 Nb4 36. Qxa7 Rg8 37. Qa3 b5 38. e5 Rxd3 39. Rxd3 Qf5 40. Rg5 {0-1 (40) Motylev,A (2647)-Radjabov,T (2729) Wijk aan Zee
+2007} Qxd3+ ( 40... Qe4 ) *

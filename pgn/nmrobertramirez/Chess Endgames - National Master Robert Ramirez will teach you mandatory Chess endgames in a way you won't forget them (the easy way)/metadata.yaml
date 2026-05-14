@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLQKBpQZcRycoJ58pfYGcUR-vAbjgLQTR3'
+defaults:
+  videoPlaylist: "Chess Endgames - National Master Robert Ramirez will teach you mandatory Chess endgames in a way you won't forget them (the easy way)"

@@ -1,0 +1,16 @@
+[Event "?"]
+[Site "?"]
+[Date "2023.01.23"]
+[Round "?"]
+[White "KID vs London"]
+[Black "Chapter 12"]
+[Result "*"]
+[VideoURL "https://youtu.be/gzWkUU6BmlQ?si=Lp73Wy-r5FLrZLij"]
+[ECO "A48"]
+[Annotator "ChessGeek"]
+[PlyCount "88"]
+[SourceVersionDate "2023.01.18"]
+
+1. d4 Nf6 2. Bf4 g6 3. e3 Bg7 4. Nf3 O-O 5. c3 d6 6. h3 Nc6 7. Nbd2 ( 7. Bh2 Nd7 8. Nbd2 e5 9. Be2 f5 10. dxe5 dxe5 11. e4 f4 12. O-O a5 13. Nc4 Kh8 14. a4 Qe7 15. Qc2 g5 16. Rad1 h5 17. Ne1 Nf6 18. Rd5 ( 18. Nf3 Nh7 19. Rfe1 g4 20. hxg4 hxg4 21. Nfd2 Qh4 22. g3 Qh5 23. gxf4 exf4 24. Kh1 Ng5 ) 18... g4 19. Nd3 Nxd5 20. exd5 Nd8 {Firouzja2003 won by resignation 0-1 (20) PaulfromSPb (2663)
+-Firouzja2003 (3058) Chess.com 2019} ) ( 7. d5 Nb8 ( 7... e5 8. dxe6 Bxe6 ) ) 7... Nd7 ( 7... Re8 ) 8. Nc4 e5 9. dxe5 dxe5 10. Bh2 e4 11. Nd4 Nce5 12. Nxe5 Nxe5 13. Bxe5 ( 13. Be2 Nd3+ 14. Bxd3 exd3 15. Qxd3 c5 ) 13... Bxe5 14. Bc4 Qg5 15. g3 c5 16. Ne2 Rd8 17. Qb3 Qe7 18. Rd1 Rxd1+ 19. Kxd1 b6 20. Kc1 Rb8 21. Nf4 Kg7 22. Bd5 Bb7 23. Bxb7 Rxb7 24. Rd1 Bxf4 25. gxf4 Rd7 26. Qc4 Rxd1+ 27. Kxd1 Qd7+ 28. Ke2 Qxh3 29. Qxe4 Qe6 30. Qa4 a5 31. b3 h5 32. Ke1 Qf6 33. Qc4 h4 34. Kf1 Qc6 35. e4 Qd6 36. e5 Qd1+ 37. Kg2 Qg4+ 38. Kh2 Qf3 39. Kg1 h3 40. Qf1 Qg4+ 41. Kh1 Qxf4 42. Qxh3 Qxf2 43. a4 Qe1+ 44. Kg2 Qxe5 {Firouzja2003 won by resignation
+0-1 (44) PaulfromSPb (2678)-Firouzja2003 (3045) Chess.com 2019} *

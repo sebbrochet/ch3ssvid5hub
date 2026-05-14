@@ -53,8 +53,22 @@ describe('sanitizeFilename', () => {
     expect(sanitizeFilename('  hello world  ')).toBe('hello world');
   });
 
-  it('preserves Unicode letters', () => {
-    expect(sanitizeFilename('Défense Française — Partie 3')).toBe('Défense Française — Partie 3');
+  it('preserves Unicode letters and normalizes dashes', () => {
+    expect(sanitizeFilename('Défense Française — Partie 3')).toBe('Défense Française - Partie 3');
+  });
+
+  it('replaces smart single quotes with apostrophe', () => {
+    expect(sanitizeFilename('Bobby Fischer\u2019s First Game')).toBe("Bobby Fischer's First Game");
+    expect(sanitizeFilename('\u2018quoted\u2019 text')).toBe("'quoted' text");
+  });
+
+  it('removes smart double quotes', () => {
+    expect(sanitizeFilename('Robert \u201Ethe other\u201C Byrne')).toBe('Robert the other Byrne');
+  });
+
+  it('replaces middle dot and other non-ASCII symbols', () => {
+    expect(sanitizeFilename('Fischer \u00B7 Age 12')).toBe('Fischer Age 12');
+    expect(sanitizeFilename('Byrne \u23B8196364')).toBe('Byrne 196364');
   });
 
   it('strips emoji', () => {
@@ -78,6 +92,12 @@ describe('sanitizeFilename', () => {
 
   it('removes all specified special characters', () => {
     expect(sanitizeFilename('a<b>c:d"e/f\\g|h?i*j')).toBe('abcdefghij');
+  });
+
+  it('removes hash, brackets from filenames', () => {
+    expect(sanitizeFilename('Chess Lesson # 117')).toBe('Chess Lesson 117');
+    expect(sanitizeFilename('Horde Chess [Reupload]')).toBe('Horde Chess Reupload');
+    expect(sanitizeFilename('Boot Camp #11 - Bishop')).toBe('Boot Camp 11 - Bishop');
   });
 
   it('replaces non-breaking spaces with regular spaces', () => {

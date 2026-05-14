@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLy7vABK_JsyOZgB01tpsv4ITQjp7DKbQZ'
+defaults:
+  videoPlaylist: "King's Indian Defense"

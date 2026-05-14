@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+defaults:
+  language: fr
+avatarUrl: 'https://yt3.ggpht.com/Bd9iqICF-q6k5wYIvodr_KSRU_o_i-1IkAR3_D_yBOwHDkAydJfzfWohHdIRsi0yVYGhte7QCw=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@juliensong'

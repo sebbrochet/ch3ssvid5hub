@@ -1,0 +1,24 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[VideoURL "https://www.youtube.com/watch?v=KlVgoi5pr5g"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+[Annotator "sebbrochet"]
+
+1. e4 {[%ts 0:19]} e5 {[%ts 0:19]} 2. Nf3 {[%ts 0:20]} Nc6 {[%ts 0:21]} 3. Bb5 {[%ts 0:22]} *
+
+[Event "Why The Ruy Lopez?"]
+[Site "?"]
+[Date "2026.05.12"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[VideoURL "https://www.youtube.com/watch?v=KlVgoi5pr5g"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+
+1. e4 {[%ts 2:38]} e5 {[%ts 2:48]} 2. Nf3 {[%ts 2:48]} Nc6 {[%ts 2:52]} 3. Bb5 {[%ts 2:53] [%csl Gb1,Gb5,Gc1,Rg3] [%cal Ge1g1,Gf1b5,Rb1d2,Rd2f1,Rf1g3]} a6 {[%ts 4:35]} ( 3... Nf6 {[%ts 5:30]} 4. O-O {[%ts 5:31]} ( 4. d3 {[%ts 5:33] [%csl Gd3] [%cal Gc2c3,Ge1g1,Gb1d2,Gd2f1,Gf1g3,Gh2h3,Rd3d4,Ra2a4]} ) ) 4. Ba4 {[%ts 4:37]} Nf6 {[%ts 4:39]} 5. O-O {[%ts 4:43]} ( 5. d3 {[%ts 5:22]} ) 5... Be7 {[%ts 4:46]} 6. Re1 {[%ts 4:47]} b5 {[%ts 4:47]} 7. Bb3 {[%ts 4:47]} d6 {[%ts 4:47]} 8. c3 {[%ts 4:47]} O-O {[%ts 4:48]} 9. h3 {[%ts 4:48] [%cal Gc6a5,Gc6b8,Gc8b7,Gf6d7]} *

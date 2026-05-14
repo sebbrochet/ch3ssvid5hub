@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLssNbVBYrGcBB79ZpB4VOQ44Vr9l-cKDa'
+defaults:
+  videoPlaylist: 'Bobby Fischer - Learn From the World Chess Champions'

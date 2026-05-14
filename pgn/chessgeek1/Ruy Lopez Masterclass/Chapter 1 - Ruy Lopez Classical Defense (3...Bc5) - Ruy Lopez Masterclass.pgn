@@ -1,0 +1,49 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "Classical (3...Bc5) Defense"]
+[Result "*"]
+[VideoURL "https://youtu.be/dBd9ppRKrN8?si=WqB2aG3gLgRkM4XA"]
+[ECO "C64"]
+[Annotator "ChessGeek"]
+[PlyCount "18"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 {Hello! In this chapter, we discuss the so-called Classical Defense with 3..
+. Bc5. Black is ambitious. They wish to develop onto the most active diagonal
+with their bishop, then get the Knight out, and finally castle into a
+comfortable middlegame. We must not let this happen. Our main plan will be c3,
+and pushing for a quick d4, to disrupt Black's otherwise wonderful plan. Here
+is the breakdown of moves for Black after our immediate 4.c3
+_____________________________________________ (1) 4...d6. A surprisingly
+common blunder!! which loses on the spot. I show how to win a piece instantly.
+(2) 4...f5. An aggressive move, which carries some bite for sure. We need to
+disarm f5 with a quick strike in the center: We play d4!  (3) 4...Nge7. Black
+is playing for a quick d5. This is a good and well respected choice for Black,
+which will alter the pawn structure in the center. I show how to handle this
+and prepare for this new pawn structure well!  (4) 4...Nf6. This is the main
+move for Black, and one which is most ambitious, developing the Knight to f6.
+We strike with d4, and try to punish the Knight asap, with an upcoming e4-e5
+push as well!} e5 2. Nf3 Nc6 3. Bb5 ( 3. Bc4 {What is Bc4 doing here?? I show
+here 6 games from GM Baadur Jobava which start with this Italian, but after 10
+moves (10. 0-0) transpose to a critical line in our current Ruy Lopez chapter.
+Jobava scores extremely well in these 6 games (5/6), and I think they are
+instructive -- against some of the best players in the game!} Bc5 4. c3 Nf6 5. d4 exd4 6. e5 d5 7. Bb5 Ne4 8. cxd4 Bb6 9. h3 O-O 10. O-O f6 ( 10... Bd7 11. Ba4 Ne7 12. Bc2 c5 13. Nc3 Bf5 14. Re1 Nxf2 15. Kxf2 cxd4 16. Kg3 dxc3 17. bxc3 Rc8 18. Bg5 Bxc2 19. Qxc2 Qd7 20. Rad1 Nf5+ 21. Kh2 h6 22. g4 Nd4 23. Nxd4 Bxd4 24. Rxd4 hxg5 25. Re3 Rc5 26. Qf5 Qc7 27. Rdd3 Qe7 28. Re2 Re8 29. Rf3 Qc7 30. Qxg5 Rxc3 31. Rxc3 Qxc3 32. h4 f6 33. Qg6 Rxe5 34. Rc2 d4 35. h5 Rc5 36. Qe8+ Kh7 37. Qg6+ Kg8 38. Rxc3 dxc3 39. h6 Rg5 40. Qe8+ Kh7 41. hxg7 Kxg7 42. Qc8 a5 43. Qxb7+ Kg6 44. Qc8 a4 45. Kh3 {1-0 (45) Jobava,B (2673)-Sakaev,K (2594) Minsk
+2015} ) 11. Bxc6 bxc6 12. Be3 f5 ( 12... fxe5 13. Nxe5 Qd6 ( 13... Ba6 14. Re1 Ba5 15. Nxc6 Qh4 16. Nxa5 Rxf2 17. Nc3 Rxg2+ 18. Kxg2 Qg3+ 19. Kh1 Qxh3+ 20. Kg1 Qg3+ 21. Kh1 Qh3+ 22. Kg1 Qg3+ 23. Kh1 Qh3+ {1/2-1/2 (23) Jobava,B (2699)
+-Grischuk,A (2780) Khanty-Mansiysk 2015 CBM 167 [Szabo,Kr]} ) ( 13... Bb7 14. Nd2 c5 15. Nxe4 cxd4 16. Bxd4 dxe4 17. Qb3+ Bd5 18. Qc3 Qg5 19. Be3 Qh5 20. Rad1 Be6 21. Rde1 Bd5 22. a4 Ba5 23. Qxa5 Qxe5 24. Rc1 Rac8 25. Rfd1 c6 26. b4 Qe6 27. b5 Bb3 28. Rd2 cxb5 29. Rxc8 Qxc8 30. axb5 Bc4 31. Rc2 Qe6 32. Qxa7 Qd5 33. Bd4 Rf7 34. Qb8+ Rf8 35. Qc7 Qxd4 36. Qxc4+ Qxc4 37. Rxc4 Rb8 38. Rb4 Kf7 39. Kf1 Ke6 40. Rxe4+ Kd6 41. Rd4+ Ke6 42. Rb4 Kd5 43. Rh4 h6 44. Rg4 g5 45. Rb4 Kc5 46. Rb1 Kb6 47. Re1 Kc5 48. Re6 {1-0 (48) Jobava,B (2699)-Dominguez Perez,
+L (2734) Khanty-Mansiysk 2015 CBM 167 [Roiz,M]} ) ( 13... Qe8 14. Nc3 Nd6 15. Re1 Nf5 16. Rc1 Nxe3 17. Rxe3 Qd8 18. Na4 Qh4 19. Nf3 Qf6 20. Nc5 Bf5 21. Ne5 Rae8 22. Qe1 Qg5 23. b4 Qf4 24. Nxc6 Rxe3 25. Qxe3 Qxe3 26. fxe3 Re8 27. Kf2 Bg6 28. a4 Rf8+ 29. Ke2 Bxc5 30. Rxc5 Be4 31. Ne7+ Kh8 32. Rxc7 Bxg2 33. Rc8 Bf1+ 34. Ke1 Rxc8 35. Nxc8 Bc4 36. Nxa7 Kg8 37. b5 Kf8 38. Nc8 Ke8 39. Nd6+ Kd7 40. Nxc4 dxc4 41. a5 g5 42. a6 Kc7 43. d5 {1-0 (43) Jobava,B (2673)-Melkumyan,H (2654)
+Minsk 2015} ) 14. Nd2 Nxd2 15. Qxd2 c5 16. dxc5 Qxe5 17. cxb6 axb6 18. Rfe1 Qf5 19. b4 Ra3 20. Rad1 Ba6 21. Qc1 Rd3 22. Qxc7 d4 23. Rxd3 Qxd3 24. Bf4 Qc3 25. Re7 Qxc7 26. Bxc7 d3 27. Bxb6 Rb8 28. Ba5 Bb5 29. Re5 Bc4 30. Re4 Bxa2 {1/2-1/2 (30) Jobava,B (2707)-Anand,V (2786) Leuven 2017} ) 13. Qc1 f4 14. Bxf4 c5 15. dxc5 Nxc5 16. Be3 Nd3 17. Qd1 Ba6 18. Nc3 d4 19. Bg5 Qe8 20. Nd5 Kh8 21. Nxb6 axb6 22. Nxd4 Qxe5 23. Qg4 Rae8 24. Be3 Nxb2 25. Nf3 Qe4 26. Rfc1 Qxg4 27. hxg4 Nc4 28. Rc3 c5 29. Rb1 Re6 30. g5 Kg8 31. Nd2 Rxe3 32. Rxe3 Nxe3 33. fxe3 b5 34. Ne4 Rc8 35. a3 c4 36. Nc3 Rc5 37. g6 hxg6 38. Kf2 Kf7 39. e4 Ke6 40. Ke3 Rg5 41. Kf3 Kd7 42. g4 Rc5 43. Ke3 Kc6 44. Kd4 Rg5 45. Rg1 Bc8 46. Rb1 Bd7 47. Nd5 Kd6 48. a4 Bc6 49. axb5 Bxd5 50. exd5 Rxg4+ 51. Kc3 Kc5 52. b6 Rg3+ 53. Kd2 c3+ 54. Kc2 Rg2+ 55. Kxc3 Rg3+ 56. Kd2 Rg2+ 57. Ke3 Rg3+ 58. Kf2 {1-0 (58)
+Jobava,B (2707)-Kramnik,V (2808) Leuven 2017} ) 3... Bc5 ( 3... a6 {Throwing in
+a6 first changes almost nothing. Afterwards, Black has the same options of Nf6
+or Nge7 mostly, and we respond with the similar d4!} 4. Ba4 Bc5 ( 4... b5 {Is possible, but again, has no impact on the lines. We play much in the same
+way.} 5. Bb3 Bc5 6. c3 Nf6 7. d4 exd4 8. e5 Ne4 9. Bd5 {is even stronger! The
+knight is trapped.} ) 5. c3 Nf6 ( 5... Nge7 6. d4 exd4 7. cxd4 Bb4+ 8. Nc3 d5 9. e5 {Again, this is a very similar setup, and an identical plan to the non-a6
+lines!} ) 6. d4 exd4 7. e5 {And the lines are almost identical!} ) 4. c3 Nf6 {The main move - Option 4!} ( 4... f5 {Option 2!} 5. d4 exd4 ( 5... fxe4 6. Bxc6 exf3 ( 6... dxc6 7. Nxe5 Bd6 8. Qh5+ g6 9. Qe2 Bf5 10. h3 Qe7 11. Bf4 Nf6 12. Nd2 O-O-O 13. O-O Rhg8 14. Bh2 h5 15. Ndc4 Nd5 16. f3 exf3 17. Qxf3 Bxe5 18. Nxe5 Qh7 19. c4 Ne7 20. Rad1 Kb8 21. g4 hxg4 22. hxg4 Be6 23. Qf6 Bc8 24. Nf7 Rd7 25. Ng5 Qh4 26. Qf4 Rh8 27. Bg3 Qh6 28. Kg2 b6 29. Qe5 Re8 30. Rh1 Qf8 31. Ne6 {1-0 (31) Anand,V (2776)-L'Ami,E (2605) Germany 2017 CBM 179 [Sagar Shah]} ) 7. Bxf3 ) 6. e5 dxc3 7. Nxc3 Nge7 8. O-O O-O 9. Nd5 d6 10. b4 Bb6 ( 10... dxe5 11. Bc4 ) 11. Bg5 ) ( 4... Nge7 {Option 3!} 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 d5 8. e5 Bg4 9. Be2 O-O 10. O-O Nf5 11. Ng5 Bxe2 12. Nxe2 h6 13. Qd3 hxg5 14. Qxf5 Be7 15. f4 gxf4 16. Bxf4 g6 17. Qg4 Qc8 18. Qg3 Qe6 19. Bh6 Rfe8 20. Nf4 $2 ( 20. Rad1 ) 20... Nxd4 21. Rae1 Nf5 22. Qh3 Qb6+ 23. Kh1 Qxb2 24. Nxg6 fxg6 25. Rxf5 Rf8 26. Bxf8 Bxf8 27. Rf6 Qc2 28. Qe6+ Kh7 29. Ref1 Bg7 30. Rf7 Qd3 31. Qf6 {1-0 (32) Mariano,M (2002)-Cipolli,A (2191) Americana 2009} ) ( 4... d6 {Option 1 - BLUNDER!} 5. d4 exd4 6. cxd4 Bb4+ 7. Kf1 Bd7 8. Qa4 Nge7 9. d5 ) 5. d4 exd4 6. e5 Ne4 ( 6... Nd5 7. O-O O-O 8. cxd4 Bb6 9. Bc4 Nce7 ( 9... Nde7 10. d5 Nb4 11. a3 Na6 12. Bg5 Bc5 13. d6 cxd6 14. exd6 Re8 15. dxe7 Bxe7 16. Qd5 Rf8 17. Re1 Bxg5 18. Nxg5 Qf6 19. Bxa6 Qxa6 20. Nc3 Qg6 21. Nb5 a6 22. Nd6 Qf6 23. Ngxf7 Rxf7 24. Re8# {1-0 (24) Popovic,M (1835)-Tokarcikova,D (1347) Kouty
+nad Desnou 2017} ) 10. Bg5 Qe8 11. Nc3 c6 ( 11... Nxc3 12. bxc3 d6 13. exd6 cxd6 14. Re1 Bd8 15. Qe2 Be6 16. Bxe6 fxe6 17. Qxe6+ Rf7 18. Qxd6 Rc8 19. Re3 Qc6 20. Bxe7 Bxe7 21. Qxc6 Rxc6 22. Ne5 Bg5 23. Nxc6 Bxe3 24. fxe3 bxc6 25. Rb1 Re7 26. Kf2 Kf7 27. Kf3 Kf6 28. e4 Kg5 29. d5 cxd5 30. exd5 Kf5 31. d6 Rd7 32. Rd1 Ke5 33. Ke3 Rxd6 34. Rxd6 Kxd6 35. Kd4 Kc6 36. Kc4 a6 37. a4 Kd6 38. Kd4 g6 39. c4 Kc6 40. c5 Kc7 41. Kd5 Kd7 42. c6+ Kc7 43. a5 h6 44. Kc5 g5 45. g4 Kc8 46. Kb6 {1-0 (46) Geshnizjani,R (1477)-Zach,C (1396) Vaihingen/Enz 2003} ) 12. Ne4 Bc7 13. Re1 a6 14. Nf6+ gxf6 15. exf6 Nxf6 16. Bxf6 Bd8 17. Qd2 d5 18. Rxe7 Bf5 19. Qh6 {1-0 (19) Garcia Melgar,J (2310)-Bragado,M Nigran 1993} ) 7. O-O d5 ( 7... dxc3 8. Qd5 Bxf2+ 9. Rxf2 Nxf2 10. Nxc3 Ng4 11. h3 Nh6 12. Bxh6 gxh6 13. Ne4 ) 8. cxd4 Bb6 9. h3 O-O {The general plan here is to develop the Bishop to
+e3, and move the Queen, perhaps to the c-file, anticipating the opening of the
+center with the c pawn push (which is Black's active plan given the two
+bishops). I refer you to the 6 Jobava games posted in this PGN from the
+Italian move order to see some of the possible developing schemes, and piece
+maneuvers for White!} *

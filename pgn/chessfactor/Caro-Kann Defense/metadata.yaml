@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PL9RQPxG_e-LmXOjbqXE_Pccyy7pvRUI1O'
+defaults:
+  videoPlaylist: 'Caro-Kann Defense'

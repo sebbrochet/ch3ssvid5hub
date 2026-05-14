@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLy7vABK_JsyMZ0hjKoGgM3TvhK_17HCqc'
+defaults:
+  videoPlaylist: 'New Jobava speedrun 2025'

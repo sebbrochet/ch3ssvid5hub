@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLOaFVRf_8WkQIT8DltZVPhQGs8k2vMN9k'
+defaults:
+  videoPlaylist: 'Nimzo-Indian Defense'

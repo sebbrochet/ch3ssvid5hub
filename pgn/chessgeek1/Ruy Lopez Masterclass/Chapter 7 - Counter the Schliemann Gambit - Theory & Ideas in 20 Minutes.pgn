@@ -1,0 +1,65 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "Schliemann Gambit (3...f5)"]
+[Result "*"]
+[VideoURL "https://youtu.be/MGQvHHP8hXc?si=1onvLgJyXXQl0U1p"]
+[ECO "C63"]
+[Annotator "ChessGeek"]
+[PlyCount "37"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 {This chapter
+explores the Jaenisch/Schliemann Gambit (3...f5), along with its sister, the
+delayed Jaenisch/Schliemann Gambit (3...a6 4. Ba4 f5). This is perhaps the
+most concrete and theoretically testing chapter, in the sense that the lines
+are often long and somewhat engine-like. But, if we know some stuff, we can
+obtain a nice advantage, often even having an extra pawn.   Here is the
+breakdown of the theory to know: 
+___________________________________________________ The critical decision for
+black is if they play:  5...d5 - which enters a sharp and tactical game, where
+we retain a strong advantage 5...Nf6 - which is more solid and secure, but as
+White we also need to know less theory and have somewhat less risk.   Within
+those two variations, there is a smaller split later on. For organization’s
+sake, I will quickly list that split here as well:   5...d5 splits into: (1) 7.
+..Qd5 (we forcefully enter into a good endgame for White with queens off) (2)
+and 7...Qg5 (the main move, where with accurate play we should win a pawn!)  5.
+..Nf6 splits into:  (1) 9...Bg7 (an interesting pawn sac which we respond to
+with a novelty from the computer which I am very fond of) (2) 9...e4 (a
+combative move, which does not address the issues of the unsafe Black king,
+and we try to quickly highlight this).} e5 2. Nf3 Nc6 3. Bb5 f5 ( 3... a6 4. Ba4 f5 {We now look at the delayed Jaenisch/Schliemann Gambit, which is a worse
+version of the normal f5 gambit, because of our extra option: d4.} 5. d4 fxe4 ( 5... exd4 6. e5 b5 7. Bb3 Na5 8. Qxd4 Nxb3 9. axb3 Ne7 10. Nc3 Nc6 11. Qf4 ) 6. Nxe5 Nf6 7. O-O {[%cal Gb1c3,Gc1g5,Gf1e1]} ) 4. Nc3 ( 4. d4 {For illustrative
+purposes-- to show the difference between the delayed and normal Jaenisch/
+Schliemann Gambit} fxe4 5. Nxe5 Nxe5 6. dxe5 c6 {[%cal Gd8a5,Ga5e5]} ) 4... fxe4 {The only critical try: All other moves can be strongly met by exf5 (although
+sometimes even better options exist).} ( 4... Nf6 5. exf5 ) ( 4... Bb4 5. exf5 ) ( 4... Nd4 5. exf5 {we have better moves, but for consistency, even taking on f5
+is good here!} ) ( 4... Bc5 5. exf5 ) ( 4... d6 5. exf5 {we have better moves, but
+for consistency, even taking on f5 is good here!} ) 5. Nxe4 {The first major
+split: They can either play d5, or Nf6 -- In both cases, Black must target our
+active central knight instantly.} d5 ( 5... Nf6 {This line is slightly less
+popular, but engine approved. It makes sense, Black still targets our Knight,
+but in a less reckless manner, and aims to finish development & castle.} 6. Qe2 d5 7. Nxf6+ gxf6 8. d4 {We have so much pressure on e4, that they can not
+defend it. Now, Black has two options: push it forward to keep it alive, or
+gambit it with Bg7.} e4 ( 8... Bg7 9. dxe5 O-O 10. O-O Nxe5 {Black has a major
+threat here: Bg4. We need to stop it. h3 is a fine way to do so, but the
+engine proposes an even more cunning idea, which is not too intuitive. Qd1, to
+allow Be2. We consolidate our pieces and enable good coordination. Black's
+initiative soon runs out of steam.  One extra piece of advise to remember:
+unless for a very specific and solid reason, do NOT take on e5 and fix Black's
+pawns, and open their rook.} ( 10... fxe5 11. Bxc6 bxc6 ( 11... e4 12. Bxd5+ Qxd5 13. Ng5 ) 12. Nxe5 ) 11. Qd1 c6 12. Be2 Bg4 ( 12... Qd6 13. c3 Be6 14. Re1 Rae8 15. Be3 ) 13. Nd4 Bxe2 14. Qxe2 ) 9. Nh4 {Black needs to watch over the f7
+square, and can thus either play Qe7, or Be6.  To both of those moves, we need
+to develop and castle, and look to break quickly with f3.} Be6 ( 9... Qe7 10. O-O Bd7 {The pin is broken, so be careful about playing f3. We have two
+pleasant options. Play c3, then f3, or play Qh5 to go into a better endgame.} 11. c3 {Option 1 (c3 and f3 is what I like!)} ( 11. Qh5+ {I will show option 2,
+though option 1 is just as good.} Qf7 12. Qxf7+ Kxf7 13. Be3 ) 11... O-O-O 12. f3 ) 10. O-O Qd7 11. f3 {We quickly open the center!} O-O-O 12. fxe4 dxe4 13. c3 ) 6. Nxe5 dxe4 7. Nxc6 Qg5 {The most critical and fighting move in the d5
+complex. The queen hits b5, g2, and guards over h5 checks.} ( 7... bxc6 8. Bxc6+ Bd7 9. Qh5+ Ke7 10. Qe5+ Be6 ( 10... Kf7 11. Bd5+ Kg6 12. Bxe4+ ) 11. Bxa8 Qxa8 12. Qxc7+ ) ( 7... Qd5 8. c4 Qd6 {Every other move will lose on the spot to
+ideas of Nd4+, or d4, or so on. On d6, Black's queen is as safe as it can be.} ( 8... Qc5 9. d4 exd3 10. Be3 ) ( 8... Qf5 9. Nd4+ ) ( 8... Qg5 9. d4 Qxg2 10. Qh5+ ) ( 8... Qd7 9. Ne5 ) 9. Nxa7+ Bd7 ( 9... c6 10. Nxc8 Rxc8 11. Ba4 ) 10. Bxd7+ Qxd7 11. Qh5+ g6 12. Qe5+ {One of the points of playing Qh5, is to expose the king
+and thus force a good endgame, trading off the queens.} Kf7 13. Nb5 c6 ( 13... Re8 14. Qxc7 Qxc7 15. Nxc7 ) 14. Qd4 Qxd4 ( 14... Qe7 ) 15. Nxd4 ) 8. Qe2 {Let's
+understand this position. If the Black queen leaves g5 now, we play Qh5+ and
+open up the Black king and win. This means, that the Black queen is somewhat
+stuck to defending h5, and thus, we threaten the move d4, where Black
+struggles with the development of our pieces, and still guarding h5. They
+would love to be able to meet d4 with Qxg2, and thus, they play the only
+developing move defending h5 - Nf6. This hopefully explains why this is the
+ONLY move for black!} Nf6 9. Nxa7+ Bd7 ( 9... Kd8 10. Nxc8 Qxg2 11. Qf1 Qxf1+ 12. Kxf1 ) 10. Bxd7+ Nxd7 11. f4 Qf5 ( 11... Qxf4 12. d4 Qf5 13. Nb5 O-O-O 14. Rf1 ) 12. Nb5 O-O-O {there are several moves white can look to play: b3, a4,
+Nc3, etc. Often the king can stay in the center.} 13. b3 Bc5 14. Bb2 Rhe8 15. O-O-O {This is one solid option.} Qxf4 16. a4 c6 17. Na3 e3 18. Nc4 exd2+ 19. Qxd2 *

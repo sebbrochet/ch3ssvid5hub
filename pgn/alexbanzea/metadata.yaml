@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+defaults:
+  language: en
+avatarUrl: 'https://yt3.ggpht.com/djp1budchHMtp3WIzJfF-Q0nVr-S4cIRZG0--MJwHnWtR_AHcenVC22-wTOUV41_j5W2HSIa2Q=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@alexbanzea'

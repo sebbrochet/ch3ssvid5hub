@@ -1,0 +1,43 @@
+[Event "?"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "ML: Nf6 & Bc5"]
+[Result "*"]
+[VideoURL "https://youtu.be/e_nM0ha_WIA?si=HXOBtSLRADL-uRcc"]
+[ECO "C65"]
+[Annotator "ChessGeek"]
+[PlyCount "53"]
+[SourceVersionDate "2024.08.19"]
+
+1. e4 {This chapter
+takes a look at one of the key main variations. Nf6 followed by Bc5 (with out
+without a6/b5) We will explore this main line through a series of variations/
+games, but take note that we are speaking of general principles and ideas. It
+is impossible to cover all the move orders, and instead we need to understand
+what we are playing for.   So, a summary of the ideas:   In terms of piece
+placement: the f1 bishop often finds itself on c2, especially via the a6+b5
+push. The b1 knight often plays for d2-f1-g3/e3. The c1 bishop often goes to
+e3. White 0-0 and plays the rook to e1.   In terms of pawn pushes we are
+playing for: d4, and a4!   In terms of attacking chances: we must look at all
+sides of the boards. Often a4 will allow us to put pressure on Black's QS pawn
+structure (Qe2 & Bd3). Often our KS knights combined with Qf3 give us good KS
+attacking chances and sac possibilities on h6/g7!} e5 2. Nf3 Nc6 3. Bb5 Nf6 ( 3... a6 4. Ba4 Nf6 5. d3 Bc5 ( 5... b5 6. Bb3 Bc5 7. c3 ) 6. c3 ) 4. d3 Bc5 5. c3 O-O 6. O-O d6 7. h3 {whenever d6 is played, I like to play h3 as a safety
+precaution, especially with the Bishop on c5, so that Ng4 hits f2.} a6 ( 7... Ne7 {Split (1): Playing Ne7 for c6-d5 idea instead of a6-b5.} 8. Re1 {Not a
+great move, allowing c6. When the knight moves away to e7, we should strike
+instantly, not allowing c6+Ng6+eventually d5.} ( 8. d4 {When we achieve d4 in a
+safe and secure way, we can largely say the opening stage went well. Often,
+this will take longer to do, and will require further moves (Re1, Nb1-d2-f1-g3,
+ect.)} Bb6 9. Re1 c6 10. Bd3 d5 {is still needed, otherwise Black lacks too
+much space.} ( 10... Ng6 {Delaying d5 is more common and natural, but actually
+less good.} 11. Nbd2 exd4 12. cxd4 d5 {eventually d5 is necessary.} 13. e5 Nh5 14. Nf1 Nhf4 15. Bxg6 Nxg6 16. Bg5 f6 17. exf6 gxf6 18. Bh6 Re8 19. Ng3 Rxe1+ 20. Qxe1 Kf7 21. Qe3 Qe7 22. Qd3 Bd7 23. Re1 Qb4 24. b3 Re8 25. Rxe8 Kxe8 26. Nh5 Qe7 27. Bg7 f5 28. Qd2 f4 29. Be5 Nxe5 30. Nxe5 Qg5 31. Nxf4 Bf5 32. Kh2 Be4 33. f3 Bxd4 34. Qxd4 Qxf4+ 35. g3 Qc1 36. fxe4 Qc2+ 37. Kg1 Qb1+ 38. Kg2 Qxa2+ 39. Qf2 Qxf2+ 40. Kxf2 dxe4 41. Ke3 Ke7 42. Kxe4 Kd6 43. g4 b5 44. h4 a5 45. g5 a4 46. bxa4 bxa4 47. h5 Ke7 48. Nc4 Ke6 49. Na3 c5 50. Nc4 Kf7 51. Kf5 Ke7 52. g6 hxg6+ 53. hxg6 Kf8 54. Kf6 Kg8 55. g7 {1-0 (55) Karjakin,S (2773)
+-Le,Q (2739) Saint Louis 2017} ) 11. Nxe5 Nxe4 12. Nd2 {is better, not rushing
+to take!} ( 12. Bxe4 dxe4 13. Rxe4 c5 {Black claims that by giving away our
+strong bishop, and by breaking with c5, they have comp.} ) 12... Nd6 13. Qc2 Bf5 14. Bxf5 Nexf5 15. Ndf3 Re8 16. Bf4 Bc7 17. Rad1 {We finish developing, and
+have a strong control on the center. Black is fine, but White has easier
+practical play.} ) 8... c6 9. Ba4 ) 8. Ba4 b5 9. Bc2 {super common approach, and
+offers much transpositional value to an earlier a6-b5.} Bb7 10. Re1 h6 11. Nbd2 Re8 12. Nf1 Bb6 13. Ng3 {We developed naturally, and are now ready to strike
+with d4. White scores very well from this position and similar ones, and the
+engine gives white a slight edge too.} Ne7 14. Nh4 Qd7 ( 14... c5 15. Qf3 Nc6 16. Ngf5 Kh7 17. Nxg7 Kxg7 18. Nf5+ Kh7 19. Nxh6 Qe7 20. Bg5 Bd8 21. Ng4 Qe6 22. Bxf6 Rg8 23. Bxd8 Rgxd8 24. Re3 Ne7 25. Qd1 Ng6 26. d4 Rac8 27. d5 Qe7 28. Qd2 Kg7 29. Rg3 Rh8 30. Ne3 Kf8 31. Nf5 Qf6 32. a4 Nf4 33. axb5 axb5 34. Ra7 Rb8 35. Kf1 Qd8 36. Qd1 Qb6 37. Qa1 Qd8 38. Qa5 Qxa5 39. Rxa5 {1-0 (39) Janse,
+A (1936)-Karlisch,M (1722) Kiel 2015} ) ( 14... Ng6 15. Nxg6 fxg6 16. d4 Qe7 17. a4 {d4 & a4 is a strong combo!} Kh7 18. Be3 c5 19. d5 Rf8 20. axb5 axb5 21. Qe2 Qd7 22. Bd3 c4 23. Bxb6 cxd3 24. Qxd3 {White is much better.} ) 15. Qf3 ( 15. d4 {was also possible, and probably better.} c5 16. d5 c4 17. Qf3 ) 15... d5 16. Bxh6 Kh7 17. Bg5 Qe6 18. Nhf5 Nxf5 19. Nxf5 Ng8 20. exd5 Bxd5 21. Qh5+ Nh6 22. Nxh6 gxh6 23. Rxe5 Qd6 24. Rxd5 Qxd5 25. Qxh6+ Kg8 26. Bf6 Bxf2+ 27. Kh1 {1-0 (27) Santos Ruiz,M (2021)-Cortes Cabeza,C (1633) Islantilla 2012} *

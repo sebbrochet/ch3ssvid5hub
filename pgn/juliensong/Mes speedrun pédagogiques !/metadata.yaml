@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLSFhEAkpGMV4Pm-MZEuBt77KXduQY8FT8'
+defaults:
+  videoPlaylist: '⚡Mes speedrun pédagogiques !'

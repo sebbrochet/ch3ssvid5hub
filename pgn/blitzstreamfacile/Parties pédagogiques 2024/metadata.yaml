@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLDzslQtErjzhRArhw0JmX4zFeKZ9hFFEb'
+defaults:
+  videoPlaylist: 'Parties pédagogiques 2024'

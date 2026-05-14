@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLFzVKZL5ZLmcPosZ7Gp853HEjuI7hXDGW'
+defaults:
+  videoPlaylist: 'Middlegame strategy'

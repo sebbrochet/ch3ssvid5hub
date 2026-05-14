@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+defaults:
+  language: en
+avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_ldouWL6qvLRIbun-QFr8LLj4NQOQkzkjokhgfC-z8xpg=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@chessfactor'

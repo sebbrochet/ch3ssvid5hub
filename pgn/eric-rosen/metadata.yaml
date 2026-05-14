@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+defaults:
+  language: en
+avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_nhEdQ6S-9fyw2s5aRiwjKLPMcjG_cTCYD7rbglKA708Q=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@eric-rosen'
