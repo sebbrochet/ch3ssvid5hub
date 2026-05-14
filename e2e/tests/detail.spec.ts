@@ -51,9 +51,12 @@ test.describe('Game Detail', () => {
     await expect(hub.boardPlayButton).toBeVisible();
   });
 
-  test('shows opening moves section', async () => {
-    await expect(hub.detailMoves).toBeVisible();
-    const movesText = await hub.detailMoves.locator('.detail-moves-text').textContent();
+  test('shows opening moves section', async ({ page }) => {
+    // Navigate to a game known to have moves (first game may be a skeleton)
+    const hubWithMoves = new HubPage(page);
+    await hubWithMoves.gotoGame('alexbanzea-new-jobava-speedrun-2025-bypass-years-of-opening-study-with-this-system-0');
+    await expect(hubWithMoves.detailMoves).toBeVisible();
+    const movesText = await hubWithMoves.detailMoves.locator('.detail-moves-text').textContent();
     // Should contain at least one move number
     expect(movesText).toMatch(/\d+\./);
   });
@@ -70,7 +73,7 @@ test.describe('Game Detail', () => {
 test.describe('Game Detail — Specific Games', () => {
   test('Chess960 game shows variant badge', async ({ page }) => {
     const hub = new HubPage(page);
-    await hub.gotoGame('EricRosenExtra-chess960-serious-chess-960-0');
+    await hub.gotoGame('ericrosenextra-full-streams-serious-chess-960-0');
     await expect(hub.detailTitle).toBeVisible();
     const variant = page.locator('.detail-variant');
     await expect(variant).toBeVisible();
