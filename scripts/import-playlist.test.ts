@@ -79,6 +79,14 @@ describe('sanitizeFilename', () => {
   it('removes all specified special characters', () => {
     expect(sanitizeFilename('a<b>c:d"e/f\\g|h?i*j')).toBe('abcdefghij');
   });
+
+  it('replaces non-breaking spaces with regular spaces', () => {
+    expect(sanitizeFilename('attacking\u00A0chess')).toBe('attacking chess');
+  });
+
+  it('replaces other Unicode whitespace with regular spaces', () => {
+    expect(sanitizeFilename('en\u2009dash\u202Fspace')).toBe('en dash space');
+  });
 });
 
 // ── generatePgn ────────────────────────────────────────────────────────────────
@@ -118,26 +126,14 @@ describe('generatePgn', () => {
     expect(pgn).toContain('[VideoTitle "My Great Game"]');
   });
 
-  it('includes VideoPlaylist when provided', () => {
-    const pgn = generatePgn('abc123', { playlistTitle: 'Système Jobava-Londres 🔥' });
-    expect(pgn).toContain('[VideoPlaylist "Système Jobava-Londres 🔥"]');
-  });
-
-  it('escapes double quotes in VideoPlaylist', () => {
-    const pgn = generatePgn('abc123', { playlistTitle: 'The "Best" Playlist' });
-    expect(pgn).toContain('[VideoPlaylist "The \\"Best\\" Playlist"]');
-  });
-
   it('includes all optional headers together', () => {
     const pgn = generatePgn('abc123', {
       language: 'en',
       publishedAt: '2024-12-01T08:30:00Z',
       videoTitle: 'Best Opening Ever',
-      playlistTitle: 'My Playlist',
     });
     expect(pgn).toContain('[Date "2024.12.01"]');
     expect(pgn).toContain('[VideoTitle "Best Opening Ever"]');
-    expect(pgn).toContain('[VideoPlaylist "My Playlist"]');
     expect(pgn).toContain('[Language "en"]');
   });
   it('escapes double quotes in VideoTitle', () => {

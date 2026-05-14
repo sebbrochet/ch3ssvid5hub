@@ -97,6 +97,16 @@ PGN files in `pgn/` are the source of truth. A build script parses them into a J
 npm run build:catalog    # PGN → JSON (public/catalog/)
 ```
 
+### Import from YouTube
+
+Generate skeleton PGN files from a YouTube playlist:
+
+```bash
+npx tsx scripts/import-playlist.ts --playlist "https://www.youtube.com/playlist?list=PLxxx"
+```
+
+See [scripts/README.md](scripts/README.md) for full CLI documentation (API key setup, options, examples).
+
 ### Folder Structure
 
 ```Text

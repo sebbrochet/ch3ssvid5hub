@@ -57,7 +57,16 @@ export default function GameDetail() {
         {catalogGame && (
           <>
             <span className="breadcrumb-sep">›</span>
-            <Link to={`/browse?youtuber=${catalogGame.youtuber}`}>{catalogGame.youtuberDisplayName}</Link>
+            <Link to={`/browse?youtuber=${catalogGame.youtuber}`} className="breadcrumb-youtuber">
+              {catalog?.youtuberProfiles[catalogGame.youtuber]?.avatarUrl && (
+                <img
+                  src={catalog.youtuberProfiles[catalogGame.youtuber].avatarUrl}
+                  alt=""
+                  className="youtuber-avatar youtuber-avatar--sm"
+                />
+              )}
+              {catalogGame.youtuberDisplayName}
+            </Link>
             <span className="breadcrumb-sep">›</span>
             <span>{catalogGame.playlistDisplayName}</span>
           </>
@@ -80,6 +89,28 @@ export default function GameDetail() {
             <span className={`detail-result ${resultClass(game.headers['Result'])}`}>{game.headers['Result']}</span>
             {catalogGame?.variant && <span className="detail-variant">{catalogGame.variant}</span>}
           </div>
+
+          {catalogGame && catalogGame.moveCount > 0 && (
+            <div className="detail-annotations">
+              <span className="annotation-badge annotation-badge--moves">♟ {t('annotations.moves')}</span>
+              {catalogGame.hasTimestamps && (
+                <span className="annotation-badge annotation-badge--timestamps">
+                  ⏱ {t('annotations.timestamps')}{' '}
+                  {Math.round((catalogGame.timestampedMoveCount / catalogGame.totalMoveCount) * 100)}%
+                </span>
+              )}
+              {catalogGame.hasEvals && (
+                <span className="annotation-badge annotation-badge--evals">
+                  ⚙ {t('annotations.evals')}{' '}
+                  {Math.round(
+                    (catalogGame.evaluatedMoveCount / (catalogGame.totalMoveCount - catalogGame.checkmateMoveCount)) *
+                      100,
+                  )}
+                  %
+                </span>
+              )}
+            </div>
+          )}
 
           {game.description && <p className="detail-description">{game.description}</p>}
 

@@ -19,6 +19,7 @@
   "browse": {
     "filters": "Filtres",
     "youtuber": "YouTuber",
+    "playlist": "Playlist",
     "result": "Résultat",
     "variant": "Variante",
     "opening": "Ouverture",
@@ -33,7 +34,18 @@
     "sortDate": "Tri : Date",
     "sortPlayer": "Tri : Joueur",
     "sortOpening": "Tri : Ouverture",
-    "loading": "Chargement du catalogue…"
+    "loading": "Chargement du catalogue…",
+    "language": "Langue",
+    "annotations": "Annotations",
+    "filter_has": "avec",
+    "filter_missing": "sans"
+  },
+  "languages": {
+    "en": "Anglais",
+    "fr": "Français",
+    "de": "Allemand",
+    "es": "Espagnol",
+    "pt": "Portugais"
   },
   "detail": {
     "home": "Accueil",
@@ -56,5 +68,10 @@
     "text": "La page que vous cherchez n’existe pas ou a été déplacée.",
     "home": "Accueil",
     "browse": "Parcourir les parties"
+  },
+  "annotations": {
+    "moves": "coups",
+    "timestamps": "horodatages",
+    "evals": "évaluations"
   }
 }

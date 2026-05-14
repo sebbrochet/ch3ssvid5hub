@@ -6,6 +6,9 @@
 }
 
 .detail-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   font-size: 0.85rem;
   color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
@@ -17,7 +20,13 @@
 
 .breadcrumb-sep {
   margin: 0 0.35rem;
-  color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb-youtuber {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .detail-layout {
@@ -72,6 +81,12 @@
 .detail-result.result-draw {
   background: var(--color-bg-secondary);
   color: var(--color-text-secondary);
+}
+
+.detail-annotations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 .detail-variant {

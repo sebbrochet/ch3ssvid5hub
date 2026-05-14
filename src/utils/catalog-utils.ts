@@ -1,5 +1,7 @@
 import type { CatalogGame } from '../types/catalog';
 
+export type AnnotationFilter = '' | 'has' | 'missing';
+
 /**
  * Filter games by faceted criteria.
  */
@@ -7,16 +9,24 @@ export function filterGames(
   games: CatalogGame[],
   filters: {
     youtuber?: string;
+    playlist?: string;
     tag?: string;
     result?: string;
     variant?: string;
     opening?: string;
+    language?: string;
+    moves?: AnnotationFilter;
+    timestamps?: AnnotationFilter;
+    evals?: AnnotationFilter;
   },
 ): CatalogGame[] {
   let filtered = games;
 
   if (filters.youtuber) {
     filtered = filtered.filter((g) => g.youtuber === filters.youtuber);
+  }
+  if (filters.playlist) {
+    filtered = filtered.filter((g) => g.playlist === filters.playlist);
   }
   if (filters.tag) {
     const tag = filters.tag;
@@ -30,6 +40,24 @@ export function filterGames(
   }
   if (filters.opening) {
     filtered = filtered.filter((g) => g.opening === filters.opening);
+  }
+  if (filters.language) {
+    filtered = filtered.filter((g) => (g.language ?? '') === filters.language);
+  }
+  if (filters.moves === 'has') {
+    filtered = filtered.filter((g) => g.moveCount > 0);
+  } else if (filters.moves === 'missing') {
+    filtered = filtered.filter((g) => g.moveCount === 0);
+  }
+  if (filters.timestamps === 'has') {
+    filtered = filtered.filter((g) => g.hasTimestamps);
+  } else if (filters.timestamps === 'missing') {
+    filtered = filtered.filter((g) => !g.hasTimestamps);
+  }
+  if (filters.evals === 'has') {
+    filtered = filtered.filter((g) => g.hasEvals);
+  } else if (filters.evals === 'missing') {
+    filtered = filtered.filter((g) => !g.hasEvals);
   }
 
   return filtered;

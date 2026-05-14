@@ -19,6 +19,7 @@
   "browse": {
     "filters": "Filtros",
     "youtuber": "YouTuber",
+    "playlist": "Lista de reproducción",
     "result": "Resultado",
     "variant": "Variante",
     "opening": "Apertura",
@@ -33,7 +34,18 @@
     "sortDate": "Orden: Fecha",
     "sortPlayer": "Orden: Jugador",
     "sortOpening": "Orden: Apertura",
-    "loading": "Cargando catálogo…"
+    "loading": "Cargando catálogo…",
+    "language": "Idioma",
+    "annotations": "Anotaciones",
+    "filter_has": "con",
+    "filter_missing": "sin"
+  },
+  "languages": {
+    "en": "Inglés",
+    "fr": "Francés",
+    "de": "Alemán",
+    "es": "Español",
+    "pt": "Portugués"
   },
   "detail": {
     "home": "Inicio",
@@ -56,5 +68,10 @@
     "text": "La página que buscas no existe o ha sido movida.",
     "home": "Inicio",
     "browse": "Explorar partidas"
+  },
+  "annotations": {
+    "moves": "movimientos",
+    "timestamps": "marcas de tiempo",
+    "evals": "evaluaciones"
   }
 }

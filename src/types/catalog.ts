@@ -32,12 +32,22 @@ export interface CatalogGame {
   eco?: string;
   /** Opening name */
   opening?: string;
-  /** Number of half-moves */
+  /** Number of half-moves in the main line */
   moveCount: number;
+  /** Total number of half-moves including variations */
+  totalMoveCount: number;
   /** YouTube video title */
   videoTitle?: string;
   /** Whether the PGN has [%ts] timestamp annotations */
   hasTimestamps: boolean;
+  /** Whether the PGN has [%eval] engine evaluation annotations */
+  hasEvals: boolean;
+  /** Number of half-moves that have [%ts] timestamp annotations */
+  timestampedMoveCount: number;
+  /** Number of half-moves that have [%eval] engine evaluation annotations */
+  evaluatedMoveCount: number;
+  /** Number of checkmate moves (no eval expected) */
+  checkmateMoveCount: number;
   /** Tags for filtering */
   tags: string[];
   /** Difficulty level */
@@ -68,8 +78,12 @@ export interface CatalogIndex {
   players: string[];
   /** All unique youtuber handles */
   youtubers: string[];
+  /** Youtuber profile info (display name, avatar, channel URL) */
+  youtuberProfiles: Record<string, { displayName: string; avatarUrl?: string; channelUrl?: string }>;
   /** All unique annotator names */
   annotators: string[];
+  /** All unique video languages */
+  languages: string[];
 }
 
 /** Detailed per-game data for the detail view. */

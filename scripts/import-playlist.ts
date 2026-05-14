@@ -16,6 +16,7 @@ interface PlaylistResponse {
 interface ChannelSnippet {
   customUrl?: string;
   title: string;
+  thumbnails?: { default?: { url?: string } };
 }
 
 interface ChannelResponse {
@@ -112,11 +113,17 @@ export function extractPlaylistId(input: string): string {
 
 const UNSAFE_CHARS = /[<>:"/\\|?*]/g;
 const EMOJI = /[\p{Emoji_Presentation}\p{Extended_Pictographic}\uFE0E\uFE0F]/gu;
+const UNICODE_WHITESPACE = /[\u00A0\u2000-\u200A\u202F\u205F\u3000]/g;
 const CONSECUTIVE_SPACES = /\s{2,}/g;
 const MAX_FILENAME_LENGTH = 200;
 
 export function sanitizeFilename(title: string): string {
-  let name = title.replace(UNSAFE_CHARS, '').replace(EMOJI, '').replace(CONSECUTIVE_SPACES, ' ').trim();
+  let name = title
+    .replace(UNICODE_WHITESPACE, ' ')
+    .replace(UNSAFE_CHARS, '')
+    .replace(EMOJI, '')
+    .replace(CONSECUTIVE_SPACES, ' ')
+    .trim();
 
   if (name.length > MAX_FILENAME_LENGTH) {
     name = name.slice(0, MAX_FILENAME_LENGTH);
@@ -147,7 +154,7 @@ export function formatPgnDate(isoDate: string): string {
 
 export function generatePgn(
   videoId: string,
-  options?: { language?: string; publishedAt?: string; videoTitle?: string; playlistTitle?: string },
+  options?: { language?: string; publishedAt?: string; videoTitle?: string },
 ): string {
   const date = options?.publishedAt ? formatPgnDate(options.publishedAt) : '????.??.??';
   const headers = [
@@ -162,10 +169,6 @@ export function generatePgn(
 
   if (options?.videoTitle) {
     headers.push(`[VideoTitle "${escapePgnString(options.videoTitle)}"]`);
-  }
-
-  if (options?.playlistTitle) {
-    headers.push(`[VideoPlaylist "${escapePgnString(options.playlistTitle)}"]`);
   }
 
   if (options?.language) {
@@ -204,7 +207,13 @@ async function fetchPlaylistInfo(playlistId: string, apiKey: string): Promise<Pl
   };
 }
 
-export async function fetchChannelHandle(channelId: string, apiKey: string): Promise<string> {
+export interface ChannelProfile {
+  handle: string;
+  avatarUrl?: string;
+  channelUrl?: string;
+}
+
+export async function fetchChannelProfile(channelId: string, apiKey: string): Promise<ChannelProfile> {
   const url = `${API_BASE}/channels?part=snippet&id=${encodeURIComponent(channelId)}&key=${encodeURIComponent(apiKey)}`;
   const res = await fetch(url);
 
@@ -219,13 +228,23 @@ export async function fetchChannelHandle(channelId: string, apiKey: string): Pro
   }
 
   const snippet = data.items[0].snippet;
+  let handle: string;
   if (snippet.customUrl) {
-    // customUrl is like "@alexbanzea" — strip the @ prefix
-    return snippet.customUrl.replace(/^@/, '');
+    handle = snippet.customUrl.replace(/^@/, '');
+  } else {
+    handle = sanitizeFilename(snippet.title);
   }
 
-  // Fallback: use channel title with unsafe chars removed
-  return sanitizeFilename(snippet.title);
+  return {
+    handle,
+    avatarUrl: snippet.thumbnails?.default?.url,
+    channelUrl: snippet.customUrl ? `https://www.youtube.com/${snippet.customUrl}` : undefined,
+  };
+}
+
+export async function fetchChannelHandle(channelId: string, apiKey: string): Promise<string> {
+  const profile = await fetchChannelProfile(channelId, apiKey);
+  return profile.handle;
 }
 
 const PRIVATE_TITLES = new Set(['Private video', 'Deleted video']);
@@ -298,10 +317,12 @@ async function main() {
 
   // Resolve youtuber handle: use explicit flag or auto-detect from channel
   let youtuber: string;
+  let channelProfile: ChannelProfile | undefined;
   if (args.youtuber) {
     youtuber = args.youtuber;
   } else {
-    youtuber = await fetchChannelHandle(playlistInfo.channelId, apiKey);
+    channelProfile = await fetchChannelProfile(playlistInfo.channelId, apiKey);
+    youtuber = channelProfile.handle;
 
     // Check if an existing pgn/ folder matches (case-insensitive) and preserve its casing
     const pgnDir = path.resolve(config.pgnDir);
@@ -326,6 +347,46 @@ async function main() {
 
   const outputDir = path.resolve(config.pgnDir, youtuber, playlistName);
   const result: ImportResult = { created: 0, skippedExisting: 0, skippedPrivate: 0, errors: 0 };
+
+  // Write or update youtuber-level metadata.yaml with channel profile
+  if (!args.dryRun && channelProfile) {
+    const youtuberDir = path.join(path.resolve(config.pgnDir), youtuber);
+    fs.mkdirSync(youtuberDir, { recursive: true });
+    const youtuberMetaPath = path.join(youtuberDir, 'metadata.yaml');
+    if (fs.existsSync(youtuberMetaPath)) {
+      const content = fs.readFileSync(youtuberMetaPath, 'utf-8');
+      if (channelProfile.avatarUrl && !content.includes('avatarUrl:')) {
+        fs.appendFileSync(youtuberMetaPath, `avatarUrl: '${channelProfile.avatarUrl}'\n`, 'utf-8');
+      }
+      if (channelProfile.channelUrl && !content.includes('channelUrl:')) {
+        fs.appendFileSync(youtuberMetaPath, `channelUrl: '${channelProfile.channelUrl}'\n`, 'utf-8');
+      }
+    } else {
+      let content = '# yaml-language-server: $schema=https://www.schemastore.org/any.json\n\n';
+      if (channelProfile.avatarUrl) content += `avatarUrl: '${channelProfile.avatarUrl}'\n`;
+      if (channelProfile.channelUrl) content += `channelUrl: '${channelProfile.channelUrl}'\n`;
+      if (content.split('\n').length > 2) {
+        fs.writeFileSync(youtuberMetaPath, content, 'utf-8');
+        console.log(`  ✓ Created: ${youtuber}/metadata.yaml`);
+      }
+    }
+  }
+
+  // Write or update playlist metadata.yaml with the playlist URL
+  const metadataPath = path.join(outputDir, 'metadata.yaml');
+  if (!args.dryRun) {
+    fs.mkdirSync(outputDir, { recursive: true });
+    const playlistUrl = `https://www.youtube.com/playlist?list=${playlistId}`;
+    if (!fs.existsSync(metadataPath)) {
+      const escapedTitle = playlistInfo.title.replace(/'/g, "''");
+      fs.writeFileSync(
+        metadataPath,
+        `# yaml-language-server: $schema=https://www.schemastore.org/any.json\n\nplaylistUrl: '${playlistUrl}'\ndefaults:\n  videoPlaylist: '${escapedTitle}'\n`,
+        'utf-8',
+      );
+      console.log(`  ✓ Created: metadata.yaml`);
+    }
+  }
 
   for (let i = 0; i < videos.length; i++) {
     const video = videos[i];
@@ -361,7 +422,6 @@ async function main() {
           language: args.language,
           publishedAt: video.publishedAt,
           videoTitle: video.title,
-          playlistTitle: playlistInfo.title,
         }),
         'utf-8',
       );

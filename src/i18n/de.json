@@ -19,6 +19,7 @@
   "browse": {
     "filters": "Filter",
     "youtuber": "YouTuber",
+    "playlist": "Playlist",
     "result": "Ergebnis",
     "variant": "Variante",
     "opening": "Eröffnung",
@@ -33,7 +34,18 @@
     "sortDate": "Sortierung: Datum",
     "sortPlayer": "Sortierung: Spieler",
     "sortOpening": "Sortierung: Er\u00f6ffnung",
-    "loading": "Katalog wird geladen…"
+    "loading": "Katalog wird geladen…",
+    "language": "Sprache",
+    "annotations": "Anmerkungen",
+    "filter_has": "mit",
+    "filter_missing": "ohne"
+  },
+  "languages": {
+    "en": "Englisch",
+    "fr": "Französisch",
+    "de": "Deutsch",
+    "es": "Spanisch",
+    "pt": "Portugiesisch"
   },
   "detail": {
     "home": "Startseite",
@@ -56,5 +68,10 @@
     "text": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
     "home": "Startseite",
     "browse": "Partien durchsuchen"
+  },
+  "annotations": {
+    "moves": "Züge",
+    "timestamps": "Zeitstempel",
+    "evals": "Bewertungen"
   }
 }

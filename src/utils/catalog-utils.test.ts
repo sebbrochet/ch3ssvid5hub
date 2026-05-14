@@ -15,7 +15,12 @@ function makeGame(overrides: Partial<CatalogGame> = {}): CatalogGame {
     black: 'Black Player',
     result: '1-0',
     moveCount: 30,
+    totalMoveCount: 30,
     hasTimestamps: false,
+    hasEvals: false,
+    timestampedMoveCount: 0,
+    evaluatedMoveCount: 0,
+    checkmateMoveCount: 0,
     tags: ['tactics'],
     ...overrides,
   };
@@ -105,6 +110,59 @@ describe('filterGames', () => {
   it('returns empty when no games match', () => {
     const result = filterGames(games, { youtuber: 'nobody' });
     expect(result).toHaveLength(0);
+  });
+
+  it('filters by moves=has (only games with moves)', () => {
+    const data = [makeGame({ id: 'has-moves', moveCount: 10 }), makeGame({ id: 'no-moves', moveCount: 0 })];
+    const result = filterGames(data, { moves: 'has' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('has-moves');
+  });
+
+  it('filters by moves=missing (only skeletons)', () => {
+    const data = [makeGame({ id: 'has-moves', moveCount: 10 }), makeGame({ id: 'no-moves', moveCount: 0 })];
+    const result = filterGames(data, { moves: 'missing' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('no-moves');
+  });
+
+  it('filters by timestamps=has', () => {
+    const data = [makeGame({ id: 'ts', hasTimestamps: true }), makeGame({ id: 'no-ts', hasTimestamps: false })];
+    const result = filterGames(data, { timestamps: 'has' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('ts');
+  });
+
+  it('filters by timestamps=missing', () => {
+    const data = [makeGame({ id: 'ts', hasTimestamps: true }), makeGame({ id: 'no-ts', hasTimestamps: false })];
+    const result = filterGames(data, { timestamps: 'missing' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('no-ts');
+  });
+
+  it('filters by evals=has', () => {
+    const data = [makeGame({ id: 'ev', hasEvals: true }), makeGame({ id: 'no-ev', hasEvals: false })];
+    const result = filterGames(data, { evals: 'has' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('ev');
+  });
+
+  it('filters by evals=missing', () => {
+    const data = [makeGame({ id: 'ev', hasEvals: true }), makeGame({ id: 'no-ev', hasEvals: false })];
+    const result = filterGames(data, { evals: 'missing' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('no-ev');
+  });
+
+  it('combines annotation filters with other filters', () => {
+    const data = [
+      makeGame({ id: 'g1', youtuber: 'alice', hasTimestamps: true, hasEvals: true }),
+      makeGame({ id: 'g2', youtuber: 'alice', hasTimestamps: true, hasEvals: false }),
+      makeGame({ id: 'g3', youtuber: 'bob', hasTimestamps: true, hasEvals: true }),
+    ];
+    const result = filterGames(data, { youtuber: 'alice', evals: 'has' });
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('g1');
   });
 });
 

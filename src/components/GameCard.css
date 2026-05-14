@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.35rem;
   font-size: 0.8rem;
 }
 
@@ -138,4 +139,39 @@
 .tag-more {
   background: var(--color-bg-secondary);
   color: var(--color-text-secondary);
+}
+
+.game-card--skeleton {
+  opacity: 0.55;
+}
+
+.game-card-annotations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.annotation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.annotation-badge--moves {
+  background: var(--color-badge-moves-bg, #e6f4ea);
+  color: var(--color-badge-moves-text, #1e7e34);
+}
+
+.annotation-badge--timestamps {
+  background: var(--color-badge-ts-bg, #e3f2fd);
+  color: var(--color-badge-ts-text, #1565c0);
+}
+
+.annotation-badge--evals {
+  background: var(--color-badge-eval-bg, #f3e5f5);
+  color: var(--color-badge-eval-text, #7b1fa2);
 }

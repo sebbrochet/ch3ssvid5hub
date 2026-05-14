@@ -19,6 +19,7 @@
   "browse": {
     "filters": "Filters",
     "youtuber": "YouTuber",
+    "playlist": "Playlist",
     "result": "Result",
     "variant": "Variant",
     "opening": "Opening",
@@ -33,7 +34,18 @@
     "sortDate": "Sort: Date",
     "sortPlayer": "Sort: Player",
     "sortOpening": "Sort: Opening",
-    "loading": "Loading catalog…"
+    "loading": "Loading catalog…",
+    "language": "Language",
+    "annotations": "Annotations",
+    "filter_has": "has",
+    "filter_missing": "missing"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "French",
+    "de": "German",
+    "es": "Spanish",
+    "pt": "Portuguese"
   },
   "detail": {
     "home": "Home",
@@ -56,5 +68,10 @@
     "text": "The page you’re looking for doesn’t exist or has been moved.",
     "home": "Home",
     "browse": "Browse Games"
+  },
+  "annotations": {
+    "moves": "moves",
+    "timestamps": "timestamps",
+    "evals": "evals"
   }
 }

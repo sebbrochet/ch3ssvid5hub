@@ -21,6 +21,14 @@
   margin-bottom: 1.25rem;
 }
 
+.filter-group--sub {
+  margin-left: 1.5rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--color-border);
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .filter-group h4 {
   font-size: 0.85rem;
   color: var(--color-text-secondary);
@@ -43,6 +51,31 @@
 .filter-item.active {
   font-weight: 600;
   color: var(--color-primary);
+}
+
+/* Annotation tri-state filter buttons */
+.annotation-filter {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  text-align: left;
+  width: 100%;
+}
+
+.annotation-filter-state {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  font-size: 0.7rem;
+}
+
+.annotation-filter-state--has {
+  color: var(--color-success);
+}
+
+.annotation-filter-state--missing {
+  color: var(--color-draw-result);
 }
 
 .filter-count {

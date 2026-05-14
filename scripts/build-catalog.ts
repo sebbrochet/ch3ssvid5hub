@@ -21,6 +21,8 @@ interface ParsedGame {
 
 interface YoutuberMeta {
   displayName?: string;
+  avatarUrl?: string;
+  channelUrl?: string;
   defaults?: Record<string, unknown>;
 }
 
@@ -47,8 +49,13 @@ interface CatalogGame {
   eco?: string;
   opening?: string;
   moveCount: number;
+  totalMoveCount: number;
   videoTitle?: string;
   hasTimestamps: boolean;
+  hasEvals: boolean;
+  timestampedMoveCount: number;
+  evaluatedMoveCount: number;
+  checkmateMoveCount: number;
   tags: string[];
   difficulty?: string;
   language?: string;
@@ -75,7 +82,9 @@ interface CatalogIndex {
   openings: string[];
   players: string[];
   youtubers: string[];
+  youtuberProfiles: Record<string, { displayName: string; avatarUrl?: string; channelUrl?: string }>;
   annotators: string[];
+  languages: string[];
 }
 
 // ── Display Name Cache ─────────────────────────────────────────────────────────
@@ -204,19 +213,66 @@ function countMoves(movetext: string): number {
   // let's count SAN tokens for accuracy
   const sanTokens = movetext
     .replace(/\{[^}]*\}/g, '') // strip comments
-    .replace(/\([^)]*\)/g, '') // strip variations (simple, non-nested)
     .replace(/\d+\.\.\./g, '') // strip "1..."
     .replace(/\d+\./g, '') // strip move numbers
     .replace(/\$\d+/g, '') // strip NAGs
     .replace(/(1-0|0-1|1\/2-1\/2|\*)/g, '') // strip result
-    .trim()
-    .split(/\s+/)
-    .filter((t) => t.length > 0 && /^[A-Za-z]/.test(t));
-  return sanTokens.length;
+    .trim();
+  const mainLine = stripVariations(sanTokens);
+  return mainLine.split(/\s+/).filter((t) => t.length > 0 && /^[A-Za-z]/.test(t)).length;
 }
 
 function hasTimestamps(movetext: string): boolean {
   return /\[%ts\s/.test(movetext);
+}
+
+function hasEvals(movetext: string): boolean {
+  return /\[%eval\s/.test(movetext);
+}
+
+function stripVariations(movetext: string): string {
+  // Iteratively strip innermost variations to handle nesting
+  let result = movetext;
+  let prev: string;
+  do {
+    prev = result;
+    result = result.replace(/\([^()]*\)/g, '');
+  } while (result !== prev);
+  return result;
+}
+
+function countAllMoves(movetext: string): number {
+  // Count all plies including those inside variations
+  const clean = movetext
+    .replace(/\{[^}]*\}/g, '')
+    .replace(/\d+\.\.\./g, '')
+    .replace(/\d+\./g, '')
+    .replace(/\$\d+/g, '')
+    .replace(/(1-0|0-1|1\/2-1\/2|\*)/g, '')
+    .replace(/[()]/g, '')
+    .trim();
+  return clean.split(/\s+/).filter((t) => t.length > 0 && /^[A-Za-z]/.test(t)).length;
+}
+
+function countAnnotatedMoves(movetext: string, pattern: RegExp): number {
+  // Count annotations across all moves including variations
+  const comments = movetext.match(/\{[^}]*\}/g);
+  if (!comments) return 0;
+  return comments.filter((c) => pattern.test(c)).length;
+}
+
+function countCheckmates(movetext: string): number {
+  // Count checkmate moves (SAN ending with #) outside of comments
+  const noComments = movetext.replace(/\{[^}]*\}/g, '');
+  return (noComments.match(/#/g) || []).length;
+}
+
+function countTimestampedMoves(movetext: string): number {
+  return countAnnotatedMoves(movetext, /\[%ts\s/);
+}
+
+function countEvaluatedMoves(movetext: string): number {
+  return countAnnotatedMoves(movetext, /\[%eval\s/);
 }
 
 function extractFirstMoves(movetext: string, maxMoves: number = 15): string {
@@ -369,6 +425,7 @@ async function buildCatalog(): Promise<void> {
   const allPlayers = new Set<string>();
   const allYoutubers = new Set<string>();
   const allAnnotators = new Set<string>();
+  const allLanguages = new Set<string>();
 
   // First pass: collect one VideoURL per youtuber for display name resolution
   const youtuberVideoUrls = new Map<string, string[]>();
@@ -391,10 +448,17 @@ async function buildCatalog(): Promise<void> {
 
   // Resolve display names for all youtubers
   const displayNames: Record<string, string> = {};
+  const youtuberProfiles: Record<string, { displayName: string; avatarUrl?: string; channelUrl?: string }> = {};
   for (const [handle, videoUrls] of youtuberVideoUrls) {
     const metaPath = path.join(pgnRoot, handle, 'metadata.yaml');
     const youtuberMeta = loadYaml<YoutuberMeta>(metaPath);
-    displayNames[handle] = await resolveDisplayName(handle, youtuberMeta, displayNameCache, videoUrls);
+    const displayName = await resolveDisplayName(handle, youtuberMeta, displayNameCache, videoUrls);
+    displayNames[handle] = displayName;
+    youtuberProfiles[handle] = {
+      displayName,
+      avatarUrl: youtuberMeta?.avatarUrl,
+      channelUrl: youtuberMeta?.channelUrl,
+    };
   }
 
   // Save updated cache
@@ -489,7 +553,7 @@ async function buildCatalog(): Promise<void> {
         youtuber,
         youtuberDisplayName: displayNames[youtuber],
         playlist,
-        playlistDisplayName: h['VideoPlaylist'] ?? playlist,
+        playlistDisplayName: h['VideoPlaylist'] ?? (merged['videoPlaylist'] as string | undefined) ?? playlist,
         fileName,
         gameIndex: gi,
         white: h['White'] ?? '?',
@@ -502,8 +566,13 @@ async function buildCatalog(): Promise<void> {
         eco,
         opening,
         moveCount: countMoves(game.movetext),
+        totalMoveCount: countAllMoves(game.movetext),
         videoTitle,
         hasTimestamps: hasTimestamps(game.movetext),
+        hasEvals: hasEvals(game.movetext),
+        timestampedMoveCount: countTimestampedMoves(game.movetext),
+        evaluatedMoveCount: countEvaluatedMoves(game.movetext),
+        checkmateMoveCount: countCheckmates(game.movetext),
         tags,
         difficulty: difficulty as CatalogGame['difficulty'],
         language,
@@ -520,6 +589,7 @@ async function buildCatalog(): Promise<void> {
       if (catalogGame.white && catalogGame.white !== '?') allPlayers.add(catalogGame.white);
       if (catalogGame.black && catalogGame.black !== '?') allPlayers.add(catalogGame.black);
       if (annotator) allAnnotators.add(annotator);
+      if (language) allLanguages.add(language);
 
       // Write per-game detail JSON
       const detail: GameDetail = {
@@ -546,7 +616,9 @@ async function buildCatalog(): Promise<void> {
     openings: [...allOpenings].sort(),
     players: [...allPlayers].sort(),
     youtubers: [...allYoutubers].sort(),
+    youtuberProfiles,
     annotators: [...allAnnotators].sort(),
+    languages: [...allLanguages].sort(),
   };
 
   fs.writeFileSync(path.join(catalogDir, 'index.json'), JSON.stringify(catalog, null, 2));

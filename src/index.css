@@ -26,6 +26,12 @@
   --color-result-white-text: #2e7d32;
   --color-result-black-bg: #e3f2fd;
   --color-result-black-text: #1565c0;
+  --color-badge-moves-bg: #e6f4ea;
+  --color-badge-moves-text: #1e7e34;
+  --color-badge-ts-bg: #e3f2fd;
+  --color-badge-ts-text: #1565c0;
+  --color-badge-eval-bg: #f3e5f5;
+  --color-badge-eval-text: #7b1fa2;
   --radius: 8px;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -51,6 +57,12 @@
   --color-result-white-text: #66bb6a;
   --color-result-black-bg: #1a2a3e;
   --color-result-black-text: #64b5f6;
+  --color-badge-moves-bg: #1b3a2a;
+  --color-badge-moves-text: #66bb6a;
+  --color-badge-ts-bg: #1a2a3e;
+  --color-badge-ts-text: #64b5f6;
+  --color-badge-eval-bg: #2a1a3e;
+  --color-badge-eval-text: #ce93d8;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -61,6 +73,23 @@ body {
   background: var(--color-bg);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Youtuber avatars — shared across components */
+.youtuber-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.youtuber-avatar--xs {
+  width: 20px;
+  height: 20px;
+}
+
+.youtuber-avatar--sm {
+  width: 24px;
+  height: 24px;
 }
 
 a {
