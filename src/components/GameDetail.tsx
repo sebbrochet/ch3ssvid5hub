@@ -143,7 +143,7 @@ export default function GameDetail() {
           </table>
 
           <div className="detail-actions">
-            <a href={importUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-import">
+            <a href={importUrl} target="ch3ssvid5" rel="noopener noreferrer" className="btn btn-primary btn-import">
               {t('detail.openInCh3ssVid5')}
             </a>
             <a href={pgnFileUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">

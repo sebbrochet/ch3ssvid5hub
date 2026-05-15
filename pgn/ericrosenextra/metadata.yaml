@@ -1,5 +1,6 @@
 # yaml-language-server: $schema=https://www.schemastore.org/any.json
 
+displayName: Eric Rosen Extra
 defaults:
   language: en
 avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_n3aImWGAavDkYiTywMZuvTr1S2WihdcS0vcor1pWeqMQ=s88-c-k-c0x00ffffff-no-rj'

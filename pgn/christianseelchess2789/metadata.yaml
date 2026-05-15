@@ -1,5 +1,6 @@
 # yaml-language-server: $schema=https://www.schemastore.org/any.json
 
+displayName: ChristianSeelChess
 defaults:
   language: en
 avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_ntZmfgJZS2ssXw_8WkMEVnC5x-ouzEkfs1RPGdQhOgcg=s88-c-k-c0x00ffffff-no-rj'

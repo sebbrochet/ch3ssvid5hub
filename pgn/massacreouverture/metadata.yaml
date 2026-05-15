@@ -1,5 +1,6 @@
 # yaml-language-server: $schema=https://www.schemastore.org/any.json
 
+displayName: Massacrealouverture
 defaults:
   language: fr
 avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_mhqKdlevlkKppOgOs8f9KOr_WEwKkO3RwAaChErBiF3Q=s88-c-k-c0x00ffffff-no-rj'
