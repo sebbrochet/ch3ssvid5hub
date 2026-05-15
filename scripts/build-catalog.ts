@@ -392,7 +392,10 @@ async function buildCatalog(): Promise<void> {
   const catalogDir = path.resolve(config.catalogDir);
   const gamesDir = path.join(catalogDir, 'games');
 
-  // Ensure output directories exist
+  // Ensure output directories exist (clean games dir to remove stale files)
+  if (fs.existsSync(gamesDir)) {
+    fs.rmSync(gamesDir, { recursive: true });
+  }
   fs.mkdirSync(gamesDir, { recursive: true });
 
   // Find all PGN files using Node.js built-in recursive readdir
