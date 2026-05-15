@@ -96,7 +96,8 @@ function getGitDates(): Record<string, string> {
   const dates: Record<string, string> = {};
   try {
     // Use git log with --name-only to batch-fetch last commit dates for all files
-    const result = execSync('git log --format="%aI" --name-only --diff-filter=ACMR -- "pgn/"', {
+    // -c core.quotePath=false ensures non-ASCII filenames are output as UTF-8 (not octal escapes)
+    const result = execSync('git -c core.quotePath=false log --format="%aI" --name-only --diff-filter=ACMR -- "pgn/"', {
       encoding: 'utf-8',
       maxBuffer: 50 * 1024 * 1024,
     });
