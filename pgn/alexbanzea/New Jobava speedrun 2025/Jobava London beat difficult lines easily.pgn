@@ -1,4 +1,4 @@
-[Event "rated game"]
+[Event "Game 1 - 2 Nc3 c5"]
 [Site "chess.com"]
 [Date "2025.03.28"]
 [White "ChessMasterTeaching"]
@@ -11,13 +11,13 @@
 [WhiteElo "2205"]
 [Annotator "sebbrochet"]
 [BlackElo "2110"]
-[Tags "Jobava"]
+[Tags "Jobava, Albin Counter Gambit"]
 [Difficulty "advanced"]
 [Language "en"]
 
 1. d4 {[%ts 0:40] [%eval 0.22]} d5 {[%ts 0:42] [%eval 0.31]} 2. Nc3 {[%ts 0:45] [%eval 0.07]} c5 {[%ts 0:49] [%eval 0.14] [%cal Ye2e4,Yd4c5]} 3. e4 {[%ts 1:20] [%eval -0.01]} dxe4 {[%ts 1:26] [%eval -0.05] [%cal Rd4c5,Rc3e4,Bf1b5]} 4. d5 {[%ts 1:50] [%eval 0.05]} Nf6 {[%ts 2:03] [%eval 0.11]} 5. Nge2 {[%ts 2:40] [%eval 0.14]} e6 {[%ts 2:43] [%eval 0.08] [%csl Re4,Rd5] [%cal Ye2f4,Ye2g3,Rg3e4,Rf4d5]} 6. Nf4 {[%ts 2:57] [%eval 0.00] [%cal Yf4d5,Ba7a6]} exd5 {[%ts 3:04] [%eval 0.24]} 7. Nfxd5 {[%ts 3:55] [%eval 0.24] [%csl Yf4,Yg5] [%cal Yc3e4,Yc1g5]} Nxd5 {[%ts 4:07] [%eval 0.26]} 8. Qxd5 {[%ts 4:13] [%eval 0.17]} Qxd5 {[%ts 4:19] [%eval 0.09]} 9. Nxd5 {[%ts 4:21] [%eval 0.06]} Bd6 {[%ts 4:26] [%eval 0.08] [%cal Yc1e3,Ye1c1]} 10. Be3 {[%ts 4:44] [%eval 0.05] [%cal Ye3c5,Bc8f5]} b6 {[%ts 4:59] [%eval 1.03]} 11. O-O-O {[%ts 5:08] [%eval 1.18] [%cal Yd1d6,Bd6e5]} O-O {[%ts 5:14] [%eval 1.39] [%csl Rd6,Re4] [%cal Yd5c3,Yd5f6,Yg7f6,Yd1d6,Yd5b6]} 12. Nf6+ {[%ts 6:41] [%eval 1.04]} gxf6 {[%ts 6:44] [%eval 1.16]} 13. Rxd6 {[%ts 6:47] [%eval 1.24]} Be6 {[%ts 6:51] [%eval 2.36] [%csl Ra2] [%cal Re6a2]} 14. Bb5 {[%ts 8:16] [%eval 1.63]} Rc8 {[%ts 8:28] [%eval 4.71]} 15. Rhd1 {[%ts 8:39] [%eval 1.41]} a6 {[%ts 8:58] [%eval 5.21]} 16. Rd8+ {[%ts 9:05] [%eval 2.97]} Rxd8 {[%ts 9:06] [%eval 4.99]} 17. Rxd8+ {[%ts 9:08] [%eval 5.09]} Kg7 {[%ts 9:09] [%eval 5.18] [%cal Yb5c6,Yb8c6,Yd8a8]} 18. Be2 {[%ts 9:46] [%eval 5.13]} Bd7 {[%ts 10:02] [%eval 5.38]} 19. Bf4 {[%ts 10:06] [%eval 5.43]} Bb5 {[%ts 10:25] [%eval 5.55]} 20. Bxb5 {[%ts 10:47] [%eval 5.15]} axb5 {[%ts 10:48] [%eval 5.11]} 21. Kb1 {[%ts 10:50] [%eval 4.53]} Ra4 {[%ts 10:58] [%eval 5.35]} 22. Rxb8 {[%ts 11:02] [%eval 5.49]} Rd4 {[%ts 11:03] [%eval 5.69]} 23. Kc1 {[%ts 11:10] [%eval 5.75]} Kg6 {[%ts 11:29] [%eval 5.94]} 24. Rxb6 {[%ts 11:31] [%eval 5.86]} Kf5 {[%ts 11:33] [%eval 6.21]} 25. Be3 {[%ts 11:35] [%eval 6.42] [%cal Ye3c5,Yb6b5]} Ra4 {[%ts 11:44] [%eval 6.49]} 26. Rxb5 {[%ts 11:47] [%eval 6.22]} Rxa2 {[%ts 11:48] [%eval 6.23]} 27. Rxc5+ {[%ts 11:50] [%eval 6.19]} Kg6 {[%ts 11:51] [%eval 6.31]} 28. Kb1 {[%ts 11:53] [%eval 6.22]} Ra6 {[%ts 11:56] [%eval 6.28]} 29. b4 {[%ts 12:06] [%eval 6.40]} Rd6 {[%ts 12:15] [%eval 6.89]} 30. b5 {[%ts 12:18] [%eval 7.18]} Rd1+ {[%ts 12:19] [%eval 7.50]} 31. Kb2 {[%ts 12:20] [%eval 7.69]} Rd7 {[%ts 12:22] [%eval 7.97]} 32. b6 {[%ts 12:23] [%eval 8.24]} Rb7 {[%ts 12:25] [%eval 8.33]} 33. Rc7 {[%ts 12:27] [%eval 9.06]} Rb8 {[%ts 12:27] [%eval 9.14]} 34. b7 {[%ts 12:30] [%eval 9.17]} Kf5 {[%ts 12:33] [%eval 9.36]} 35. Ba7 {[%ts 12:34] [%eval 9.41]} 1-0
 
-[Event "rated game"]
+[Event "Game 2 - g6 Grünfeld"]
 [Site "chess.com"]
 [Date "2025.03.28"]
 [White "ChessMasterTeaching"]
@@ -28,7 +28,7 @@
 [WhiteElo "2185"]
 [BlackElo "2110"]
 [Annotator "sebbrochet"]
-[Tags "Jobava"]
+[Tags "Jobava, Grünfeld, Harry"]
 [Difficulty "advanced"]
 [Language "en"]
 [ECO "A40"]
@@ -36,7 +36,7 @@
 
 1. d4 {[%ts 14:22] [%eval 0.23]} d5 {[%ts 14:27] [%eval 0.22]} 2. Nc3 {[%ts 14:28] [%eval 0.08]} Nf6 {[%ts 14:31] [%eval 0.09]} 3. Bf4 {[%ts 14:32] [%eval 0.10]} c6 {[%ts 14:34] [%eval 0.08]} 4. e3 {[%ts 14:57] [%eval -0.07]} g6 {[%ts 15:04] [%eval 0.28]} 5. h4 {[%ts 15:37] [%eval 0.12]} Bg7 {[%ts 15:40] [%eval 0.10]} 6. Be2 {[%ts 15:59] [%eval 0.13]} h5 {[%ts 16:03] [%eval 0.07]} 7. Nf3 {[%ts 16:08] [%eval 0.07] [%cal Yf3e5]} Bf5 {[%ts 16:13] [%eval 0.50]} 8. Ne5 {[%ts 16:28] [%eval 0.16] [%cal Yf2f3,Yg2g4]} Nbd7 {[%ts 16:39] [%eval 0.29]} 9. f3 {[%ts 17:07] [%eval 0.30]} e6 {[%ts 18:58] [%eval 0.63]} 10. Qd2 {[%ts 19:03] [%eval 0.71]} a5 {[%ts 19:09] [%eval 1.36] [%cal Yc3d1,Yd1f2]} 11. O-O-O {[%ts 19:38] [%eval 1.54]} a4 {[%ts 19:49] [%eval 1.58] [%cal Ya4a3,Yb2b3]} 12. a3 {[%ts 20:12] [%eval 1.69] [%csl Rb4,Rc5] [%cal Yc3a2,Ya2b4]} Qe7 {[%ts 21:29] [%eval 2.22]} 13. Bg5 {[%ts 22:52] [%eval 2.34]} Qf8 {[%ts 23:09] [%eval 2.35]} 14. Nxd7 {[%ts 23:23] [%eval 2.28]} Nxd7 {[%ts 23:42] [%eval 2.65] [%cal Yg2g4,Ye3e4]} 15. e4 {[%ts 25:10] [%eval 2.70]} dxe4 {[%ts 25:14] [%eval 3.53]} 16. fxe4 {[%ts 25:16] [%eval 3.49]} Bg4 {[%ts 25:18] [%eval 3.67] [%cal Yd4d5,Ye4e5,Ye2g4]} 17. Bxg4 {[%ts 25:33] [%eval 3.46]} hxg4 {[%ts 25:35] [%eval 3.49]} 18. e5 {[%ts 25:43] [%eval 3.64] [%cal Yc3e4,Ye4d6]} Bh6 {[%ts 26:17] [%eval 3.59]} 19. Ne4 {[%ts 26:18] [%eval 3.50]} Bxg5 {[%ts 26:28] [%eval 3.76]} 20. Qxg5 {[%ts 26:58] [%eval 2.16]} Qe7 {[%ts 27:04] [%eval 3.75]} 21. Nd6+ {[%ts 27:13] [%eval 3.76]} Kf8 {[%ts 27:17] [%eval 3.74]} 22. Rhf1 {[%ts 28:13] [%eval 2.12]} Qxg5+ {[%ts 29:14] [%eval 2.38]} 23. hxg5 {[%ts 29:15] [%eval 2.33]} Rh7 {[%ts 29:17] [%eval 2.42]} 24. Rf4 {[%ts 29:18] [%eval 2.51]} Ke7 {[%ts 29:21] [%eval 2.22]} 25. Rdf1 {[%ts 29:30] [%eval 2.14]} Rf8 {[%ts 29:42] [%eval 2.28]} 26. Nxb7 {[%ts 29:43] [%eval 2.23]} Rh5 {[%ts 29:48] [%eval 3.20]} 27. Rxg4 {[%ts 29:56] [%eval 3.28]} Rfh8 {[%ts 30:02] [%eval 3.27]} 28. Nd6 {[%ts 30:04] [%eval 3.19]} Rh1 {[%ts 30:08] [%eval 3.48]} 29. Rf4 {[%ts 30:10] [%eval 3.35]} Rxf1+ {[%ts 30:12] [%eval 3.50]} 30. Rxf1 {[%ts 30:13] [%eval 3.65]} Rh7 {[%ts 30:15] [%eval 3.64]} 31. Kd2 {[%ts 30:21] [%eval 3.71]} Nb6 {[%ts 30:23] [%eval 4.20]} 32. c4 {[%ts 30:25] [%eval 4.37]} Na8 {[%ts 30:34] [%eval 5.40]} 33. Kc3 {[%ts 30:38] [%eval 5.41]} Nc7 {[%ts 30:40] [%eval 5.95]} 34. Kb4 {[%ts 30:42] [%eval 6.23]} Ne8 {[%ts 30:43] [%eval 6.14]} 35. Nxe8 {[%ts 30:49] [%eval 5.90]} Kxe8 {[%ts 30:50] [%eval 5.24]} 36. Kxa4 {[%ts 30:50] [%eval 5.43]} Rh2 {[%ts 30:52] [%eval 6.65]} 37. Rf2 {[%ts 30:52] [%eval 6.22]} Rh4 {[%ts 30:55] [%eval 6.61]} 38. Rd2 {[%ts 30:57] [%eval 6.08]} Rg4 {[%ts 30:58] [%eval 6.32]} 39. Ka5 {[%ts 30:59] [%eval 6.32]} Kd7 {[%ts 31:01] [%eval 6.57]} 40. Kb6 {[%ts 31:02] [%eval 6.57]} Rxg5 {[%ts 31:04] [%eval 6.78]} 41. b4 {[%ts 31:04] [%eval 6.83]} Rh5 {[%ts 31:05] [%eval 7.03]} 42. a4 {[%ts 31:06] [%eval 7.07]} Rh8 {[%ts 31:07] [%eval 7.24]} 43. Kb7 {[%ts 31:08] [%eval 7.27]} Rh1 {[%ts 31:12] [%eval 7.52]} 44. a5 {[%ts 31:14] [%eval 7.73]} Rb1 {[%ts 31:15] [%eval 8.28]} 45. b5 {[%ts 31:18] [%eval 8.70]} Ra1 {[%ts 31:28] [%eval 11.91]} 46. a6 {[%ts 31:28] [%eval 9.78]} cxb5 {[%ts 31:30] [%eval 9.99]} 47. c5 {[%ts 31:31] [%eval 9.03]} Ke7 {[%ts 31:36] [%eval 9.30]} 48. c6 {[%ts 31:36] [%eval 9.50]} Rxa6 {[%ts 31:45] [%eval 11.26]} 49. Kxa6 {[%ts 31:46] [%eval 17.53]} 1-0
 
-[Event "rated game"]
+[Event "Game 3 - 2 Nc3 Bf5"]
 [Site "chess.com"]
 [Date "2025.03.28"]
 [White "ChessMasterTeaching"]

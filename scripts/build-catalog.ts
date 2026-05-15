@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execSync } from 'node:child_process';
 import yaml from 'js-yaml';
 import { Chess } from 'chessops/chess';
 import { parseFen, makeFen } from 'chessops/fen';
@@ -61,6 +62,8 @@ interface CatalogGame {
   language?: string;
   annotator?: string;
   variant?: string;
+  /** ISO date of the last git commit that touched this PGN file (only for annotated games) */
+  lastUpdated?: string;
 }
 
 interface GameDetail {
@@ -85,6 +88,36 @@ interface CatalogIndex {
   youtuberProfiles: Record<string, { displayName: string; avatarUrl?: string; channelUrl?: string }>;
   annotators: string[];
   languages: string[];
+}
+
+// ── Git Dates ──────────────────────────────────────────────────────────────────
+
+function getGitDates(): Record<string, string> {
+  const dates: Record<string, string> = {};
+  try {
+    // Use git log with --name-only to batch-fetch last commit dates for all files
+    const result = execSync('git log --format="%aI" --name-only --diff-filter=ACMR -- "pgn/"', {
+      encoding: 'utf-8',
+      maxBuffer: 50 * 1024 * 1024,
+    });
+    let currentDate = '';
+    for (const line of result.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      if (/^\d{4}-\d{2}-\d{2}T/.test(trimmed)) {
+        currentDate = trimmed.split('T')[0]; // Keep only YYYY-MM-DD
+      } else if (trimmed.startsWith('pgn/') && trimmed.endsWith('.pgn')) {
+        const rel = trimmed.slice('pgn/'.length);
+        // First occurrence = most recent commit, so only set if not already set
+        if (!dates[rel]) {
+          dates[rel] = currentDate;
+        }
+      }
+    }
+  } catch {
+    console.warn('  Could not read git history, lastUpdated will be omitted');
+  }
+  return dates;
 }
 
 // ── Display Name Cache ─────────────────────────────────────────────────────────
@@ -467,6 +500,9 @@ async function buildCatalog(): Promise<void> {
   // Save updated cache
   saveDisplayNameCache(displayNameCache);
 
+  // Resolve git last-modified dates for all PGN files
+  const gitDates = getGitDates();
+
   // Process each PGN file
   for (const relPath of pgnFiles) {
     const parts = relPath.split('/');
@@ -581,6 +617,7 @@ async function buildCatalog(): Promise<void> {
         language,
         annotator,
         variant: h['Variant'],
+        lastUpdated: (h['Result'] ?? '*') !== '*' ? gitDates[relPath] : undefined,
       };
 
       allGames.push(catalogGame);

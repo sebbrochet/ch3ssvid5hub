@@ -58,6 +58,8 @@ export interface CatalogGame {
   annotator?: string;
   /** Chess variant (if not standard) */
   variant?: string;
+  /** ISO date (YYYY-MM-DD) of the last git commit that touched this PGN (annotated games only) */
+  lastUpdated?: string;
 }
 
 /** Full catalog index loaded by the SPA. */
