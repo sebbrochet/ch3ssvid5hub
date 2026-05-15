@@ -1,7 +1,7 @@
 // Minimal service worker for PWA installability and basic offline support.
 // Caches the app shell on install, serves from cache with network fallback.
 
-const CACHE_NAME = 'ch3ssvid5-hub-v1';
+const CACHE_NAME = 'ch3ssvid5-hub-__BUILD_HASH__';
 const APP_SHELL = [
   './',
   './index.html',
