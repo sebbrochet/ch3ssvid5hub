@@ -217,6 +217,7 @@ async function fetchPlaylistInfo(playlistId: string, apiKey: string): Promise<Pl
 
 export interface ChannelProfile {
   handle: string;
+  displayName?: string;
   avatarUrl?: string;
   channelUrl?: string;
 }
@@ -245,6 +246,7 @@ export async function fetchChannelProfile(channelId: string, apiKey: string): Pr
 
   return {
     handle,
+    displayName: snippet.title,
     avatarUrl: snippet.thumbnails?.default?.url,
     channelUrl: snippet.customUrl ? `https://www.youtube.com/${snippet.customUrl}` : undefined,
   };
@@ -363,6 +365,9 @@ async function main() {
     const youtuberMetaPath = path.join(youtuberDir, 'metadata.yaml');
     if (fs.existsSync(youtuberMetaPath)) {
       const content = fs.readFileSync(youtuberMetaPath, 'utf-8');
+      if (channelProfile.displayName && !content.includes('displayName:')) {
+        fs.appendFileSync(youtuberMetaPath, `displayName: ${channelProfile.displayName}\n`, 'utf-8');
+      }
       if (channelProfile.avatarUrl && !content.includes('avatarUrl:')) {
         fs.appendFileSync(youtuberMetaPath, `avatarUrl: '${channelProfile.avatarUrl}'\n`, 'utf-8');
       }
@@ -371,6 +376,7 @@ async function main() {
       }
     } else {
       let content = '# yaml-language-server: $schema=https://www.schemastore.org/any.json\n\n';
+      if (channelProfile.displayName) content += `displayName: ${channelProfile.displayName}\n`;
       if (channelProfile.avatarUrl) content += `avatarUrl: '${channelProfile.avatarUrl}'\n`;
       if (channelProfile.channelUrl) content += `channelUrl: '${channelProfile.channelUrl}'\n`;
       if (content.split('\n').length > 2) {

@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLcy_l1Nkq8Pnbp_bflDZ5aahFNlS26Ttn'
+defaults:
+  videoPlaylist: 'Parties live en doubles commentaires'
