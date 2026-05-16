@@ -1,10 +1,17 @@
-[Event "?"]
-[Site "?"]
+[Event "57th US Open 1956"]
+[Site "Oklahoma city"]
 [Date "2018.04.09"]
-[White "?"]
-[Black "?"]
-[Result "*"]
+[White "Donavan"]
+[Black "Bobby Fisher"]
+[Result "0-1"]
 [VideoURL "https://youtu.be/sralN7M_bTI"]
 [VideoTitle "Bobby Fischer's deadly King's Indian ⎸Donovan vs Fischer, 57th US Open (1956)"]
+[Orientation "black"]
+[Annotator "sebbrochet"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game"]
+[Tags "KID"]
+[Difficulty "intermediate"]
+[Language "en"]
 
-*
+1. d4 {[%ts 1:59] [%eval 0.23]} Nf6 {[%ts 1:59] [%eval 0.24]} 2. c4 {[%ts 2:00] [%eval 0.38]} g6 {[%ts 2:01] [%eval 0.35]} 3. Nc3 {[%ts 2:02] [%eval 0.35]} Bg7 {[%ts 2:04] [%eval 0.58]} 4. e4 {[%ts 2:09] [%eval 0.55]} d6 {[%ts 2:10] [%eval 0.49]} 5. Nf3 {[%ts 2:10] [%eval 0.53]} O-O {[%ts 2:12] [%eval 0.53]} 6. Be2 {[%ts 2:13] [%eval 0.52]} Nbd7 {[%ts 2:14] [%eval 0.66]} 7. O-O {[%ts 2:15] [%eval 0.63]} e5 {[%ts 2:16] [%eval 0.67]} 8. h3 {[%ts 2:43] [%eval 0.03]} ( 8. d5 {[%ts 2:51] [%eval 0.09]} ( 8. Be3 {[%ts 2:51] [%eval 0.65]} ) 8... b6 {[%ts 2:44] [%eval 0.30]} 9. Be3 {[%ts 2:45] [%eval 0.33]} Nc5 {[%ts 2:46] [%eval 0.62]} ) 8... c6 {[%ts 3:22] [%eval 0.81] [%csl Gd5,Gb5]} 9. Be3 {[%ts 3:32] [%eval 0.41]} Qe7 {[%ts 3:34] [%eval 0.83]} 10. Qc2 {[%ts 3:36] [%eval 0.51]} a6 {[%ts 3:39] [%eval 0.97] [%cal Gd4d5,Be5d4]} 11. a4 {[%ts 4:00] [%eval 0.43]} Re8 {[%ts 4:04] [%eval 0.85]} 12. dxe5 {[%ts 4:12] [%eval 0.57]} dxe5 {[%ts 4:14] [%eval 1.07]} 13. a5 {[%ts 4:15] [%eval 0.92]} Nh5 {[%ts 4:16] [%eval 0.99] [%csl Gh3,Gf4]} 14. Rfd1 {[%ts 4:53] [%eval 0.87]} Nf4 {[%ts 4:54] [%eval 0.90]} 15. Bf1 {[%ts 5:18] [%eval 0.75] [%csl Gh3] [%cal Gd7b6,Gc8h3,Gf4h3]} Nf8 {[%ts 5:30] [%eval 1.07]} 16. c5 {[%ts 5:45] [%eval 0.87]} N8e6 {[%ts 5:46] [%eval 1.54] [%csl Gc8,Ga8]} 17. Na4 {[%ts 6:12] [%eval 1.70] [%cal Ga4b6]} Ng5 {[%ts 6:40] [%eval 1.52]} 18. Nxg5 {[%ts 6:58] [%eval 1.81]} Qxg5 {[%ts 6:59] [%eval 1.66] [%csl Gg2] [%cal Gf4h3,Gg2h3]} 19. Kh2 {[%ts 7:11] [%eval 1.55]} Be6 {[%ts 7:13] [%eval 2.07] [%csl Ge7]} 20. g3 {[%ts 7:21] [%eval 1.89]} Bh6 {[%ts 7:35] [%eval 2.39]} 21. gxf4 {[%ts 7:43] [%eval 0.89]} exf4 {[%ts 7:44] [%eval 0.97]} 22. Bc1 {[%ts 7:59] [%eval 1.07]} Qh4 {[%ts 8:01] [%eval 1.45]} 23. Ra3 {[%ts 8:03] [%eval 1.38] [%cal Ga3h3,Be6g4]} Rad8 {[%ts 8:11] [%eval 1.82]} 24. Rad3 {[%ts 8:13] [%eval 1.54]} Rxd3 {[%ts 8:15] [%eval 1.66]} 25. Rxd3 {[%ts 8:15] [%eval 1.62]} Bg7 {[%ts 8:16] [%eval 1.93]} 26. b3 {[%ts 8:18] [%eval 1.14]} f5 {[%ts 8:19] [%eval 1.54]} 27. Rf3 {[%ts 8:21] [%eval 1.18]} fxe4 {[%ts 8:22] [%eval 1.90]} 28. Qxe4 {[%ts 8:23] [%eval 1.65]} Bf7 {[%ts 8:25] [%eval 1.51] [%cal Be4b4]} 29. Qc2 {[%ts 8:51] [%eval 0.94]} ( 29. Qb4 {[%ts 9:15] [%eval 1.52]} Bd5 {[%ts 8:55] [%eval 1.68]} 30. Bc4 {[%ts 9:07] [%eval 1.90]} ) 29... Re1 {[%ts 9:23] [%eval 0.82] [%cal Gb4e1]} 30. Bc4 {[%ts 9:28] [%eval -6.30]} Qg5 {[%ts 9:36] [%eval -5.13]} 31. Bxf7+ {[%ts 9:39] [%eval -6.48] [%cal Bg8h8]} Kf8 {[%ts 9:46] [%eval -5.27]} 32. Rg3 {[%ts 9:51] [%eval -4.27]} fxg3+ {[%ts 10:00] [%eval -5.23]} 33. fxg3 {[%ts 10:01] [%eval -5.55] [%cal Be1c1]} Qxc1 {[%ts 10:03] [%eval -4.35]} 34. Qxc1 {[%ts 10:13] [%eval -4.37]} Rxc1 {[%ts 10:14] [%eval -4.30]} 35. Be6 {[%ts 10:33] [%eval -4.38]} Re1 {[%ts 10:33] [%eval -4.84]} 36. Bc8 {[%ts 10:34] [%eval -5.14]} Re2+ {[%ts 10:37] [%eval -5.20]} 37. Kh1 {[%ts 10:38] [%eval -5.11]} Re7 {[%ts 10:38] [%eval -5.18]} 38. Kg2 {[%ts 10:39] [%eval -5.31]} Ke8 {[%ts 10:40] [%eval -5.02]} 39. h4 {[%ts 10:40] [%eval -5.12]} Kd8 {[%ts 10:41] [%eval -5.07]} 40. Bg4 {[%ts 10:41] [%eval -5.31]} Re3 {[%ts 10:42] [%eval -5.34]} 0-1
