@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+displayName: Raffael Chess
+defaults:
+  language: pt
+avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_nMoSH3veIXjW_ldgv0ZMCx0dSlaD4cIvt_USbThM4NDtY=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@raffaelchess'

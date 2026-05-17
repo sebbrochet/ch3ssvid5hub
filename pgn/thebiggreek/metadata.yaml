@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+defaults:
+  language: de
+displayName: The Big Greek
+avatarUrl: 'https://yt3.ggpht.com/SooOyxZKqUTa8LFT-PTLutLm94rplAjGQCbsfV2YQyyyDVJ5_pn9mEeyaT6UWWRBtdhhbZM87_o=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@thebiggreek'

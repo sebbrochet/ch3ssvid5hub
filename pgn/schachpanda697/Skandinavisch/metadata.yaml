@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLTFREv_bAg70O95zRokQfPDxo5lshmXYz'
+defaults:
+  videoPlaylist: 'Skandinavisch'

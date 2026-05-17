@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLp4-lMM-GWZpSA1fgI88gDr4utruevyrY'
+defaults:
+  videoPlaylist: 'APERTURAS EN 10 MINUTOS'

@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLQ8hE68msE1cDYriT_7C3ZsIyoUwHxMLZ'
+defaults:
+  videoPlaylist: 'Kasparov na Semi-Eslava, variante Botvinnik'

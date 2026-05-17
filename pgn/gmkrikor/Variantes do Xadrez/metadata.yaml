@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLAfuxKJO2K3gK2YiJyIbR5I5M_Th-5Ph-'
+defaults:
+  videoPlaylist: 'Variantes do Xadrez'

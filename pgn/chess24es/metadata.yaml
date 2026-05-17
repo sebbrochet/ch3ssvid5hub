@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+displayName: chess24 en Español
+defaults:
+  language: es
+avatarUrl: 'https://yt3.ggpht.com/PBHX0FLo9QGmDh5wh5QBdU1vBDwf7DNJ6KUR2dWZYfConH-k8CNj2ZPdjBCUwha9xwWMK_JHMg=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@chess24es'

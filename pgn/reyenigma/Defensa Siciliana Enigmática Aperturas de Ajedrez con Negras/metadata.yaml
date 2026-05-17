@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLWgqlpb234bHDNGGd19N1ZKOdCvDOEegR'
+defaults:
+  videoPlaylist: '⚫️ Defensa Siciliana Enigmática | Aperturas de Ajedrez con Negras'

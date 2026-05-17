@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+displayName: Schachpanda
+defaults:
+  language: de
+avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_lu8SYXEDwGPC7yJ6AHJhJ9Ia9PJpMnhKKElKBO3Jadqw=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@schachpanda697'

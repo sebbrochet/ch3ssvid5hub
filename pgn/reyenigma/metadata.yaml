@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+displayName: Rey Enigma
+defaults:
+  language: es
+avatarUrl: 'https://yt3.ggpht.com/ytc/AIdro_kTu7ZL5ZR2EeI1H5CZzLpaQ3GTjqbIva8Ry323qw1CLw=s88-c-k-c0x00ffffff-no-rj'
+channelUrl: 'https://www.youtube.com/@reyenigma'

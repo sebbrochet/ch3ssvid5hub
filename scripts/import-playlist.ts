@@ -374,9 +374,22 @@ async function main() {
       if (channelProfile.channelUrl && !content.includes('channelUrl:')) {
         fs.appendFileSync(youtuberMetaPath, `channelUrl: '${channelProfile.channelUrl}'\n`, 'utf-8');
       }
+      if (args.language && !content.includes('language:')) {
+        // Add defaults.language — append or create defaults block
+        if (content.includes('defaults:')) {
+          fs.writeFileSync(
+            youtuberMetaPath,
+            content.replace(/^(defaults:\s*\n)/m, `$1  language: ${args.language}\n`),
+            'utf-8',
+          );
+        } else {
+          fs.appendFileSync(youtuberMetaPath, `defaults:\n  language: ${args.language}\n`, 'utf-8');
+        }
+      }
     } else {
       let content = '# yaml-language-server: $schema=https://www.schemastore.org/any.json\n\n';
       if (channelProfile.displayName) content += `displayName: ${channelProfile.displayName}\n`;
+      if (args.language) content += `defaults:\n  language: ${args.language}\n`;
       if (channelProfile.avatarUrl) content += `avatarUrl: '${channelProfile.avatarUrl}'\n`;
       if (channelProfile.channelUrl) content += `channelUrl: '${channelProfile.channelUrl}'\n`;
       if (content.split('\n').length > 2) {

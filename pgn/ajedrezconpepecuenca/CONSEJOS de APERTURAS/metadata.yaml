@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLvRn7NyWiek_IM-WYQf6eDHWQQ14kyAs8'
+defaults:
+  videoPlaylist: 'CONSEJOS de APERTURAS 🔥'

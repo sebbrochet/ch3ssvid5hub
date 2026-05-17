@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/any.json
+
+playlistUrl: 'https://www.youtube.com/playlist?list=PLtLPFtNAT89gB43wRWNQLpbCrbgW3ho0J'
+defaults:
+  videoPlaylist: 'CANDIDATO 2026 - ANÁLISE'
