@@ -4,17 +4,18 @@ export type AnnotationFilter = '' | 'has' | 'missing';
 
 /**
  * Filter games by faceted criteria.
+ * Array filters match if the game's value is in the array (OR logic within a filter kind).
  */
 export function filterGames(
   games: CatalogGame[],
   filters: {
-    youtuber?: string;
-    playlist?: string;
-    tag?: string;
-    result?: string;
-    variant?: string;
-    opening?: string;
-    language?: string;
+    youtuber?: string[];
+    playlist?: string[];
+    tag?: string[];
+    result?: string[];
+    variant?: string[];
+    opening?: string[];
+    language?: string[];
     moves?: AnnotationFilter;
     timestamps?: AnnotationFilter;
     evals?: AnnotationFilter;
@@ -22,27 +23,48 @@ export function filterGames(
 ): CatalogGame[] {
   let filtered = games;
 
-  if (filters.youtuber) {
-    filtered = filtered.filter((g) => g.youtuber === filters.youtuber);
+  // Youtuber + playlist filters work together: playlist narrows only the
+  // youtuber it belongs to. Games from youtubers with no selected playlist
+  // pass through if the youtuber itself is selected.
+  if (filters.youtuber?.length) {
+    const youtubers = filters.youtuber;
+    const playlists = filters.playlist ?? [];
+    if (playlists.length > 0) {
+      // Build set of youtubers that have a playlist selected
+      const youtuberOfPlaylist = new Set(filtered.filter((g) => playlists.includes(g.playlist)).map((g) => g.youtuber));
+      filtered = filtered.filter((g) => {
+        if (!youtubers.includes(g.youtuber)) return false;
+        // If this youtuber has playlist filter(s), game must match one
+        if (youtuberOfPlaylist.has(g.youtuber)) return playlists.includes(g.playlist);
+        // Otherwise, all games from this youtuber pass
+        return true;
+      });
+    } else {
+      filtered = filtered.filter((g) => youtubers.includes(g.youtuber));
+    }
+  } else if (filters.playlist?.length) {
+    const values = filters.playlist;
+    filtered = filtered.filter((g) => values.includes(g.playlist));
   }
-  if (filters.playlist) {
-    filtered = filtered.filter((g) => g.playlist === filters.playlist);
+  if (filters.tag?.length) {
+    const values = filters.tag;
+    filtered = filtered.filter((g) => g.tags.some((t) => values.includes(t)));
   }
-  if (filters.tag) {
-    const tag = filters.tag;
-    filtered = filtered.filter((g) => g.tags.includes(tag));
+  if (filters.result?.length) {
+    const values = filters.result;
+    filtered = filtered.filter((g) => values.includes(g.result));
   }
-  if (filters.result) {
-    filtered = filtered.filter((g) => g.result === filters.result);
+  if (filters.variant?.length) {
+    const values = filters.variant;
+    filtered = filtered.filter((g) => values.includes(g.variant ?? 'Standard'));
   }
-  if (filters.variant) {
-    filtered = filtered.filter((g) => (g.variant ?? 'Standard') === filters.variant);
+  if (filters.opening?.length) {
+    const values = filters.opening;
+    filtered = filtered.filter((g) => g.opening !== undefined && values.includes(g.opening));
   }
-  if (filters.opening) {
-    filtered = filtered.filter((g) => g.opening === filters.opening);
-  }
-  if (filters.language) {
-    filtered = filtered.filter((g) => (g.language ?? '') === filters.language);
+  if (filters.language?.length) {
+    const values = filters.language;
+    filtered = filtered.filter((g) => values.includes(g.language ?? ''));
   }
   if (filters.moves === 'has') {
     filtered = filtered.filter((g) => g.moveCount > 0);

@@ -95,12 +95,8 @@
   gap: 0.3rem;
   width: 100%;
   padding: 0.2rem 0;
-  background: none;
-  border: none;
   font-size: 0.85rem;
   color: var(--color-text);
-  cursor: pointer;
-  text-align: left;
 }
 
 .opening-family-header:hover {
@@ -109,6 +105,24 @@
 
 .opening-family-header.active {
   font-weight: 600;
+  color: var(--color-primary);
+}
+
+.opening-family-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.opening-family-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.opening-family-toggle:hover {
   color: var(--color-primary);
 }
 

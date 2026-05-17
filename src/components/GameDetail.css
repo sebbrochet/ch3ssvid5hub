@@ -99,7 +99,12 @@
 }
 
 .detail-language {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
   line-height: 1;
 }
 

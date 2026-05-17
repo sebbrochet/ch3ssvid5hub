@@ -68,48 +68,72 @@ describe('filterGames', () => {
   });
 
   it('filters by youtuber', () => {
-    const result = filterGames(games, { youtuber: 'alice' });
+    const result = filterGames(games, { youtuber: ['alice'] });
     expect(result).toHaveLength(2);
     expect(result.every((g) => g.youtuber === 'alice')).toBe(true);
   });
 
   it('filters by tag', () => {
-    const result = filterGames(games, { tag: 'endgame' });
+    const result = filterGames(games, { tag: ['endgame'] });
     expect(result).toHaveLength(2);
   });
 
   it('filters by result', () => {
-    const result = filterGames(games, { result: '1-0' });
+    const result = filterGames(games, { result: ['1-0'] });
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe('g1');
   });
 
   it('filters by variant (Standard matches undefined)', () => {
-    const result = filterGames(games, { variant: 'Standard' });
+    const result = filterGames(games, { variant: ['Standard'] });
     expect(result).toHaveLength(2);
   });
 
   it('filters by variant (Chess960)', () => {
-    const result = filterGames(games, { variant: 'Chess960' });
+    const result = filterGames(games, { variant: ['Chess960'] });
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe('g2');
   });
 
   it('filters by opening', () => {
-    const result = filterGames(games, { opening: 'Sicilian' });
+    const result = filterGames(games, { opening: ['Sicilian'] });
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe('g1');
   });
 
   it('combines multiple filters', () => {
-    const result = filterGames(games, { youtuber: 'alice', tag: 'endgame' });
+    const result = filterGames(games, { youtuber: ['alice'], tag: ['endgame'] });
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe('g3');
   });
 
   it('returns empty when no games match', () => {
-    const result = filterGames(games, { youtuber: 'nobody' });
+    const result = filterGames(games, { youtuber: ['nobody'] });
     expect(result).toHaveLength(0);
+  });
+
+  it('multi-select youtuber returns games from all selected', () => {
+    const result = filterGames(games, { youtuber: ['alice', 'bob'] });
+    expect(result).toHaveLength(3);
+  });
+
+  it('multi-select result returns games matching any selected result', () => {
+    const result = filterGames(games, { result: ['1-0', '0-1'] });
+    expect(result).toHaveLength(2);
+  });
+
+  it('playlist filter scopes to its youtuber only, other youtubers pass through', () => {
+    const data = [
+      makeGame({ id: 'a1', youtuber: 'alice', playlist: 'p1' }),
+      makeGame({ id: 'a2', youtuber: 'alice', playlist: 'p2' }),
+      makeGame({ id: 'b1', youtuber: 'bob', playlist: 'p3' }),
+      makeGame({ id: 'b2', youtuber: 'bob', playlist: 'p4' }),
+    ];
+    // Select both youtubers but only alice's p1 playlist
+    const result = filterGames(data, { youtuber: ['alice', 'bob'], playlist: ['p1'] });
+    // Should get alice/p1 + all of bob's games
+    expect(result).toHaveLength(3);
+    expect(result.map((g) => g.id).sort()).toEqual(['a1', 'b1', 'b2']);
   });
 
   it('filters by moves=has (only games with moves)', () => {
@@ -160,7 +184,7 @@ describe('filterGames', () => {
       makeGame({ id: 'g2', youtuber: 'alice', hasTimestamps: true, hasEvals: false }),
       makeGame({ id: 'g3', youtuber: 'bob', hasTimestamps: true, hasEvals: true }),
     ];
-    const result = filterGames(data, { youtuber: 'alice', evals: 'has' });
+    const result = filterGames(data, { youtuber: ['alice'], evals: 'has' });
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe('g1');
   });

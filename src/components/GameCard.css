@@ -36,7 +36,12 @@
 
 .game-card-lang {
   margin-left: auto;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
   line-height: 1;
 }
 

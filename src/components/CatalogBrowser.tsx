@@ -34,14 +34,21 @@ export default function CatalogBrowser() {
   const { t } = useTranslation();
   usePageTitle(t('header.browse'));
   const [searchParams, setSearchParams] = useSearchParams();
+  const DELIM = '|';
   const query = searchParams.get('q') ?? '';
-  const selectedYoutuber = searchParams.get('youtuber') ?? '';
-  const selectedPlaylist = searchParams.get('playlist') ?? '';
-  const selectedTag = searchParams.get('tag') ?? '';
-  const selectedResult = searchParams.get('result') ?? '';
-  const selectedVariant = searchParams.get('variant') ?? '';
-  const selectedOpening = searchParams.get('opening') ?? '';
-  const selectedLanguage = searchParams.get('language') ?? '';
+  const selectedYoutubers = (searchParams.get('youtuber') ?? '').split(DELIM).filter(Boolean);
+  // Playlists are stored as "youtuber/playlist" pairs in the URL
+  const rawPlaylists = (searchParams.get('playlist') ?? '').split(DELIM).filter(Boolean);
+  const selectedPlaylistPairs = rawPlaylists.map((p) => {
+    const sep = p.indexOf('/');
+    return { youtuber: p.slice(0, sep), playlist: p.slice(sep + 1) };
+  });
+  const selectedPlaylistValues = selectedPlaylistPairs.map((p) => p.playlist);
+  const selectedTags = (searchParams.get('tag') ?? '').split(DELIM).filter(Boolean);
+  const selectedResults = (searchParams.get('result') ?? '').split(DELIM).filter(Boolean);
+  const selectedVariants = (searchParams.get('variant') ?? '').split(DELIM).filter(Boolean);
+  const selectedOpenings = (searchParams.get('opening') ?? '').split(DELIM).filter(Boolean);
+  const selectedLanguages = (searchParams.get('language') ?? '').split(DELIM).filter(Boolean);
   const filterMoves = (searchParams.get('moves') ?? '') as AnnotationFilter;
   const filterTimestamps = (searchParams.get('timestamps') ?? '') as AnnotationFilter;
   const filterEvals = (searchParams.get('evals') ?? '') as AnnotationFilter;
@@ -85,13 +92,13 @@ export default function CatalogBrowser() {
     }
 
     return filterGames(games, {
-      youtuber: selectedYoutuber,
-      playlist: selectedPlaylist,
-      tag: selectedTag,
-      result: selectedResult,
-      variant: selectedVariant,
-      opening: selectedOpening,
-      language: selectedLanguage,
+      youtuber: selectedYoutubers,
+      playlist: selectedPlaylistValues,
+      tag: selectedTags,
+      result: selectedResults,
+      variant: selectedVariants,
+      opening: selectedOpenings,
+      language: selectedLanguages,
       moves: filterMoves,
       timestamps: filterTimestamps,
       evals: filterEvals,
@@ -99,13 +106,13 @@ export default function CatalogBrowser() {
   }, [
     catalog,
     query,
-    selectedYoutuber,
-    selectedPlaylist,
-    selectedTag,
-    selectedResult,
-    selectedVariant,
-    selectedOpening,
-    selectedLanguage,
+    selectedYoutubers,
+    selectedPlaylistValues,
+    selectedTags,
+    selectedResults,
+    selectedVariants,
+    selectedOpenings,
+    selectedLanguages,
     filterMoves,
     filterTimestamps,
     filterEvals,
@@ -146,14 +153,46 @@ export default function CatalogBrowser() {
 
   function toggleFilter(key: string, value: string) {
     const params = new URLSearchParams(searchParams);
-    if (params.get(key) === value) {
-      params.delete(key);
-      // Clear playlist sub-filter when youtuber is deselected
-      if (key === 'youtuber') params.delete('playlist');
+    const current = (params.get(key) ?? '').split(DELIM).filter(Boolean);
+    const idx = current.indexOf(value);
+    if (idx >= 0) {
+      current.splice(idx, 1);
+      // When unchecking a youtuber, remove their scoped playlists
+      if (key === 'youtuber') {
+        const playlists = (params.get('playlist') ?? '').split(DELIM).filter(Boolean);
+        const remaining = playlists.filter((p) => !p.startsWith(value + '/'));
+        if (remaining.length > 0) {
+          params.set('playlist', remaining.join(DELIM));
+        } else {
+          params.delete('playlist');
+        }
+      }
     } else {
-      params.set(key, value);
-      // Clear playlist sub-filter when switching youtuber
-      if (key === 'youtuber') params.delete('playlist');
+      current.push(value);
+    }
+    if (current.length > 0) {
+      params.set(key, current.join(DELIM));
+    } else {
+      params.delete(key);
+    }
+    params.delete('page');
+    setSearchParams(params, { replace: true });
+  }
+
+  function togglePlaylist(youtuber: string, playlist: string) {
+    const params = new URLSearchParams(searchParams);
+    const scoped = `${youtuber}/${playlist}`;
+    const current = (params.get('playlist') ?? '').split(DELIM).filter(Boolean);
+    const idx = current.indexOf(scoped);
+    if (idx >= 0) {
+      current.splice(idx, 1);
+    } else {
+      current.push(scoped);
+    }
+    if (current.length > 0) {
+      params.set('playlist', current.join(DELIM));
+    } else {
+      params.delete('playlist');
     }
     params.delete('page');
     setSearchParams(params, { replace: true });
@@ -224,11 +263,8 @@ export default function CatalogBrowser() {
     }
   }
 
-  // Build playlist display name map and list for selected youtuber
+  // Build playlist display name map
   const playlistNames = new Map<string, string>();
-  const youtuberPlaylists = selectedYoutuber
-    ? [...new Set(catalog.games.filter((g) => g.youtuber === selectedYoutuber).map((g) => g.playlist))].sort()
-    : [];
   for (const g of catalog.games) {
     if (!playlistNames.has(g.playlist)) {
       playlistNames.set(g.playlist, g.playlistDisplayName);
@@ -250,7 +286,10 @@ export default function CatalogBrowser() {
               .sort((a, b) => (youtuberNames.get(a) ?? a).localeCompare(youtuberNames.get(b) ?? b))
               .map((yt) => {
                 const profile = catalog.youtuberProfiles[yt];
-                const isSelected = selectedYoutuber === yt;
+                const isSelected = selectedYoutubers.includes(yt);
+                const ytPlaylists = isSelected
+                  ? [...new Set(catalog.games.filter((g) => g.youtuber === yt).map((g) => g.playlist))].sort()
+                  : [];
                 return (
                   <div key={yt}>
                     <label className={`filter-item ${isSelected ? 'active' : ''}`}>
@@ -261,17 +300,16 @@ export default function CatalogBrowser() {
                       {youtuberNames.get(yt) ?? yt}
                       <span className="filter-count">({catalog.games.filter((g) => g.youtuber === yt).length})</span>
                     </label>
-                    {isSelected && youtuberPlaylists.length > 1 && (
+                    {isSelected && ytPlaylists.length > 1 && (
                       <div className="filter-group--sub">
-                        {youtuberPlaylists.map((pl) => {
+                        {ytPlaylists.map((pl) => {
                           const count = catalog.games.filter((g) => g.youtuber === yt && g.playlist === pl).length;
+                          const isPlSelected = selectedPlaylistPairs.some(
+                            (p) => p.youtuber === yt && p.playlist === pl,
+                          );
                           return (
-                            <label key={pl} className={`filter-item ${selectedPlaylist === pl ? 'active' : ''}`}>
-                              <input
-                                type="checkbox"
-                                checked={selectedPlaylist === pl}
-                                onChange={() => toggleFilter('playlist', pl)}
-                              />
+                            <label key={pl} className={`filter-item ${isPlSelected ? 'active' : ''}`}>
+                              <input type="checkbox" checked={isPlSelected} onChange={() => togglePlaylist(yt, pl)} />
                               {playlistNames.get(pl) ?? pl}
                               <span className="filter-count">({count})</span>
                             </label>
@@ -291,8 +329,12 @@ export default function CatalogBrowser() {
             const count = catalog.games.filter((g) => g.result === r).length;
             if (count === 0) return null;
             return (
-              <label key={r} className={`filter-item ${selectedResult === r ? 'active' : ''}`}>
-                <input type="checkbox" checked={selectedResult === r} onChange={() => toggleFilter('result', r)} />
+              <label key={r} className={`filter-item ${selectedResults.includes(r) ? 'active' : ''}`}>
+                <input
+                  type="checkbox"
+                  checked={selectedResults.includes(r)}
+                  onChange={() => toggleFilter('result', r)}
+                />
                 {r}
                 <span className="filter-count">({count})</span>
               </label>
@@ -306,8 +348,12 @@ export default function CatalogBrowser() {
             {variants.map((v) => {
               const count = catalog.games.filter((g) => (g.variant ?? 'Standard') === v).length;
               return (
-                <label key={v} className={`filter-item ${selectedVariant === v ? 'active' : ''}`}>
-                  <input type="checkbox" checked={selectedVariant === v} onChange={() => toggleFilter('variant', v)} />
+                <label key={v} className={`filter-item ${selectedVariants.includes(v) ? 'active' : ''}`}>
+                  <input
+                    type="checkbox"
+                    checked={selectedVariants.includes(v)}
+                    onChange={() => toggleFilter('variant', v)}
+                  />
                   {v}
                   <span className="filter-count">({count})</span>
                 </label>
@@ -328,10 +374,10 @@ export default function CatalogBrowser() {
                 // Single opening — render flat (no expand/collapse)
                 const op = variants[0];
                 return (
-                  <label key={op} className={`filter-item ${selectedOpening === op ? 'active' : ''}`}>
+                  <label key={op} className={`filter-item ${selectedOpenings.includes(op) ? 'active' : ''}`}>
                     <input
                       type="checkbox"
-                      checked={selectedOpening === op}
+                      checked={selectedOpenings.includes(op)}
                       onChange={() => toggleFilter('opening', op)}
                     />
                     {op}
@@ -340,23 +386,57 @@ export default function CatalogBrowser() {
                 );
               }
 
+              const selectedVariantCount = variants.filter((v) => selectedOpenings.includes(v)).length;
+              const allSelected = selectedVariantCount === variants.length;
+              const someSelected = selectedVariantCount > 0;
+
               return (
                 <div key={family} className="opening-family">
-                  <button
-                    className={`opening-family-header ${variants.some((v) => v === selectedOpening) ? 'active' : ''}`}
-                    onClick={() => {
-                      setExpandedFamilies((prev) => {
-                        const next = new Set(prev);
-                        if (next.has(family)) next.delete(family);
-                        else next.add(family);
-                        return next;
-                      });
-                    }}
-                  >
-                    <span className={`opening-family-arrow ${isExpanded ? 'expanded' : ''}`}>▸</span>
-                    {family}
-                    <span className="filter-count">({familyCount})</span>
-                  </button>
+                  <div className={`opening-family-header ${someSelected ? 'active' : ''}`}>
+                    <label className="filter-item opening-family-label">
+                      <input
+                        type="checkbox"
+                        checked={allSelected}
+                        ref={(el) => {
+                          if (el) el.indeterminate = someSelected && !allSelected;
+                        }}
+                        onChange={() => {
+                          const params = new URLSearchParams(searchParams);
+                          const current = (params.get('opening') ?? '').split(DELIM).filter(Boolean);
+                          if (someSelected) {
+                            // Remove all variants of this family
+                            const remaining = current.filter((o) => !variants.includes(o));
+                            if (remaining.length > 0) {
+                              params.set('opening', remaining.join(DELIM));
+                            } else {
+                              params.delete('opening');
+                            }
+                          } else {
+                            // Add all variants of this family
+                            const merged = [...new Set([...current, ...variants])];
+                            params.set('opening', merged.join(DELIM));
+                          }
+                          params.delete('page');
+                          setSearchParams(params, { replace: true });
+                        }}
+                      />
+                      {family}
+                      <span className="filter-count">({familyCount})</span>
+                    </label>
+                    <button
+                      className="opening-family-toggle"
+                      onClick={() => {
+                        setExpandedFamilies((prev) => {
+                          const next = new Set(prev);
+                          if (next.has(family)) next.delete(family);
+                          else next.add(family);
+                          return next;
+                        });
+                      }}
+                    >
+                      <span className={`opening-family-arrow ${isExpanded ? 'expanded' : ''}`}>▸</span>
+                    </button>
+                  </div>
                   {isExpanded && (
                     <div className="opening-family-variants">
                       {variants.map((op) => {
@@ -366,10 +446,10 @@ export default function CatalogBrowser() {
                           ? op.slice(family.length).replace(/^[,:]\s*/, '')
                           : op;
                         return (
-                          <label key={op} className={`filter-item ${selectedOpening === op ? 'active' : ''}`}>
+                          <label key={op} className={`filter-item ${selectedOpenings.includes(op) ? 'active' : ''}`}>
                             <input
                               type="checkbox"
-                              checked={selectedOpening === op}
+                              checked={selectedOpenings.includes(op)}
                               onChange={() => toggleFilter('opening', op)}
                             />
                             {variantLabel || op}
@@ -391,10 +471,10 @@ export default function CatalogBrowser() {
             {catalog.languages.map((lang) => {
               const count = catalog.games.filter((g) => (g.language ?? '') === lang).length;
               return (
-                <label key={lang} className={`filter-item ${selectedLanguage === lang ? 'active' : ''}`}>
+                <label key={lang} className={`filter-item ${selectedLanguages.includes(lang) ? 'active' : ''}`}>
                   <input
                     type="checkbox"
-                    checked={selectedLanguage === lang}
+                    checked={selectedLanguages.includes(lang)}
                     onChange={() => toggleFilter('language', lang)}
                   />
                   {t(`languages.${lang}`, lang)}
@@ -409,8 +489,8 @@ export default function CatalogBrowser() {
           <div className="filter-group">
             <h4>{t('browse.tagsLabel')}</h4>
             {catalog.tags.map((tag) => (
-              <label key={tag} className={`filter-item ${selectedTag === tag ? 'active' : ''}`}>
-                <input type="checkbox" checked={selectedTag === tag} onChange={() => toggleFilter('tag', tag)} />
+              <label key={tag} className={`filter-item ${selectedTags.includes(tag) ? 'active' : ''}`}>
+                <input type="checkbox" checked={selectedTags.includes(tag)} onChange={() => toggleFilter('tag', tag)} />
                 {tag}
                 <span className="filter-count">({catalog.games.filter((g) => g.tags.includes(tag)).length})</span>
               </label>
@@ -453,13 +533,13 @@ export default function CatalogBrowser() {
 
         {/* Active filter chips */}
         {(query ||
-          selectedYoutuber ||
-          selectedPlaylist ||
-          selectedTag ||
-          selectedResult ||
-          selectedVariant ||
-          selectedOpening ||
-          selectedLanguage ||
+          selectedYoutubers.length > 0 ||
+          selectedPlaylistPairs.length > 0 ||
+          selectedTags.length > 0 ||
+          selectedResults.length > 0 ||
+          selectedVariants.length > 0 ||
+          selectedOpenings.length > 0 ||
+          selectedLanguages.length > 0 ||
           filterMoves ||
           filterTimestamps ||
           filterEvals) && (
@@ -469,41 +549,45 @@ export default function CatalogBrowser() {
                 &quot;{query}&quot; ✕
               </button>
             )}
-            {selectedYoutuber && (
-              <button className="chip" onClick={() => toggleFilter('youtuber', selectedYoutuber)}>
-                {youtuberNames.get(selectedYoutuber) ?? selectedYoutuber} ✕
+            {selectedYoutubers.map((yt) => (
+              <button key={yt} className="chip" onClick={() => toggleFilter('youtuber', yt)}>
+                {youtuberNames.get(yt) ?? yt} ✕
               </button>
-            )}
-            {selectedPlaylist && (
-              <button className="chip" onClick={() => toggleFilter('playlist', selectedPlaylist)}>
-                {playlistNames.get(selectedPlaylist) ?? selectedPlaylist} ✕
+            ))}
+            {selectedPlaylistPairs.map(({ youtuber, playlist }) => (
+              <button
+                key={`${youtuber}/${playlist}`}
+                className="chip"
+                onClick={() => togglePlaylist(youtuber, playlist)}
+              >
+                {youtuberNames.get(youtuber) ?? youtuber} / {playlistNames.get(playlist) ?? playlist} ✕
               </button>
-            )}
-            {selectedResult && (
-              <button className="chip" onClick={() => toggleFilter('result', selectedResult)}>
-                {selectedResult} ✕
+            ))}
+            {selectedResults.map((r) => (
+              <button key={r} className="chip" onClick={() => toggleFilter('result', r)}>
+                {r} ✕
               </button>
-            )}
-            {selectedVariant && (
-              <button className="chip" onClick={() => toggleFilter('variant', selectedVariant)}>
-                {selectedVariant} ✕
+            ))}
+            {selectedVariants.map((v) => (
+              <button key={v} className="chip" onClick={() => toggleFilter('variant', v)}>
+                {v} ✕
               </button>
-            )}
-            {selectedOpening && (
-              <button className="chip" onClick={() => toggleFilter('opening', selectedOpening)}>
-                {selectedOpening} ✕
+            ))}
+            {selectedOpenings.map((op) => (
+              <button key={op} className="chip" onClick={() => toggleFilter('opening', op)}>
+                {op} ✕
               </button>
-            )}
-            {selectedTag && (
-              <button className="chip" onClick={() => toggleFilter('tag', selectedTag)}>
-                {selectedTag} ✕
+            ))}
+            {selectedTags.map((tag) => (
+              <button key={tag} className="chip" onClick={() => toggleFilter('tag', tag)}>
+                {tag} ✕
               </button>
-            )}
-            {selectedLanguage && (
-              <button className="chip" onClick={() => toggleFilter('language', selectedLanguage)}>
-                {t(`languages.${selectedLanguage}`, selectedLanguage)} ✕
+            ))}
+            {selectedLanguages.map((lang) => (
+              <button key={lang} className="chip" onClick={() => toggleFilter('language', lang)}>
+                {t(`languages.${lang}`, lang)} ✕
               </button>
-            )}
+            ))}
             {filterMoves && (
               <button className="chip" onClick={() => cycleAnnotationFilter('moves')}>
                 ♟ {t('annotations.moves')}: {t(`browse.filter_${filterMoves}`)} ✕
