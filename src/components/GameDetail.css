@@ -98,6 +98,11 @@
   font-weight: 600;
 }
 
+.detail-language {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 .detail-description {
   color: var(--color-text-secondary);
   font-style: italic;

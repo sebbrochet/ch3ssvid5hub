@@ -5,6 +5,7 @@ import { useCatalog } from '../hooks/useCatalog';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { buildPgnFileUrl, buildImportUrl, buildFolder } from '../utils/import-url';
 import { parseFirstTimestamp, resultClass } from '../utils/pgn-utils';
+import { languageFlag } from '../utils/language-flags';
 import BoardPreview from './BoardPreview';
 import VideoExtract from './VideoExtract';
 import './GameDetail.css';
@@ -88,6 +89,11 @@ export default function GameDetail() {
           <div className="detail-result-row">
             <span className={`detail-result ${resultClass(game.headers['Result'])}`}>{game.headers['Result']}</span>
             {catalogGame?.variant && <span className="detail-variant">{catalogGame.variant}</span>}
+            {catalogGame?.language && (
+              <span className="detail-language" title={catalogGame.language}>
+                {languageFlag(catalogGame.language) ?? catalogGame.language}
+              </span>
+            )}
           </div>
 
           {catalogGame && catalogGame.moveCount > 0 && (

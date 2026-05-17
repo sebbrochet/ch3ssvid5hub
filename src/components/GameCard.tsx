@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { CatalogGame } from '../types/catalog';
 import { resultClass } from '../utils/pgn-utils';
+import { languageFlag } from '../utils/language-flags';
 import './GameCard.css';
 
 interface GameCardProps {
@@ -18,6 +19,11 @@ export default function GameCard({ game, avatarUrl }: GameCardProps) {
       <div className="game-card-header">
         {avatarUrl && <img src={avatarUrl} alt="" className="youtuber-avatar youtuber-avatar--xs" />}
         <span className="game-card-youtuber">{game.youtuberDisplayName}</span>
+        {game.language && (
+          <span className="game-card-lang" title={game.language}>
+            {languageFlag(game.language) ?? game.language}
+          </span>
+        )}
         {game.variant && <span className="game-card-variant">{game.variant}</span>}
       </div>
 
